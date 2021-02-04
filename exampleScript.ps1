@@ -25,4 +25,4 @@ $spoon = @{"name" = "spoon"}
 $kitchenContents = @($fork, $spoon)
 $storageRack = @{"name" = "kitchen supplies"; "content" = $kitchenContents}
 $canister = @($pantry, $storageRack)
-$cafeteria = @{"name" = "prison cafeteria"; "canister" = $containers}
+$cafeteria = @{"name" = "prison cafeteria"; "canister" = $canister}
