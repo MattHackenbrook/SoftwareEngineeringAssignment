@@ -13,3 +13,16 @@ $containers = @($dresser, $box)
 $cell = @{"name" = "my cell"; "containers" = $containers}
 
 $cell | ConvertTo-Json -Depth 10 | Out-File -FilePath $outputFile
+
+$sandwichTraits = @{"health" = 10; "strength" = 3}
+$sandwich = @{"name" = "sandwich"; "traits" = $sandwichTraits}
+$keyTraits = @{"intelligence" = 2; "uses" = 5}
+$key = @{"name" = "key"; "traits" = $keyTraits}
+$pantryContents = @($sandwich, $key)
+$pantry = @{"name" = "pantry"; "content" = $dresserContents}
+$fork = @{"name" = "fork"}
+$spoon = @{"name" = "spoon"}
+$kitchenContents = @($fork, $spoon)
+$storageRack = @{"name" = "kitchen supplies"; "content" = $kitchenContents}
+$canister = @($pantry, $storageRack)
+$cafeteria = @{"name" = "prison cafeteria"; "canister" = $containers}
