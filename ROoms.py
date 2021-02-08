@@ -53,6 +53,10 @@ PileofLeftovers = {"Items":{"Big Spoon":BigSpoon}, "Desc":"A smelly pile of wast
 
 Cafeteria = {"Doors":{"Kitchen Door":KitchenDoor, "South Hall Door":SouthHallDoor, "West Hall Door":WestHallDoor, "Courtyard":CourtyardDoor}, "Containers":{"Ground":None,"Trash Can":TrashCan, "Pile of leftovers":PileofLeftovers, "Vending Machine":VendingMachine}, "Characters":{"Zombie":Zombie}, "ShortDesc":"The moldy and messy Cafeteria appears to be unchanged and still dirty.", "LongDesc":"You walk into a big open room with rectangular dinning tables strewn about.  Old plates of food and broken chairs are thrown around, a smell of mold permeates the air, im glad im not hungry right now", "Visited":False}
 
+
+Cafe = json.dumps(Cafeteria)
+print(Cafe)
+
 #Courtyard:
 
 Courtyard = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
