@@ -22,7 +22,7 @@ import json
 
 #Item = {"Class":"", "Desc":"", "Traits":{"Damage":0}}
 
-#Room = {"Doors":{}, "Container's":{"Ground**",}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
+#Room = {"Doors":{}, "Containers":{"Ground**",}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
 
 #presets:
     
@@ -51,28 +51,28 @@ TrashCan = {"Items":{"Hard Garbage":HardGarbage}, "Desc":"a dirty old trash can 
 
 PileofLeftovers = {"Items":{"Big Spoon":BigSpoon}, "Desc":"A smelly pile of waste that might possibly have been food lying on a table"}
 
-Cafeteria = {"Doors":{"Kitchen Door":, "South Hall Door":, "West Hall Door":, "Courtyard":}, "Container's":{"Ground":None,"Trash Can":TrashCan, "Pile of leftovers":PileofLeftovers, "Vending Machine":VendingMachine}, "Characters":{"Zombie":Zombie} "ShortDesc":"The moldy and messy Cafeteria appears to be unchanged and still dirty.", "LongDesc":"You walk into a big open room with rectangular dinning tables strewn about.  Old plates of food and broken chairs are thrown around, a smell of mold permeates the air, 'im glad im not hungry right now'", "Visited":False}
+Cafeteria = {"Doors":{"Kitchen Door":KitchenDoor, "South Hall Door":SouthHallDoor, "West Hall Door":WestHallDoor, "Courtyard":CourtyardDoor}, "Containers":{"Ground":None,"Trash Can":TrashCan, "Pile of leftovers":PileofLeftovers, "Vending Machine":VendingMachine}, "Characters":{"Zombie":Zombie}, "ShortDesc":"The moldy and messy Cafeteria appears to be unchanged and still dirty.", "LongDesc":"You walk into a big open room with rectangular dinning tables strewn about.  Old plates of food and broken chairs are thrown around, a smell of mold permeates the air, im glad im not hungry right now", "Visited":False}
 
 #Courtyard:
 
-Courtyard = {"Doors":{}, "Container's":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
+Courtyard = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
 
 #Northhall:
 
-NorthHall = {"Doors":{}, "Container's":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
+NorthHall = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
 
 #Bloody cell:
 
-BloodyCell = {"Doors":{}, "Container's":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
+BloodyCell = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
 
 #West Cell Block:
 
-WestCellBlock = {"Doors":{}, "Container's":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
+WestCellBlock = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
 
 #Waste Dump:
 
-WasteDump = {"Doors":{}, "Container's":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
-WasteDump = {"Doors":[], "Container's":[], "Characters":[], "ShortDesc":"", "LongDesc":"", "Visited":False}
+WasteDump = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
+WasteDump = {"Doors":[], "Containers":[], "Characters":[], "ShortDesc":"", "LongDesc":"", "Visited":False}
                                         
 #ToolShed
 CourtyardDoor = {"Locked":True, "Desc":"This is the door to the Courtyard"}
