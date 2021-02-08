@@ -1,90 +1,90 @@
 def build_room(Doors, Containers, Characters, ShortDesc, LongDesc, Visited):
     room = {
-        "doors": Doors,
-        "containers": Containers,
-        "characters": Characters,
-        "shortDesc": ShortDesc,
-        "longDesc": LongDesc,
-        "visited": Visited
+        "Doors": Doors,
+        "Containers": Containers,
+        "Characters": Characters,
+        "ShortDesc": ShortDesc,
+        "LongDesc": LongDesc,
+        "Visited": Visited
     }
     return room
 
 
 def build_door(Locked, Desc):
     door = {
-        "locked": Locked,
-        "desc": Desc
+        "Locked": Locked,
+        "Desc": Desc
     }
     return door;
 
 
 def build_container(items, desc):
     container = {
-        "items": items,
-        "desc": desc
+        "Items": items,
+        "Desc": desc
     }
     return container
 
 
 def build_stats(str, thr, per, arm, hth):
     stats = {
-        "strength": str,
-        "thrift": thr,
-        "persuasion": per,
-        "armour": arm,
-        "health": hth
+        "Strength": str,
+        "Thrift": thr,
+        "Persuasion": per,
+        "Armour": arm,
+        "Health": hth
     }
     return stats;
 
 
 def build_character(stats, inventory, wearing, desc, class_):
     character = {
-        "stats": stats,
-        "inventory": inventory,
-        "wearing": wearing,
-        "desc": desc,
-        "class": class_
+        "Stats": stats,
+        "Inventory": inventory,
+        "Wearing": wearing,
+        "Desc": desc,
+        "Class": class_
     }
     return character
 
 
 def wearable_item_traits(damage, armour):
     traits = {
-        "damage": damage,
-        "armour": armour
+        "Damage": damage,
+        "Armour": armour
     }
     return traits
 
 
 def readable_item_traits(damage, text):
     traits = {
-        "damage": damage,
-        "text": text
+        "Damage": damage,
+        "Text": text
     }
     return traits
 
 
 def edible_item_traits(damage, healing):
     traits = {
-        "damage": damage,
-        "healing": healing
+        "Damage": damage,
+        "Healing": healing
     }
     return traits
 
 
 def key_item_traits(damage, door_list):
     traits = {
-        "damage": damage,
-        "doors": door_list
+        "Damage": damage,
+        "Doors": door_list
     }
     return traits
 
 
 def build_item(desc, traits, class_):
     item = {
-        "class": class_,
-        "desc": desc,
-        "traits": traits
+        "Class": class_,
+        "Desc": desc,
+        "Traits": traits
     }
     return item
 
