@@ -1,3 +1,14 @@
+def build_room(Doors, Containers, Characters, ShortDesc, LongDesc, Visited):
+    room = {
+        "doors": Doors,
+        "containers": Containers,
+        "characters": Characters,
+        "shortDesc": ShortDesc,
+        "longDesc": LongDesc,
+        "visited": Visited
+    }
+    return room
+
 
 def build_door(Locked, Desc):
     door = {
