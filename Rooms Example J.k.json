@@ -15,12 +15,12 @@
     "Half Used Crack Pipe": {
       "SHORTDESC": "Half Used Crack Pipe",
       "LONGDESC": "Joe Dirt's half used crack pipe, if i smoke it should help with my withdrawals",
-      "Useable": true,
+      "Useable": true
+    },
      "Band-aids": {
         "SHORTDESC": "Band-aids",
         "LONGDESC": "Band-aids may come in handy if i run into zombies or worse",
         "Wearable": true
       }
-    }
   }
 }
