@@ -6,11 +6,15 @@ Created on Thu Feb  4 17:37:07 2021
 """
 
 import json
-
+#to convert json to python
 #with open('C:/Users/3picm/Documents/softeng/SoftwareEngineeringAssignment/Rooms Example J.K.json') as f:
 #  data = json.load(f)
 
 #print(data)
+
+#to convert python to json
+#X = json.dumps(room object)
+#print(X)
 
 #templates
 
@@ -54,40 +58,38 @@ PileofLeftovers = {"Items":{"Big Spoon":BigSpoon}, "Desc":"A smelly pile of wast
 Cafeteria = {"Doors":{"Kitchen Door":KitchenDoor, "South Hall Door":SouthHallDoor, "West Hall Door":WestHallDoor, "Courtyard":CourtyardDoor}, "Containers":{"Ground":None,"Trash Can":TrashCan, "Pile of leftovers":PileofLeftovers, "Vending Machine":VendingMachine}, "Characters":{"Zombie":Zombie}, "ShortDesc":"The moldy and messy Cafeteria appears to be unchanged and still dirty.", "LongDesc":"You walk into a big open room with rectangular dinning tables strewn about.  Old plates of food and broken chairs are thrown around, a smell of mold permeates the air, im glad im not hungry right now", "Visited":False}
 
 
-Cafe = json.dumps(Cafeteria)
-print(Cafe)
-
 #Courtyard:
 
 Courtyard = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
+
 
 #Northhall:
 
 NorthHall = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
 
+
 #Bloody cell:
 
 BloodyCell = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
+
 
 #West Cell Block:
 
 WestCellBlock = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
 
+
 #Waste Dump:
 
 WasteDump = {"Doors":{}, "Containers":{}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
-WasteDump = {"Doors":[], "Containers":[], "Characters":[], "ShortDesc":"", "LongDesc":"", "Visited":False}
                                         
+
 #ToolShed
-CourtyardDoor = {"Locked":True, "Desc":"This is the door to the Courtyard"}
-                                        
-Shovel = {"Class":"Key", "Desc":"You pick up a shovel, You can use it to break through somewhere", "Traits":{"Damage":3}}
-                                        
+
 CourtyardDoor = {"Locked":True, "Desc":"This is the door to the Courtyard"}
                                         
 Shovel = {"Class":"Key", "Desc":"You pick up a shovel, You can use it to break through somewhere", "Traits":{"Damage":3}}
 
 Box = {"Items":{Shovel:Shovel}, "Desc":"You see a box with something inside"}
 
-ToolShed = {"Door":CourtyardDoor, "Container's":{"Ground":"none", Box:Shovel}, "Characters":"none", "ShortDesc":"The ToolShed", "LongDesc":'''As you enter the tool shed you see a locker full of shovels. You remember the countless days you spent digging holes for the prison under the hot sun. The guards would laugh as they poured your water in the hole infront of you, leaving you with a burning sensation in your throat with no way to quench your thirst. "Im glad those bastards are dead" you say to yourself.''', "Visited":False}                                    
+ToolShed = {"Door":CourtyardDoor, "Container's":{"Ground":"none", "Box":Shovel}, "Characters":"none", "ShortDesc":"The ToolShed", "LongDesc":'''As you enter the tool shed you see a locker full of shovels. You remember the countless days you spent digging holes for the prison under the hot sun. The guards would laugh as they poured your water in the hole infront of you, leaving you with a burning sensation in your throat with no way to quench your thirst. "Im glad those bastards are dead" you say to yourself.''', "Visited":False}                                    
         
