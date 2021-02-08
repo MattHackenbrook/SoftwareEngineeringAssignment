@@ -89,7 +89,7 @@ CourtyardDoor = {"Locked":True, "Desc":"This is the door to the Courtyard"}
                                         
 Shovel = {"Class":"Key", "Desc":"You pick up a shovel, You can use it to break through somewhere", "Traits":{"Damage":3}}
 
-Box = {"Items":{Shovel:Shovel}, "Desc":"You see a box with something inside"}
+Box = {"Items":{"Shovel":Shovel}, "Desc":"You see a box with something inside"}
 
-ToolShed = {"Door":CourtyardDoor, "Container's":{"Ground":"none", "Box":Shovel}, "Characters":"none", "ShortDesc":"The ToolShed", "LongDesc":'''As you enter the tool shed you see a locker full of shovels. You remember the countless days you spent digging holes for the prison under the hot sun. The guards would laugh as they poured your water in the hole infront of you, leaving you with a burning sensation in your throat with no way to quench your thirst. "Im glad those bastards are dead" you say to yourself.''', "Visited":False}                                    
+ToolShed = {"Door":CourtyardDoor, "Container's":{"Ground":"", "Box":Shovel}, "Characters":"", "ShortDesc":"The ToolShed", "LongDesc":"As you enter the tool shed you see a locker full of shovels. You remember the countless days you spent digging holes for the prison under the hot sun. The guards would laugh as they poured your water in the hole infront of you, leaving you with a burning sensation in your throat with no way to quench your thirst. 'Im glad those bastards are dead' you say to yourself.", "Visited":False}                                    
         
