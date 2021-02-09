@@ -7,3 +7,9 @@ Created on Thu Feb  4 16:40:36 2021
 
 import json
 
+PrisonRooms = {"Room":Roomobject, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":
+               "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":, "":}
+
+X = json.dumps(PrisonRooms)
+print(X)
+
