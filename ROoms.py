@@ -358,7 +358,7 @@ PrisonGuard = {
     "Class": "PrisonGuard"
 }
 
-WestHall = {
+GuardRoom = {
     "Doors": {
         "CourtYard Door": CourtYardDoor,
         "North Hall Door": NorthHallDoorG
@@ -533,6 +533,7 @@ pantry = build_container(
 )
 
 containers = {
+    "Ground": {},
     "oven": oven,
     "pantry": pantry
 }
@@ -746,6 +747,8 @@ prison = {
     "Bloody Cell": BloodyCell,
     "Ivan's Cell": IvanCell,
     "West Cell Block": WestCellBlock,
+    "Guard Room": GuardRoom,
+    "Tool Shed": ToolShed
 }
 
 print(json.dumps(prison))
