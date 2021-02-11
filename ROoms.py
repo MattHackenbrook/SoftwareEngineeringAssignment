@@ -190,4 +190,48 @@ Ivan = {"Stats":{"Strength":"20", "Thrift":"1", "Persuasion":"0", "Armour":"5", 
 
 IvanCell = {"Doors":{"NorthCellBlockDoor":NorthCellBlockDoor}, "Containers":{"Ground":""}, "Characters":{"Ivan":Ivan}, "ShortDesc":"Ivan's Cell", "LongDesc":"This cell belongs to Ivan. The beast of the prison. You heard stories about how he killed 10 men with only his fists. You do not want to run into this guy", "Visited":False}
 
+#Janitor’s Closet:
+
+HalfUsedCrackPipe = {"Class":"Misc", "Desc":"Joe Dirt's half used crack pipe, if i smoke it should help with my withdrawals", "Traits":{"Healing":1}}
+
+BandAids = {"Class":"Misc", "Desc":"Band-aids may come in handy if i run into zombies or worse", "Traits":{"Healing":3}}
+
+SouthHallDoor = {"Locked":False, "Desc":"Looks like a hallway but heading in the south direction"}
+
+JoesDrawer = {"Items":{"Half Used Crack Pipe":HalfUsedCrackPipe,"Band Aids":BandAids },"Desc":"Joe Dirt's draw is left open, he must of left in a rush"}
+
+JanitorsCloset = {"Doors":{"South Hall Door":SouthHallDoor}, "Containers":{"Ground":None, "JoesDrawer":JoesDrawer}, "Characters":{}, "ShortDesc":"The Janitor’s Closet is a small room in the south hall.", "LongDesc":"The Janitor’s Closet is a small room in the south hall. Joe Dirt's the prison Janitor, he doens't carry a weapon but he's always high, his stash might be inside the closet. As you approach you don't hear any zombies inside", "Visited":False}
+
+
+#West Hall:
+
+WestCellBlockDoor = {"Locked":True, "Desc":"Dirty floor and walls , zombie free for now"}
+
+EasterEggRoomDoor = {"Locked":True, "Desc":"there seems to be music playing and fuzz images in the back of the room, need to get closer"}
+
+HospitalDoorW = {"Locked":True, "Desc":"A series of what looks like unmade beds with dirty white sheets"}
+
+NorthHallDoorW = {"Locked":True, "Desc":"A long dirty corridor, must be the North hallway it looks like it has some other doors"}
+
+SouthHallDoorW = {"Locked":True, "Desc":"A long dirty corridor, must be the South hallway it looks like it has some other doors"}
+
+Syringe = {"Class":"melee", "Desc":"A used syringe, can be used to poision", "Traits":{"Damage":5}}
+
+WestHall = {"Doors":{"West Cell Block Door":WestCellBlockDoor, "Easter Egg Room Door":EasterEggRoomDoor, "Hospital Door":HospitalDoorW, "North Hall Door":NorthHallDoorW, "South Hall Door":SouthHallDoorW}, "Containers":{"Ground":Syringe}, "Characters":{}, "ShortDesc":"the long ominous hallway with doors for the Hospital wing, north and south hallway and West cell block", "LongDesc":"", "Visited":False}
+
+
+
+#Guard room:
+
+CourtYardDoor = {"Locked":True, "Desc":"You can see into the courtyard, from what you can tell this is how you entered the prison, but now there's a bunch of zomies roaming around"}
+
+NorthHallDoorG = {"Locked":False, "Desc":"A long dirty corridor, must be the North hallway it looks like it has some other doors"}
+
+BulletProofVest = {"Class":"Misc", "Desc":"A old vest with stab marks, but it's bullet proof", "Traits":{"Damage":1, "Health":15}}
+
+Gun = {"Class":"Misc", "Desc":"The Guards Gun still has ammo, this will come in handy real soon", "Traits":{"Damage":15}}
+
+PrisonGuard = {"Stats":{"Strength":10, "Thrift":2, "Persuasion":0, "Armour":15, "Health":15}, "Inventory":{"Gun":Gun}, "Wearing":"Bullet Proof Vest":BulletProofVest, "Desc":"A Guard is hiding under his desk, he's been beaten and is scared", "Class":"PrisonGuard"} 
+
+WestHall = {"Doors":{"CourtYard Door":CourtYardDoor, "North Hall Door":NorthHallDoorG, "Containers":{"Ground":BulletProofVest,Gun}, "Characters":{"Prison Guard":PrisonGuard}, "ShortDesc":"The guards room is dimminly lit, maybe everyone left but its worth checking out for weapons", "LongDesc":"", "Visited":False}
 
