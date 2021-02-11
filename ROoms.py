@@ -131,7 +131,7 @@ Shovel = {"Class":"Key", "Desc":"You pick up a shovel, You can use it to break t
 
 Box = {"Items":{"Shovel":Shovel}, "Desc":"You see a box with something inside"}
 
-ToolShed = {"Door":CourtyardDoor, "Container's":{"Ground":"", "Box":Shovel}, "Characters":"", "ShortDesc":"The ToolShed", "LongDesc":"As you enter the tool shed you see a locker full of shovels. You remember the countless days you spent digging holes for the prison under the hot sun. The guards would laugh as they poured your water in the hole infront of you, leaving you with a burning sensation in your throat with no way to quench your thirst. 'Im glad those bastards are dead' you say to yourself.", "Visited":False}                                    
+ToolShed = {"Door":CourtyardDoor, "Container's":{"Ground":"", "Box":Box}, "Characters":"", "ShortDesc":"The ToolShed", "LongDesc":"As you enter the tool shed you see a locker full of shovels. You remember the countless days you spent digging holes for the prison under the hot sun. The guards would laugh as they poured your water in the hole infront of you, leaving you with a burning sensation in your throat with no way to quench your thirst. 'Im glad those bastards are dead' you say to yourself.", "Visited":False}                                    
         
 
 #South Hall:
@@ -153,5 +153,41 @@ SouthHall = {"Doors":{"West Hall Door":WestHallDoor, "Washroom Door":WashroomDoo
 #Hospital Ward:
 
 
+WestHallDoor = {"Locked":True, "Desc":"This leads to the West Hall"}
+
+NorthHallDoor = {"Locked":True, "Desc":"Leads to the North Hall"}
+
+NurseZombie = {"Stats":{"Strength":1, "Thrift":0, "Persuasion":0, "Armour":1, "Health":1}, "Inventory":{}, "Wearing":None, "Desc":"A zombie wearing a nurse uniform", "Class":"zombie"}
+
+Pills = {"Class":"Edible", "Desc":"You find some pills, they might be able to recover some health, or just get you really high.", "Traits":{"Healing":5}}
+
+SurgicalKnife = {"Class":"melee", "Desc":"You find a surgical knife with some blood still left on it. This place was never that clean anyway", "Traits":{"Damage":3}}
+
+Cabinet = {"Items":{"Pills":Pills}, "Desc":"As you approach the cabinet, you can see some things inside that might be useful"}
+
+Tray = {"Items":{"Surgical Knife":SurgicalKnife}, "Desc":"You see a surgical knife layed out on the tray"}
+
+HospitalWard = {"Doors":{"West Hall Door": "North Hall Door":NorthHallDoor}, "Containers":{"Ground":"","Cabinet":Cabinet, "Tray":Tray}, "Characters":{"Nurse Zombie":NurseZombie}, "ShortDesc":"The Hospital Ward", "LongDesc":"You open the door and see a bed and a tray in the middle of the room. You look to your right and see the medical cabinet in the corner. 'There must be something in here I can use' you say to yourself. As you search the room you remember the time that Ivan almost beat you to death because you didn't give him your cookies. You spent a week in pain recovering in the Hopsital Ward, but it was nice not having to be in that cell for a little bit", "Visited":False}
+
+
+#Washroom
+
+SouthHallDoor = {"Locked":False, "Desc":"This leads to the South Hall"}
+
+SewerDoor = {"Locked":True, "Desc":"You see a crack in the floor that looks like it might lead somewhere. You need a something strong like a sledgehammer to break through."}
+
+Pipe = {"Class":"melee", "Desc":"This pipe must have fallen from the ceiling after the pipes burst", "Traits":{"Damage":2}}
+
+Washroom = {"Doors":{"South Hall Door":SouthHallDoor, "Sewer":SewerDoor}, "Containers":{"Ground":Pipe}, "Characters":"", "ShortDesc":"The Washroom", "LongDesc":"You can hear the slow fall of water dripping from the ceiling, you take a step forward and feel something wet at your feet. You look down to see you are standing in a pool of blood. The washroom has been the place of many unspeakable acts, but thankfully you have never dropped the soap and are safe from the traumatizing experience other inmates faced. As you examine the room you notice a giant crack in the floor and see a small pipe next to it.", "Visited":False}
+
+#Ivan's Cell
+
+NorthCellBlockDoor = {"Locked":False, "Desc":"This leads to the North Cell Block"}
+
+Sledgehammer = {"Class":"melee", "Desc":"A giant sledgehammer, good for smashing.", "Traits":{"Damage":7}}
+
+Ivan = {"Stats":{"Strength":"20", "Thrift":"1", "Persuasion":"0", "Armour":"5", "Health":"10"}, "Inventory":{"Sledgehammer":Sledgehammer}, "Wearing":None, "Desc":"Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you. He can be a great ally, but an even worse enemy.", "class":""}
+
+IvanCell = {"Doors":{"NorthCellBlockDoor":NorthCellBlockDoor}, "Containers":{"Ground":""}, "Characters":{"Ivan":Ivan}, "ShortDesc":"Ivan's Cell", "LongDesc":"This cell belongs to Ivan. The beast of the prison. You heard stories about how he killed 10 men with only his fists. You do not want to run into this guy", "Visited":False}
 
 
