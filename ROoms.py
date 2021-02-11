@@ -235,3 +235,367 @@ PrisonGuard = {"Stats":{"Strength":10, "Thrift":2, "Persuasion":0, "Armour":15, 
 
 WestHall = {"Doors":{"CourtYard Door":CourtYardDoor, "North Hall Door":NorthHallDoorG, "Containers":{"Ground":BulletProofVest,Gun}, "Characters":{"Prison Guard":PrisonGuard}, "ShortDesc":"The guards room is dimminly lit, maybe everyone left but its worth checking out for weapons", "LongDesc":"", "Visited":False}
 
+
+def build_room(Doors, Containers, Characters, ShortDesc, LongDesc, Visited):
+    room = {
+        "Doors": Doors,
+        "Containers": Containers,
+        "Characters": Characters,
+        "ShortDesc": ShortDesc,
+        "LongDesc": LongDesc,
+        "Visited": Visited
+    }
+    return room
+
+
+def build_door(Locked, Desc):
+    door = {
+        "Locked": Locked,
+        "Desc": Desc
+    }
+    return door;
+
+
+def build_container(items, desc):
+    container = {
+        "Items": items,
+        "Desc": desc
+    }
+    return container
+
+
+def build_stats(str, thr, per, arm, hth):
+    stats = {
+        "Strength": str,
+        "Thrift": thr,
+        "Persuasion": per,
+        "Armour": arm,
+        "Health": hth
+    }
+    return stats;
+
+
+def build_character(stats, inventory, wearing, desc, class_):
+    character = {
+        "Stats": stats,
+        "Inventory": inventory,
+        "Wearing": wearing,
+        "Desc": desc,
+        "Class": class_
+    }
+    return character
+
+
+def wearable_item_traits(damage, armour):
+    traits = {
+        "Damage": damage,
+        "Armour": armour
+    }
+    return traits
+
+
+def readable_item_traits(damage, text):
+    traits = {
+        "Damage": damage,
+        "Text": text
+    }
+    return traits
+
+
+def projectile_item_traits(damage, amo):
+    traits = {
+        "Damage": damage,
+        "Amo": amo
+    }
+    return traits
+
+
+def melee_item_traits(damage):
+    traits = {
+        "Damage": damage,
+    }
+    return traits
+
+
+def edible_item_traits(damage, healing):
+    traits = {
+        "Damage": damage,
+        "Healing": healing
+    }
+    return traits
+
+
+def key_item_traits(damage, door_list):
+    traits = {
+        "Damage": damage,
+        "Doors": door_list
+    }
+    return traits
+
+
+def build_item(desc, traits, class_):
+    item = {
+        "Class": class_,
+        "Desc": desc,
+        "Traits": traits
+    }
+    return item
+
+
+zombie_inv = {
+    "Teeth": build_item("Eww... Teeth.", melee_item_traits(4), "Melee")
+}
+
+zombie_stats = build_stats(1, 0, 0, 0, 4)
+
+doors = {
+    "Cafeteria Door": build_door(False, "A swinging door leads to the cafeteria.")
+}
+
+oven = build_container({}, "The oven is completely disabled, the gas is turned off. What is happening outside this prison?")
+
+paprika = build_item(
+    "You don't know why, but you feel like this might be useful... or maybe you're just a crazy man carrying "
+    "paprika.",
+    edible_item_traits(1, 1),
+    "Edible"
+)
+
+salt = build_item(
+    "Salt is said to deter ghosts. Could it do the same for zombies?",
+    edible_item_traits(3, 1),
+    "Edible"
+)
+
+items = {
+    "Paprika": paprika,
+    "Salt": salt
+}
+
+build_container(items, "A shelf for cooking supplies. It doesn't appear very unique.")
+
+beans = build_item(
+    "A can of baked beans. If only you could find a can opener...",
+    melee_item_traits(4),
+    "Melee"
+)
+
+items = {
+    "Beans": beans
+}
+
+pantry = build_container(
+    items,
+    "This cabinet used to be filled with food that would last days... it appears to have been emptied."
+)
+
+
+
+containers = {
+    "oven": oven,
+    "pantry": pantry
+}
+
+apron = build_item(
+    "Meant to keep food off clothes while cooking, but it seems to be covered in zombie goo now.",
+    wearable_item_traits(1, 2),
+    "Wearable"
+)
+
+zombie_chef = build_character(
+    zombie_stats,
+    zombie_inv,
+    apron,
+    "This zombie looks like Jim. He used to work in the kitchen, I think he was once a car thief.",
+    "Zombie"
+)
+
+zombie_chef = {
+    "Stats": zombie_stats,
+    "Inventory": zombie_inv,
+    "Wearing": apron,
+    "Desc": "This zombie looks like Jim. He used to work in the kitchen, I think he was once a car thief."
+}
+
+characters = {
+    "Zombie Chef": zombie_chef
+}
+
+short_desc = "This place should not be used to prepare food. Everything is disgusting."
+
+long_desc = "This room used to make food for the whole prison. It's tiny, very tiny, and extremely gross. You " \
+            "find yourself hoping that the mysterious liquids covering the walls only appeared after the " \
+            "apocalypse... but that seems like wishful thinking."
+
+kitchen = build_room(doors, containers, characters, short_desc, long_desc, False)
+
+doors = {
+    "Washroom": build_door(True, "A hole in the pipe."),
+    "South": build_door(False, "The sewage is running this direction, it's probably a way out!"),
+    "North": build_door(False, "The sewage is draining from this direction. There's probably nothing of importance")
+}
+containers = {
+    "Ground": build_container({}, "The sewage on the ground is absolutely disgusting.")
+}
+characters = {}
+
+
+sewer = build_room(
+    doors,
+    containers,
+    {},
+    "The sewer again... it's not easier this time.",
+    "As you crawl on your belly into the vile sewer, you find yourself questioning if escape is even worth this "
+    "horrible stench. It takes all of your might to keep going.",
+    False
+)
+
+doors = {
+    "West Cell Block": build_door(False, "Your cell door.")
+}
+
+rock_traits = melee_item_traits(3)
+
+ground_items = {
+    "Rock": build_item("A rock that has fallen from your cell wall.", rock_traits, "Melee")
+}
+
+shiv_traits = melee_item_traits(4)
+bean_traits = edible_item_traits(0, 2)
+
+mattress_items = {
+    "Shiv": build_item("A piece of scrap metal, filed into a knife.", shiv_traits, "Melee"),
+    "Beans": build_item("A handful of beans.", bean_traits, "Edible")
+}
+
+containers = {
+    "Ground": build_container(ground_items, "The floor of your cell"),
+    "Mattress": build_container(mattress_items, "You remember stuffing your mattress with contraband."),
+}
+
+prison_uniform = build_item("Your standard, orange jumpsuit.", wearable_item_traits(0, 1), "Wearable")
+
+player_inv = {
+    "Hand": build_item("Your hand.", melee_item_traits(2), "Melee")
+}
+
+characters = {
+    "Player": build_character(
+        build_stats(0, 0, 0, 0, 1),
+        player_inv,
+        prison_uniform,
+        "You.",
+        "Player"
+    )
+}
+
+start_cell = build_room(
+    doors,
+    containers,
+    characters,
+    "Home sweet home.",
+    "This is your cell, the miserable, disgusting hole you've spent your last few years.",
+    True
+)
+
+doors = {
+    "Courtyard": build_door(False, "The entrance to the courtyard."),
+    "Freedom": build_door(True, "The front gate, on the other side is freedom.")
+}
+
+containers = {
+    "Ground": build_container({}, "The floor is extremely muddy here.")
+}
+
+front_gate = build_room(
+    doors,
+    containers,
+    {},
+    "The gateway to freedom.",
+    "This is the same place where you remember being brought into this concrete nightmare all those years ago. Outside"
+    "of the main gate is freedom.",
+    False
+)
+
+doors = {
+    "South Hall": build_door(False, "The entrance to the south hall."),
+    "Bloody Cell": build_door(False, "You can see that this cell is completely covered in blood. What happened here?"),
+    "Jones' Cell": build_door(True, "This cell is completely sealed up from a roof collapse. It belongs to your old "
+                                    "friend, Jones, a friendly backyard chemist.")
+}
+
+desk_items = {
+    "Pen": build_item("A simple ballpoint pen.", melee_item_traits(3), "Melee"),
+    "Note from warden": build_item(
+        "A note from the warden to the guard stationed in the south block.",
+        readable_item_traits(1, "Remember to keep prisoner 203, Jones, away from the janitors closet!"),
+        "Readable"),
+    "Guard hat": build_item("A guards hat", wearable_item_traits(1, 1), "Wearable")
+}
+
+containers = {
+    "Desk": build_container(desk_items, "The guard desk in the center of the block.")
+}
+
+
+characters = {
+    "Zombie steve": build_character( zombie_stats, zombie_inv, prison_uniform, "Steve, but a zombie.", "Zombie"),
+    "Zombie jeff": build_character(zombie_stats, zombie_inv, prison_uniform, "Jeff, but a zombie.", "Zombie"),
+    "Zombie fred": build_character(zombie_stats, zombie_inv, prison_uniform, "Fred, but a zombie.", "Zombie"),
+    "Zombie jack": build_character(zombie_stats, zombie_inv, prison_uniform, "Jack, but a zombie.", "Zombie")
+}
+
+south_cell_block = build_room(
+    doors,
+    containers,
+    characters,
+    "Jones' cell block. It's completely torn apart.",
+    "The entire room is falling apart. Its almost like a wreaking ball was swung around in here. This is the cell "
+    "block where your friend Jones used to be. He's probably dead, or a zombie, but might as well check, right?",
+    False
+)
+
+doors = {
+    "Ivan's Cell": build_door(False, "The cell door to Ivan's cell. It's torn off the wall."),
+    "North Hall": build_door(False, "The door to the hallway")
+}
+
+desk_items = {
+    "Rotten banana": build_item(
+        "A completely black banana. Almost certainly not safe to eat.",
+        edible_item_traits(0, -1),
+        "Edible"
+    ),
+    "Empty handgun": build_item("A guards handgun. There is no magazine.", melee_item_traits(3), "Melee")
+}
+
+containers = {
+    "Desk": build_container(desk_items, "The guard desk in the center of the block.")
+}
+
+
+characters = {
+    "Zombie James": build_character( zombie_stats, zombie_inv, prison_uniform, "James, but a zombie.", "Zombie"),
+    "Zombie luke": build_character(zombie_stats, zombie_inv, prison_uniform, "Luke, but a zombie.", "Zombie"),
+}
+
+north_cell_block = build_room(
+    doors,
+    containers,
+    characters,
+    "Ivan's cell block. It appears to be nearly untouched.",
+    "An oddly tidy cell block. This is Ivan's cell block, and if he's here it could mean trouble for you. The man "
+    "is terrifying!",
+    False
+)
+
+prison = {
+    "North Cell Block": north_cell_block,
+    "South Cell Block": south_cell_block,
+    "Sewer": sewer,
+    "Start Cell": start_cell,
+    "Front Gate": front_gate,
+    "Kitchen": kitchen
+}
+
+print(json.dumps(prison))
