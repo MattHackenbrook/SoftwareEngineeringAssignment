@@ -1,0 +1,962 @@
+{
+  "Ivan's Cell": {
+    "LongDesc": "This cell belongs to Ivan. The beast of the prison. You heard stories about how he killed 10 men with only his fists. You do not want to run into this guy",
+    "ShortDesc": "Ivan's Cell",
+    "Visited": false,
+    "Characters": {
+      "Ivan": {
+        "Inventory": {
+          "Sledgehammer": {
+            "Class": "melee",
+            "Traits": {
+              "Damage": 7
+            },
+            "Desc": "A giant sledgehammer, good for smashing."
+          }
+        },
+        "Stats": {
+          "Thrift": "1",
+          "Armour": "5",
+          "Persuasion": "0",
+          "Strength": "20",
+          "Health": "10"
+        },
+        "Desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you. He can be a great ally, but an even worse enemy.",
+        "Wearing": null,
+        "class": ""
+      }
+    },
+    "Containers": {
+      "Ground": ""
+    },
+    "Doors": {
+      "NorthCellBlockDoor": {
+        "Locked": false,
+        "Desc": "This leads to the North Cell Block"
+      }
+    }
+  },
+  "Front Gate": {
+    "LongDesc": "This is the same place where you remember being brought into this concrete nightmare all those years ago. Outsideof the main gate is freedom.",
+    "ShortDesc": "The gateway to freedom.",
+    "Visited": false,
+    "Characters": {},
+    "Containers": {
+      "Ground": {
+        "Items": {},
+        "Desc": "The floor is extremely muddy here."
+      }
+    },
+    "Doors": {
+      "Courtyard": {
+        "Locked": false,
+        "Desc": "The entrance to the courtyard."
+      },
+      "Freedom": {
+        "Locked": true,
+        "Desc": "The front gate, on the other side is freedom."
+      }
+    }
+  },
+  "South Hall": {
+    "LongDesc": "The South Hall looks completely abandoned just like West Hall did. You see several corpses with missing limbs and what looks like bites that have been taken out of them. As you take a closer look you see a corpse with its eyes wide open and quickly realize it was your good friend Jeff. You take a moment to close his eyes and pray that he is in a better place now. A tear runs down your face as you get up and continue to move on trying to escape this hellhole.",
+    "ShortDesc": "The South Hall",
+    "Visited": false,
+    "Characters": {
+      "Zombie": {
+        "Class": "zombie",
+        "Inventory": {},
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 1,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 1
+        },
+        "Desc": "A Zombie",
+        "Wearing": null
+      },
+      "Zombie2": {
+        "Class": "zombie",
+        "Inventory": {},
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 1,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 1
+        },
+        "Desc": "A Zombie",
+        "Wearing": null
+      }
+    },
+    "Containers": {
+      "Ground": ""
+    },
+    "Doors": {
+      "Janitor's Closet Door": {
+        "Locked": true,
+        "Desc": "This leads to the Janitor's Closet. There might be something useful in there"
+      },
+      "South Cell Block Door": {
+        "Locked": false,
+        "Desc": "You see blood stains on the ground infront of the door. This leads to the South Cell Block"
+      },
+      "West Hall Door": {
+        "Locked": true,
+        "Desc": "This leads to the West Hall"
+      },
+      "Cafeteria Door": {
+        "Locked": false,
+        "Desc": "This leads to the Cafeteria."
+      },
+      "Washroom Door": {
+        "Locked": false,
+        "Desc": "You can hear water running as you continue walking. This must be the door to the washroom"
+      }
+    }
+  },
+  "Hospital Ward": {
+    "LongDesc": "You open the door and see a bed and a tray in the middle of the room. You look to your right and see the medical cabinet in the corner. 'There must be something in here I can use' you say to yourself. As you search the room you remember the time that Ivan almost beat you to death because you didn't give him your cookies. You spent a week in pain recovering in the Hopsital Ward, but it was nice not having to be in that cell for a little bit",
+    "ShortDesc": "The Hospital Ward",
+    "Visited": false,
+    "Characters": {
+      "Nurse Zombie": {
+        "Class": "zombie",
+        "Inventory": {},
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 1,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 1
+        },
+        "Desc": "A zombie wearing a nurse uniform",
+        "Wearing": null
+      }
+    },
+    "Containers": {
+      "Ground": "",
+      "Tray": {
+        "Items": {
+          "Surgical Knife": {
+            "Class": "melee",
+            "Traits": {
+              "Damage": 3
+            },
+            "Desc": "You find a surgical knife with some blood still left on it. This place was never that clean anyway"
+          }
+        },
+        "Desc": "You see a surgical knife layed out on the tray"
+      },
+      "Cabinet": {
+        "Items": {
+          "Pills": {
+            "Class": "Edible",
+            "Traits": {
+              "Healing": 5
+            },
+            "Desc": "You find some pills, they might be able to recover some health, or just get you really high."
+          }
+        },
+        "Desc": "As you approach the cabinet, you can see some things inside that might be useful"
+      }
+    },
+    "Doors": {
+      "West Hall Door": {
+        "Locked": true,
+        "Desc": "This leads to the West Hall"
+      },
+      "North Hall Door": {
+        "Locked": true,
+        "Desc": "Leads to the North Hall"
+      }
+    }
+  },
+  "Cafeteria": {
+    "LongDesc": "You walk into a big open room with rectangular dinning tables strewn about.  Old plates of food and broken chairs are thrown around, a smell of mold permeates the air, im glad im not hungry right now",
+    "ShortDesc": "The moldy and messy Cafeteria appears to be unchanged and still dirty.",
+    "Visited": false,
+    "Characters": {
+      "Zombie": {
+        "Class": "zombie",
+        "Inventory": {},
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 1,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 1
+        },
+        "Desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily",
+        "Wearing": null
+      }
+    },
+    "Containers": {
+      "Ground": null,
+      "Vending Machine": {
+        "Items": {
+          "Can of Spripesi Cola Up": {
+            "Class": "Edible",
+            "Traits": {
+              "Damage": 1,
+              "Healing": 1
+            },
+            "Desc": "A can of Diet Spripesi Cola Up, its the quenchiest! looks edible"
+          }
+        },
+        "Desc": "A banged up old vending machine, looks like its still powered"
+      },
+      "Pile of leftovers": {
+        "Items": {
+          "Big Spoon": {
+            "Class": "Misc",
+            "Traits": {
+              "Damage": 1
+            },
+            "Desc": "A large Wooden Spoon about a foot and a half long, a little chipped at the ends"
+          }
+        },
+        "Desc": "A smelly pile of waste that might possibly have been food lying on a table"
+      },
+      "Trash Can": {
+        "Items": {
+          "Hard Garbage": {
+            "Class": "Throwable",
+            "Traits": {
+              "throw": 2,
+              "Damage": 2
+            },
+            "Desc": "A hard solid mass of dried up Garvage, who knows what this used to be, its got some weight to it"
+          }
+        },
+        "Desc": "a dirty old trash can with the smell of old garbage coming out of it."
+      }
+    },
+    "Doors": {
+      "Kitchen Door": {
+        "Locked": false,
+        "Desc": "Inside you see what looks like a kitchen, and is that food?"
+      },
+      "Courtyard": {
+        "Locked": true,
+        "Desc": "looking through you see grass and a big fence"
+      },
+      "South Hall Door": {
+        "Locked": false,
+        "Desc": "Looks like a hallway but heading in the south direction"
+      },
+      "West Hall Door": {
+        "Locked": true,
+        "Desc": "Looks like a halway but heading in the weat direction"
+      }
+    }
+  },
+  "West Hall": {
+    "LongDesc": "",
+    "ShortDesc": "The guards room is dimly lit, maybe everyone left but its worth checking out for weapons",
+    "Visited": false,
+    "Characters": {
+      "Prison Guard": {
+        "Class": "PrisonGuard",
+        "Inventory": {
+          "Gun": {
+            "Class": "Misc",
+            "Traits": {
+              "Damage": 15
+            },
+            "Desc": "The Guards Gun still has ammo, this will come in handy real soon"
+          }
+        },
+        "Stats": {
+          "Thrift": 2,
+          "Armour": 15,
+          "Persuasion": 0,
+          "Strength": 10,
+          "Health": 15
+        },
+        "Desc": "A Guard is hiding under his desk, he's been beaten and is scared",
+        "Wearing": {
+          "Class": "Misc",
+          "Traits": {
+            "Damage": 1,
+            "Health": 15
+          },
+          "Desc": "A old vest with stab marks, but it's bullet proof"
+        }
+      }
+    },
+    "Containers": {
+      "Ground": {
+        "Bullet Proof Vest": {
+          "Class": "Misc",
+          "Traits": {
+            "Damage": 1,
+            "Health": 15
+          },
+          "Desc": "A old vest with stab marks, but it's bullet proof"
+        },
+        "Gun": {
+          "Class": "Misc",
+          "Traits": {
+            "Damage": 15
+          },
+          "Desc": "The Guards Gun still has ammo, this will come in handy real soon"
+        }
+      }
+    },
+    "Doors": {
+      "CourtYard Door": {
+        "Locked": true,
+        "Desc": "You can see into the courtyard, from what you can tell this is how you entered the prison, but now there's a bunch of zomies roaming around"
+      },
+      "North Hall Door": {
+        "Locked": false,
+        "Desc": "A long dirty corridor, must be the North hallway it looks like it has some other doors"
+      }
+    }
+  },
+  "Janitors Closet": {
+    "LongDesc": "The Janitor’s Closet is a small room in the south hall. Joe Dirt's the prison Janitor, he doens't carry a weapon but he's always high, his stash might be inside the closet. As you approach you don't hear any zombies inside",
+    "ShortDesc": "The Janitor’s Closet is a small room in the south hall.",
+    "Visited": false,
+    "Characters": {},
+    "Containers": {
+      "Ground": null,
+      "JoesDrawer": {
+        "Items": {
+          "Band Aids": {
+            "Class": "Misc",
+            "Traits": {
+              "Healing": 3
+            },
+            "Desc": "Band-aids may come in handy if i run into zombies or worse"
+          },
+          "Half Used Crack Pipe": {
+            "Class": "Misc",
+            "Traits": {
+              "Healing": 1
+            },
+            "Desc": "Joe Dirt's half used crack pipe, if i smoke it should help with my withdrawals"
+          }
+        },
+        "Desc": "Joe Dirt's draw is left open, he must of left in a rush"
+      }
+    },
+    "Doors": {
+      "South Hall Door": {
+        "Locked": false,
+        "Desc": "Looks like a hallway but heading in the south direction"
+      }
+    }
+  },
+  "South Cell Block": {
+    "LongDesc": "The entire room is falling apart. Its almost like a wreaking ball was swung around in here. This is the cell block where your friend Jones used to be. He's probably dead, or a zombie, but might as well check, right?",
+    "ShortDesc": "Jones' cell block. It's completely torn apart.",
+    "Visited": false,
+    "Characters": {
+      "Zombie steve": {
+        "Class": "Zombie",
+        "Inventory": {
+          "Teeth": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 4
+            },
+            "Desc": "Eww... Teeth."
+          }
+        },
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 0,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 4
+        },
+        "Desc": "Steve, but a zombie.",
+        "Wearing": {
+          "Class": "Wearable",
+          "Traits": {
+            "Damage": 0,
+            "Armour": 1
+          },
+          "Desc": "Your standard, orange jumpsuit."
+        }
+      },
+      "Zombie fred": {
+        "Class": "Zombie",
+        "Inventory": {
+          "Teeth": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 4
+            },
+            "Desc": "Eww... Teeth."
+          }
+        },
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 0,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 4
+        },
+        "Desc": "Fred, but a zombie.",
+        "Wearing": {
+          "Class": "Wearable",
+          "Traits": {
+            "Damage": 0,
+            "Armour": 1
+          },
+          "Desc": "Your standard, orange jumpsuit."
+        }
+      },
+      "Zombie jack": {
+        "Class": "Zombie",
+        "Inventory": {
+          "Teeth": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 4
+            },
+            "Desc": "Eww... Teeth."
+          }
+        },
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 0,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 4
+        },
+        "Desc": "Jack, but a zombie.",
+        "Wearing": {
+          "Class": "Wearable",
+          "Traits": {
+            "Damage": 0,
+            "Armour": 1
+          },
+          "Desc": "Your standard, orange jumpsuit."
+        }
+      },
+      "Zombie jeff": {
+        "Class": "Zombie",
+        "Inventory": {
+          "Teeth": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 4
+            },
+            "Desc": "Eww... Teeth."
+          }
+        },
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 0,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 4
+        },
+        "Desc": "Jeff, but a zombie.",
+        "Wearing": {
+          "Class": "Wearable",
+          "Traits": {
+            "Damage": 0,
+            "Armour": 1
+          },
+          "Desc": "Your standard, orange jumpsuit."
+        }
+      }
+    },
+    "Containers": {
+      "Desk": {
+        "Items": {
+          "Note from warden": {
+            "Class": "Readable",
+            "Traits": {
+              "Damage": 1,
+              "Text": "Remember to keep prisoner 203, Jones, away from the janitors closet!"
+            },
+            "Desc": "A note from the warden to the guard stationed in the south block."
+          },
+          "Pen": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 3
+            },
+            "Desc": "A simple ballpoint pen."
+          },
+          "Guard hat": {
+            "Class": "Wearable",
+            "Traits": {
+              "Damage": 1,
+              "Armour": 1
+            },
+            "Desc": "A guards hat"
+          }
+        },
+        "Desc": "The guard desk in the center of the block."
+      }
+    },
+    "Doors": {
+      "Bloody Cell": {
+        "Locked": false,
+        "Desc": "You can see that this cell is completely covered in blood. What happened here?"
+      },
+      "South Hall": {
+        "Locked": false,
+        "Desc": "The entrance to the south hall."
+      },
+      "Jones' Cell": {
+        "Locked": true,
+        "Desc": "This cell is completely sealed up from a roof collapse. It belongs to your old friend, Jones, a friendly backyard chemist."
+      }
+    }
+  },
+  "Washroom": {
+    "LongDesc": "You can hear the slow fall of water dripping from the ceiling, you take a step forward and feel something wet at your feet. You look down to see you are standing in a pool of blood. The washroom has been the place of many unspeakable acts, but thankfully you have never dropped the soap and are safe from the traumatizing experience other inmates faced. As you examine the room you notice a giant crack in the floor and see a small pipe next to it.",
+    "ShortDesc": "The Washroom",
+    "Visited": false,
+    "Characters": "",
+    "Containers": {
+      "Ground": {
+        "Class": "melee",
+        "Traits": {
+          "Damage": 2
+        },
+        "Desc": "This pipe must have fallen from the ceiling after the pipes burst"
+      }
+    },
+    "Doors": {
+      "South Hall Door": {
+        "Locked": false,
+        "Desc": "This leads to the South Hall"
+      },
+      "Sewer": {
+        "Locked": true,
+        "Desc": "You see a crack in the floor that looks like it might lead somewhere. You need a something strong like a sledgehammer to break through."
+      }
+    }
+  },
+  "Sewer": {
+    "LongDesc": "As you crawl on your belly into the vile sewer, you find yourself questioning if escape is even worth this horrible stench. It takes all of your might to keep going.",
+    "ShortDesc": "The sewer again... it's not easier this time.",
+    "Visited": false,
+    "Characters": {},
+    "Containers": {
+      "Ground": {
+        "Items": {},
+        "Desc": "The sewage on the ground is absolutely disgusting."
+      }
+    },
+    "Doors": {
+      "South": {
+        "Locked": false,
+        "Desc": "The sewage is running this direction, it's probably a way out!"
+      },
+      "Washroom": {
+        "Locked": true,
+        "Desc": "A hole in the pipe."
+      },
+      "North": {
+        "Locked": false,
+        "Desc": "The sewage is draining from this direction. There's probably nothing of importance"
+      }
+    }
+  },
+  "Bloody Cell": {
+    "LongDesc": "A grotestesque scene of blood and gore, it looks as though the inmate who belonged in this cell is now the bloody puddle of red slop in the floor. the cell is turned upsidedown, there must have been a terrible struggle before he was pinned down on the floor and eaten alive. note to self, dont get cornered.",
+    "ShortDesc": "a bloody mess on the floor from the previous inmates remains",
+    "Visited": false,
+    "Characters": {},
+    "Containers": {
+      "Ground": {
+        "Class": "Misc",
+        "Traits": {
+          "Damage": 1
+        },
+        "Desc": "a bloody hand attached to what remains of an arm"
+      }
+    },
+    "Doors": {
+      "South Cell Block Door": {
+        "Locked": false,
+        "Desc": "what looks like the empty cell block, the window is smudged in blood"
+      }
+    }
+  },
+  "Waste Dump": {
+    "LongDesc": "As you travel down this tunnel of refuse you slide out into the open air and land into an even bigger pile of waste as you are dumped out of the prison's sewage, as you are inches away from freedom.  theres seems to be something moving in the waste with you.",
+    "ShortDesc": "opening up around you is the dump for all the sewage from the entire prison, gross",
+    "Visited": false,
+    "Characters": {
+      "Half Zombie": {
+        "Inventory": {},
+        "Stats": {
+          "Thrift": -1,
+          "Armour": 0,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 1
+        },
+        "Desc": "A zombie missing the lower half of its body tried to painfully crawl its way towards you using one of its decaying arms",
+        "Wearing": null,
+        "class": "legless"
+      }
+    },
+    "Containers": {
+      "Ground": null
+    },
+    "Doors": {
+      "Waste dump door": {
+        "Locked": false,
+        "Desc": "small metal bars attached to a hinge, the sewage tunnel you came through is beyond"
+      }
+    }
+  },
+  "Courtyard": {
+    "LongDesc": "A cobblesstone path leads out to the front gate.  Dried grass makes up the field ahead as the concreet walls sourrounding you arecovered by moss with barbed wire wrapped around the top, an orange sphere is vissible in the field",
+    "ShortDesc": "The dried grass sways in the wind and the concreete walls stand firm",
+    "Visited": false,
+    "Characters": {
+      "Horde": {
+        "Inventory": {},
+        "Stats": {
+          "Thrift": "0",
+          "Armour": "50",
+          "Persuasion": "0",
+          "Strength": "50",
+          "Health": "50"
+        },
+        "Desc": "A Huge horde of almost 50 zombies wanders around aimlesly together as they look for any way to move around.",
+        "Wearing": null,
+        "class": "Horde"
+      }
+    },
+    "Containers": {
+      "Ground": {
+        "Class": "Throwable",
+        "Traits": {
+          "Throw": 1,
+          "Damage": 1
+        },
+        "Desc": "A roughted up faded orange basketball"
+      }
+    },
+    "Doors": {
+      "Cafeteria Door": {
+        "Locked": true,
+        "Desc": "Looks like theres a mess of dinning tables and what looks like piles of waste all over."
+      },
+      "Front Gate Door": {
+        "Locked": true,
+        "Desc": "Through the metal Iron bars, it looks like theres another gate accross this control room that leads to the road, freedom."
+      },
+      "Tool Shed Door": {
+        "Locked": true,
+        "Desc": "A small dark room, you see some odd shapes in the shadows"
+      },
+      "South Hall Door": {
+        "Locked": true,
+        "Desc": "There is a long dim lit corridor that seems to lead on for a bit."
+      },
+      "Guard Room Door": {
+        "Locked": true,
+        "Desc": "there are some computer screens that are still lit and something that looks like a metal cylinder."
+      }
+    }
+  },
+  "Start Cell": {
+    "LongDesc": "This is your cell, the miserable, disgusting hole you've spent your last few years.",
+    "ShortDesc": "Home sweet home.",
+    "Visited": true,
+    "Characters": {
+      "Player": {
+        "Class": "Player",
+        "Inventory": {
+          "Hand": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 2
+            },
+            "Desc": "Your hand."
+          }
+        },
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 0,
+          "Persuasion": 0,
+          "Strength": 0,
+          "Health": 1
+        },
+        "Desc": "You.",
+        "Wearing": {
+          "Class": "Wearable",
+          "Traits": {
+            "Damage": 0,
+            "Armour": 1
+          },
+          "Desc": "Your standard, orange jumpsuit."
+        }
+      }
+    },
+    "Containers": {
+      "Ground": {
+        "Items": {
+          "Rock": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 3
+            },
+            "Desc": "A rock that has fallen from your cell wall."
+          }
+        },
+        "Desc": "The floor of your cell"
+      },
+      "Mattress": {
+        "Items": {
+          "Shiv": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 4
+            },
+            "Desc": "A piece of scrap metal, filed into a knife."
+          },
+          "Beans": {
+            "Class": "Edible",
+            "Traits": {
+              "Damage": 0,
+              "Healing": 2
+            },
+            "Desc": "A handful of beans."
+          }
+        },
+        "Desc": "You remember stuffing your mattress with contraband."
+      }
+    },
+    "Doors": {
+      "West Cell Block": {
+        "Locked": false,
+        "Desc": "Your cell door."
+      }
+    }
+  },
+  "West Cell Block": {
+    "LongDesc": "The familiar cell block no longer looks the same.  the once clean interior is now spattered with blood, littered with broken furniture, busted cell doors and metal bars, near the exit door you see the body of an inmate, he looks like someone you know.",
+    "ShortDesc": "the now completly destroyed cell block lacks any of its former security, or sanitation due to the blodd.  Poor Pedros burial will have to wait",
+    "Visited": false,
+    "Characters": {},
+    "Containers": {
+      "Ground": null,
+      "Corpse": {
+        "Items": {
+          "key": {
+            "Class": "Key",
+            "Traits": {
+              "Damage": 0,
+              "opens": []
+            },
+            "Desc": "a small key card with some drops of blood"
+          }
+        },
+        "Desc": "the mutilated corpse of one of the inmates, Pedro, face first in the ground, his back completly devoured.  his right arm is outstretched looks like he was holding something. Bugger always had sticky fingers"
+      }
+    },
+    "Doors": {
+      "My Cell Door": {
+        "Locked": false,
+        "Desc": "its the door that leads to your cell, nothing new"
+      },
+      "West Hall Door": {
+        "Locked": false,
+        "Desc": "You see that there is a hallway beyond, this must be the door to the west hall"
+      }
+    }
+  },
+  "Kitchen": {
+    "LongDesc": "This room used to make food for the whole prison. It's tiny, very tiny, and extremely gross. You find yourself hoping that the mysterious liquids covering the walls only appeared after the apocalypse... but that seems like wishful thinking.",
+    "ShortDesc": "This place should not be used to prepare food. Everything is disgusting.",
+    "Visited": false,
+    "Characters": {
+      "Zombie Chef": {
+        "Inventory": {
+          "Teeth": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 4
+            },
+            "Desc": "Eww... Teeth."
+          }
+        },
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 0,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 4
+        },
+        "Desc": "This zombie looks like Jim. He used to work in the kitchen, I think he was once a car thief.",
+        "Wearing": {
+          "Class": "Wearable",
+          "Traits": {
+            "Damage": 1,
+            "Armour": 2
+          },
+          "Desc": "Meant to keep food off clothes while cooking, but it seems to be covered in zombie goo now."
+        }
+      }
+    },
+    "Containers": {
+      "pantry": {
+        "Items": {
+          "Beans": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 4
+            },
+            "Desc": "A can of baked beans. If only you could find a can opener..."
+          }
+        },
+        "Desc": "This cabinet used to be filled with food that would last days... it appears to have been emptied."
+      },
+      "oven": {
+        "Items": {},
+        "Desc": "The oven is completely disabled, the gas is turned off. What is happening outside this prison?"
+      }
+    },
+    "Doors": {
+      "Cafeteria Door": {
+        "Locked": false,
+        "Desc": "A swinging door leads to the cafeteria."
+      }
+    }
+  },
+  "North Cell Block": {
+    "LongDesc": "An oddly tidy cell block. This is Ivan's cell block, and if he's here it could mean trouble for you. The man is terrifying!",
+    "ShortDesc": "Ivan's cell block. It appears to be nearly untouched.",
+    "Visited": false,
+    "Characters": {
+      "Zombie James": {
+        "Class": "Zombie",
+        "Inventory": {
+          "Teeth": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 4
+            },
+            "Desc": "Eww... Teeth."
+          }
+        },
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 0,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 4
+        },
+        "Desc": "James, but a zombie.",
+        "Wearing": {
+          "Class": "Wearable",
+          "Traits": {
+            "Damage": 0,
+            "Armour": 1
+          },
+          "Desc": "Your standard, orange jumpsuit."
+        }
+      },
+      "Zombie luke": {
+        "Class": "Zombie",
+        "Inventory": {
+          "Teeth": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 4
+            },
+            "Desc": "Eww... Teeth."
+          }
+        },
+        "Stats": {
+          "Thrift": 0,
+          "Armour": 0,
+          "Persuasion": 0,
+          "Strength": 1,
+          "Health": 4
+        },
+        "Desc": "Luke, but a zombie.",
+        "Wearing": {
+          "Class": "Wearable",
+          "Traits": {
+            "Damage": 0,
+            "Armour": 1
+          },
+          "Desc": "Your standard, orange jumpsuit."
+        }
+      }
+    },
+    "Containers": {
+      "Desk": {
+        "Items": {
+          "Empty handgun": {
+            "Class": "Melee",
+            "Traits": {
+              "Damage": 3
+            },
+            "Desc": "A guards handgun. There is no magazine."
+          },
+          "Rotten banana": {
+            "Class": "Edible",
+            "Traits": {
+              "Damage": 0,
+              "Healing": -1
+            },
+            "Desc": "A completely black banana. Almost certainly not safe to eat."
+          }
+        },
+        "Desc": "The guard desk in the center of the block."
+      }
+    },
+    "Doors": {
+      "North Hall": {
+        "Locked": false,
+        "Desc": "The door to the hallway"
+      },
+      "Ivan's Cell": {
+        "Locked": false,
+        "Desc": "The cell door to Ivan's cell. It's torn off the wall."
+      }
+    }
+  },
+  "North Hall": {
+    "LongDesc": "A long dusty hallway stretches ahead with another barred door at the other end, along with others leading to what seems like more cells.  One of these doors has a red cross on it. there are scattered belongings accross the floor",
+    "ShortDesc": "the long ominous hallway with doors for the Hospital wing, West hallway and north cell block",
+    "Visited": false,
+    "Characters": {},
+    "Containers": {
+      "Ground": {
+        "Class": "melee",
+        "Traits": {
+          "Damage": 3
+        },
+        "Desc": "A small plactic toothrush with a sharp filled end"
+      }
+    },
+    "Doors": {
+      "Hospital Door": {
+        "Locked": true,
+        "Desc": "A series of what looks like unmade beds with dirty white sheets"
+      },
+      "West Hall Door": {
+        "Locked": true,
+        "Desc": "A long dirty corridor, must be the West hallway it looks like it has some other doors"
+      },
+      "North Cell Block Door": {
+        "Locked": true,
+        "Desc": "Dirty floor and walls and what looks like 2 moving bodies"
+      },
+      "Guard Room Door": {
+        "Locked": true,
+        "Desc": "there are some computer screens that are still lit and something that looks like a metal cylinder."
+      }
+    }
+  }
+}
