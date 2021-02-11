@@ -57,7 +57,7 @@ WestHallDoorCaf = {"Locked": True, "Desc": "Looks like a halway but heading in t
 CourtyardDoor = {"Locked": True, "Desc": "looking through you see grass and a big fence"}
 
 VendingMachine = {"Items": {"Can of Spripesi Cola Up": Soda},
-                  "Desc": "A banged up old vending machine, looks like its still powered"}
+                  "Desc": "A banged up old vending machine, looks like its still powered with a few drinks left"}
 
 TrashCan = {"Items": {"Hard Garbage": HardGarbage},
             "Desc": "a dirty old trash can with the smell of old garbage coming out of it."}
@@ -358,7 +358,7 @@ PrisonGuard = {
     "Class": "PrisonGuard"
 }
 
-GuardRoom = {
+WestHall = {
     "Doors": {
         "CourtYard Door": CourtYardDoor,
         "North Hall Door": NorthHallDoorG
@@ -533,7 +533,6 @@ pantry = build_container(
 )
 
 containers = {
-    "Ground": {},
     "oven": oven,
     "pantry": pantry
 }
@@ -731,8 +730,8 @@ north_cell_block = build_room(
 prison = {
     "North Cell Block": north_cell_block,
     "South Cell Block": south_cell_block,
-    "Sewer": sewer,
-    "Start Cell": start_cell,
+    "Sewer": sewer,-
+    "Start Cell": start_cell, 
     "Front Gate": front_gate,
     "Kitchen": kitchen,
     "Cafeteria": Cafeteria,
@@ -742,13 +741,13 @@ prison = {
     "South Hall": SouthHall,
     "West Hall": WestHall,
     "Janitors Closet": JanitorsCloset,
-    "Waste Dump": WasteDump,
+    "Waste Dump": WasteDump,                  
     "Washroom": Washroom,
     "Bloody Cell": BloodyCell,
     "Ivan's Cell": IvanCell,
-    "West Cell Block": WestCellBlock,
-    "Guard Room": GuardRoom,
-    "Tool Shed": ToolShed
+    "West Cell Block": WestCellBlock,          
+    "easter Egg Room":
+
 }
 
 print(json.dumps(prison))
