@@ -23,7 +23,8 @@ import json
 
 # Container = {"Items":{}, "Desc":""}
 
-# Character = {"Stats":{"Strength":"", "Thrift":"", "Persuasion":"", "Armour":"", "Health":""}, "Inventory":{}, "Wearing":None, "Desc":"", "class":""}
+# Character = {"Stats":{"Strength":"", "Thrift":"", "Persuasion":"", "Armour":"", "Health":""}, "Inventory":{},
+# "Wearing":None, "Desc":"", "class":""}
 
 # Item = {"Class":"", "Desc":"", "Traits":{"Damage":0}}
 
@@ -300,7 +301,7 @@ Corpse = {"Items": {"key": Key},
                   " sticky fingers"}
 
 WestCellBlock = {"Doors": {"My Cell Door": StartDoor, "West Hall Door": WestHallDoor},
-                 "Containers": {"Ground": None, "Corpse": Corpse}, "Characters": {},
+                 "Containers": {"Ground": {}, "Corpse": Corpse}, "Characters": {},
                  "ShortDesc": "the now completly destroyed cell block lacks any of its former security, or sanitation "
                               "due to the blodd.  Poor Pedros burial will have to wait",
                  "LongDesc": "The familiar cell block no longer looks the same.  the once clean interior is now"
@@ -559,10 +560,10 @@ Ivan = {
         "Armour": "5",
         "Health": "10"
     },
-    "Inventory": {"Sledgehammer": Sledgehammer}, "Wearing": None,
+    "Inventory": {"Sledgehammer": Sledgehammer}, "Wearing": {},
     "Desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you. He can"
             " be a great ally, but an even worse enemy.",
-    "class": ""
+    "class": {}
 }
 
 IvanCell = {
@@ -570,7 +571,7 @@ IvanCell = {
         "NorthCellBlockDoor": NorthCellBlockDoor
     },
     "Containers": {
-        "Ground": ""
+        "Ground": {}
     },
     "Characters": {"Ivan": Ivan},
     "ShortDesc": "Ivan's Cell",
@@ -612,7 +613,7 @@ JanitorsCloset = {
         "South Hall Door": SouthHallDoor
     },
     "Containers": {
-        "Ground": None,
+        "Ground": {},
         "Joes Drawer": JoesDrawer
     },
     "Characters": {},
@@ -671,7 +672,7 @@ WestHall = {
         "Characters": {},
         "ShortDesc": "the long ominous hallway with doors for the Hospital wing, north and south hallway and West "
                      "cell block",
-        "LongDesc": "",
+        "LongDesc": {},
         "Visited": False
 }
 
@@ -734,7 +735,7 @@ GuardRoom = {
         "Prison Guard": PrisonGuard
     },
     "ShortDesc": "The guards room is dimly lit, maybe everyone left but its worth checking out for weapons",
-    "LongDesc": "",
+    "LongDesc": {},
     "Visited": False
 }
 
