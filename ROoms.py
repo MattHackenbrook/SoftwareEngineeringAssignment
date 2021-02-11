@@ -133,3 +133,25 @@ Box = {"Items":{"Shovel":Shovel}, "Desc":"You see a box with something inside"}
 
 ToolShed = {"Door":CourtyardDoor, "Container's":{"Ground":"", "Box":Shovel}, "Characters":"", "ShortDesc":"The ToolShed", "LongDesc":"As you enter the tool shed you see a locker full of shovels. You remember the countless days you spent digging holes for the prison under the hot sun. The guards would laugh as they poured your water in the hole infront of you, leaving you with a burning sensation in your throat with no way to quench your thirst. 'Im glad those bastards are dead' you say to yourself.", "Visited":False}                                    
         
+
+#South Hall:
+
+WestHallDoor = {"Locked":True, "Desc":"This leads to the West Hall"}
+
+WashroomDoor = {"Locked":False, "Desc":"You can hear water running as you continue walking. This must be the door to the washroom"}
+
+SouthCellBlockDoor = {"Locked":False, "Desc":"You see blood stains on the ground infront of the door. This leads to the South Cell Block"}
+
+JanitorClosetDoor = {"Locked":True, "Desc":"This leads to the Janitor's Closet. There might be something useful in there"}
+
+CafeteriaDoor = {"Locked":False, "Desc":"This leads to the Cafeteria."}
+
+Zombie = {"Stats":{"Strength":1, "Thrift":0, "Persuasion":0, "Armour":1, "Health":1}, "Inventory":{}, "Wearing":None, "Desc":"A Zombie", "Class":"zombie"}
+
+SouthHall = {"Doors":{"West Hall Door":WestHallDoor, "Washroom Door":WashroomDoor, "South Cell Block Door":SouthCellBlockDoor, "Janitor's Closet Door":JanitorClosetDoor, "Cafeteria Door":CafeteriaDoor}, "Containers":{"Ground":""}, "Characters":{"Zombie":Zombie, "Zombie2":Zombie}, "ShortDesc":"The South Hall", "LongDesc":"The South Hall looks completely abandoned just like West Hall did. You see several corpses with missing limbs and what looks like bites that have been taken out of them. As you take a closer look you see a corpse with its eyes wide open and quickly realize it was your good friend Jeff. You take a moment to close his eyes and pray that he is in a better place now. A tear runs down your face as you get up and continue to move on trying to escape this hellhole.", "Visited":False}
+
+#Hospital Ward:
+
+
+
+
