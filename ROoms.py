@@ -672,7 +672,9 @@ WestHall = {
         "Characters": {},
         "ShortDesc": "the long ominous hallway with doors for the Hospital wing, north and south hallway and West "
                      "cell block",
-        "LongDesc": {},
+        "LongDesc": "the long ominous hallway with doors you hear the sounds the prison echoing through the doors, "
+                    "down the hall you can see the hospital wing, more hallways, north and south and halls leading,"
+                    "back the way you came. "
         "Visited": False
 }
 
@@ -735,7 +737,9 @@ GuardRoom = {
         "Prison Guard": PrisonGuard
     },
     "ShortDesc": "The guards room is dimly lit, maybe everyone left but its worth checking out for weapons",
-    "LongDesc": {},
+    "LongDesc": "Judging by the state of the prison you would expect this room to be empty, the lights are dim,"
+                 "the room is messy from people scavenging, they must be looking for weaopons, the guards are"
+                 "usually armed, its worth checking out",
     "Visited": False
 }
 
