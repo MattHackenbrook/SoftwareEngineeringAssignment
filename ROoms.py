@@ -989,6 +989,107 @@ north_cell_block = build_room(
     "is terrifying!",
     False
 )
+#Easter Egg Room:
+
+
+WestHallDoorEaster = {
+    "Locked": True,
+    "Desc": "You can see you to the west hall, no one in sight but can't be sure if thats a good thing"
+}
+
+RickAstleyMusic = {
+    "Class": "Misc",
+    "Desc": "Rick Asthly's Never gonna give you up is playing on a screen",
+    "Traits": {
+        "Damage": 1,
+    }
+}
+
+EmptyGun = {
+    "Class": "Misc",
+    "Desc": "A corpse is clutching a gun with no bullets, he looks to have shot himself from the music",
+    "Traits": {
+        "Health": 0
+    }
+}
+
+Corpse = {"Items": {"key": Key},
+          "Desc": "A corpse is lying face down holding a gun with no bullets while the song plays in the background."
+                  "You can't tell at this point if he shot himself to get away from the zombies or the music"}
+
+EasterEggRoom = {
+    "Doors": {
+        "West Hall Door Easter": WestHallDoorEaster
+    },
+    "Containers": {
+        "Ground": {
+            "Empty Gun": EmptyGun
+        },"Corpse": Corpse
+    },
+    "Characters": {
+    },
+    "ShortDesc": "This room is mysterious or a complete waste of time",
+    "LongDesc": "This room was likely used for torture, this prison is rampant with experiments and unethical,"
+                 "guards, the longer you spend in this room the more likely you end up like the corpse on the"
+                 "floor",
+    "Visited": False
+}
+
+#Jones’ cell:
+
+SouthCellBlockDoorJones = {
+    "Locked": True,
+    "Desc": "what looks like the empty cell block, the window is smudged in blood"
+}
+
+Bomb = {
+    "Class": "melee",
+    "Desc": "Rick Asthly's Never gonna give you up is playing on a screen",
+    "Traits": {
+        "Damage": 10,
+    }
+}
+
+BombMakingEquipment = {
+    "Class": "Misc",
+    "Desc": "With Jones' help this equipment can be used to make bombs",
+    "Traits": {
+        "damage": 0
+    }
+}
+
+MikeJones = {
+    "Stats": {
+        "Strength": 0,
+        "Thrift": 15,
+        "Persuasion": 0,
+        "Armour": 0,
+        "Health": 0
+    },
+    "Inventory": {"Bomb Making Equipment": BombMakingEquipment},
+    "Wearing": {"Prison Uniform": prison_uniform},
+    "Desc": "A weak old man who landed in prison for crimes against humanity, his intelligence is all thats left",
+    "Class": "MikeJones"
+}
+
+JonesCell = {
+    "Doors": {
+        "South Cell Block Door": SouthCellBlockDoorJones
+    },
+    "Containers": {
+        "Ground": {
+            "Bomb": Bomb
+        }
+    },
+    "Characters": {"Mike Jones": MikeJones
+    },
+    "ShortDesc": "This cell contains the prisons most infamous felon, Mike Jones, anarchist",
+    "LongDesc": "This is the top security wing of the prison, the most dangerous criminals are locked away here."
+                 "Mike Jones is an old man know and has no strength to fight zombie but his bomb making skils are"
+                 "legendary, his skill will be useful",
+    "Visited": False
+    
+}
 
 prison = {
     "North Cell Block": north_cell_block,
