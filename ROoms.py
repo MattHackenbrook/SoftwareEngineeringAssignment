@@ -1,3 +1,119 @@
+import json
+FrontGate = {}
+Kitchen = {}
+NorthCellBlock = {}
+SouthCellBlock = {}
+StartCell = {}
+Sewer = {}
+
+
+def build_room(Doors, Containers, Characters, ShortDesc, LongDesc, Visited):
+    room = {
+        "doors": Doors,
+        "containers": Containers,
+        "characters": Characters,
+        "shortDesc": ShortDesc,
+        "longDesc": LongDesc,
+        "visited": Visited
+    }
+    return room
+
+
+def build_door(Locked, Desc):
+    door = {
+        "locked": Locked,
+        "desc": Desc
+    }
+    return door;
+
+
+def build_container(items, desc):
+    container = {
+        "items": items,
+        "desc": desc
+    }
+    return container
+
+
+def build_stats(str, thr, per, arm, hth):
+    stats = {
+        "strength": str,
+        "thrift": thr,
+        "persuasion": per,
+        "armour": arm,
+        "health": hth
+    }
+    return stats;
+
+
+def build_character(stats, inventory, wearing, desc, class_):
+    character = {
+        "stats": stats,
+        "inventory": inventory,
+        "wearing": wearing,
+        "desc": desc,
+        "class": class_
+    }
+    return character
+
+
+def wearable_item_traits(damage, armour):
+    traits = {
+        "damage": damage,
+        "armour": armour
+    }
+    return traits
+
+
+def readable_item_traits(damage, text):
+    traits = {
+        "damage": damage,
+        "text": text
+    }
+    return traits
+
+
+def edible_item_traits(damage, healing):
+    traits = {
+        "damage": damage,
+        "healing": healing
+    }
+    return traits
+
+
+def key_item_traits(damage, door_list):
+    traits = {
+        "damage": damage,
+        "doors": door_list
+    }
+    return traits
+
+
+def build_item(desc, traits, class_):
+    item = {
+        "class": class_,
+        "desc": desc,
+        "traits": traits
+    }
+    return item
+
+
+
+def build_room(doors, containers, characters, short_desc, long_desc):
+    return {
+        "Doors": doors,
+        "Containers": containers,
+        "Characters": characters,
+        "ShortDesc": short_desc,
+        "LongDesc": long_desc,
+        "Visited": False
+    }
+
+
+def set_front_gate():
+    pass
+
+
 # -*- coding: utf-8 -*-
 """
 Created on Thu Feb  4 17:37:07 2021
@@ -6,6 +122,7 @@ Created on Thu Feb  4 17:37:07 2021
 """
 
 import json
+
 
 # to convert json to python
 # with open('C:/Users/3picm/Documents/softeng/SoftwareEngineeringAssignment/Rooms Example J.K.json') as f:
@@ -31,7 +148,6 @@ import json
 # Room = {"Doors":{}, "Containers":{"Ground",}, "Characters":{}, "ShortDesc":"", "LongDesc":"", "Visited":False}
 
 # presets:
-
 
 
 def build_room(Doors, Containers, Characters, ShortDesc, LongDesc, Visited):
@@ -265,11 +381,11 @@ NorthHall = {
         "Ground": Shank
     },
     "Characters": {},
-     "ShortDesc": "the long ominous hallway with doors for the Hospital wing, West hallway and north cell block",
-     "LongDesc": "A long dusty hallway stretches ahead with another barred door at the other end, along with"
-                 " others leading to what seems like more cells.  One of these doors has a red cross on it."
-                 " there are scattered belongings accross the floor",
-     "Visited": False
+    "ShortDesc": "the long ominous hallway with doors for the Hospital wing, West hallway and north cell block",
+    "LongDesc": "A long dusty hallway stretches ahead with another barred door at the other end, along with"
+                " others leading to what seems like more cells.  One of these doors has a red cross on it."
+                " there are scattered belongings accross the floor",
+    "Visited": False
 }
 
 # Bloody cell:
@@ -498,7 +614,6 @@ HospitalWard = {
     "Visited": False
 }
 
-
 # Washroom
 
 SouthHallDoor = {
@@ -666,16 +781,16 @@ WestHall = {
         "Hospital Door": HospitalDoorW,
         "North Hall Door": NorthHallDoorW,
         "South Hall Door": SouthHallDoorW},
-        "Containers": {
-            "Ground": Syringe
-        },
-        "Characters": {},
-        "ShortDesc": "the long ominous hallway with doors for the Hospital wing, north and south hallway and West "
-                     "cell block",
-        "LongDesc": "the long ominous hallway with doors you hear the sounds the prison echoing through the doors, "
-                    "down the hall you can see the hospital wing, more hallways, north and south and halls leading,"
-                    "back the way you came. "
-        "Visited": False
+    "Containers": {
+        "Ground": Syringe
+    },
+    "Characters": {},
+    "ShortDesc": "the long ominous hallway with doors for the Hospital wing, north and south hallway and West "
+                 "cell block",
+    "LongDesc": "the long ominous hallway with doors you hear the sounds the prison echoing through the doors, "
+                "down the hall you can see the hospital wing, more hallways, north and south and halls leading,"
+                "back the way you came. ",
+    "Visited": False
 }
 
 # Guard room:
@@ -738,11 +853,10 @@ GuardRoom = {
     },
     "ShortDesc": "The guards room is dimly lit, maybe everyone left but its worth checking out for weapons",
     "LongDesc": "Judging by the state of the prison you would expect this room to be empty, the lights are dim,"
-                 "the room is messy from people scavenging, they must be looking for weaopons, the guards are"
-                 "usually armed, its worth checking out",
+                "the room is messy from people scavenging, they must be looking for weaopons, the guards are"
+                "usually armed, its worth checking out",
     "Visited": False
 }
-
 
 zombie_inv = {
     "Teeth": build_item("Eww... Teeth.", melee_item_traits(4), "Melee")
@@ -976,8 +1090,10 @@ containers = {
 }
 
 characters = {
-    "Zombie James": build_character(zombie_stats, zombie_inv, {"Prison Uniform": prison_uniform}, "James, but a zombie.", "Zombie"),
-    "Zombie luke": build_character(zombie_stats, zombie_inv, {"Prison Uniform": prison_uniform}, "Luke, but a zombie.", "Zombie"),
+    "Zombie James": build_character(zombie_stats, zombie_inv, {"Prison Uniform": prison_uniform},
+                                    "James, but a zombie.", "Zombie"),
+    "Zombie luke": build_character(zombie_stats, zombie_inv, {"Prison Uniform": prison_uniform}, "Luke, but a zombie.",
+                                   "Zombie"),
 }
 
 north_cell_block = build_room(
@@ -989,7 +1105,7 @@ north_cell_block = build_room(
     "is terrifying!",
     False
 )
-#Easter Egg Room:
+# Easter Egg Room:
 
 
 WestHallDoorEaster = {
@@ -1024,18 +1140,18 @@ EasterEggRoom = {
     "Containers": {
         "Ground": {
             "Empty Gun": EmptyGun
-        },"Corpse": Corpse
+        }, "Corpse": Corpse
     },
     "Characters": {
     },
     "ShortDesc": "This room is mysterious or a complete waste of time",
     "LongDesc": "This room was likely used for torture, this prison is rampant with experiments and unethical,"
-                 "guards, the longer you spend in this room the more likely you end up like the corpse on the"
-                 "floor",
+                "guards, the longer you spend in this room the more likely you end up like the corpse on the"
+                "floor",
     "Visited": False
 }
 
-#Jones’ cell:
+# Jones’ cell:
 
 SouthCellBlockDoorJones = {
     "Locked": True,
@@ -1054,7 +1170,7 @@ BombMakingEquipment = {
     "Class": "Misc",
     "Desc": "With Jones' help this equipment can be used to make bombs",
     "Traits": {
-        "damage": 0
+        "damage": 1
     }
 }
 
@@ -1064,7 +1180,7 @@ MikeJones = {
         "Thrift": 15,
         "Persuasion": 0,
         "Armour": 0,
-        "Health": 0
+        "Health": 5
     },
     "Inventory": {"Bomb Making Equipment": BombMakingEquipment},
     "Wearing": {"Prison Uniform": prison_uniform},
@@ -1082,13 +1198,13 @@ JonesCell = {
         }
     },
     "Characters": {"Mike Jones": MikeJones
-    },
+                   },
     "ShortDesc": "This cell contains the prisons most infamous felon, Mike Jones, anarchist",
     "LongDesc": "This is the top security wing of the prison, the most dangerous criminals are locked away here."
-                 "Mike Jones is an old man know and has no strength to fight zombie but his bomb making skils are"
-                 "legendary, his skill will be useful",
+                "Mike Jones is an old man know and has no strength to fight zombie but his bomb making skils are"
+                "legendary, his skill will be useful",
     "Visited": False
-    
+
 }
 
 prison = {
@@ -1111,7 +1227,16 @@ prison = {
     "Ivan's Cell": IvanCell,
     "West Cell Block": WestCellBlock,
     "Guard Room": GuardRoom,
-    "Tool Shed": ToolShed
+    "Tool Shed": ToolShed,
+    "Easter Egg Room": EasterEggRoom,
+    "Jones Cell": JonesCell
 }
 
 print(json.dumps(prison))
+
+
+
+
+
+
+
