@@ -5,7 +5,9 @@ Created on Sat Mar 13 13:52:34 2021
 
 @author: user1
 """
-
+import CompileOutput
+import Translator
+import WorldHandler
 class ConsoleManager:
     
     def __init__(self, room, command):
@@ -23,7 +25,8 @@ class ConsoleManager:
         else:
             print("Invalid input. Please try again")
     
-    if WorldHandler().checkEnd() == True:
+    def endGame(self)
+        if WorldHandler().checkEnd() == True:
         print("Game Over")
     
             
