@@ -4,9 +4,10 @@ from enum import Enum
 class Action(Enum):
     THROW = 1
     HIT = 2
-    INSPECT = 3 #if inspecting NPC result in interaction prompt
+    INSPECT = 3 
     TAKE = 4
     USE = 5
+    SPEAK = 6
 
 
 class Command:
