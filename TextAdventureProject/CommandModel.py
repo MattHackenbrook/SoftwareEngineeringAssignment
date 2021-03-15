@@ -3,8 +3,8 @@ from enum import Enum
 
 class Action(Enum):
     THROW = 1
-    HTI = 2
-    INSPECT = 3
+    HIT = 2
+    INSPECT = 3 #if inspecting NPC result in interaction prompt
     TAKE = 4
     USE = 5
 
