@@ -22,7 +22,7 @@ class ConsoleManager:
         
         
     def printRoom(self):
-        return CompileOutput().playerRoomDescription(self.room)
+        return CompileOutput().playerRoomDescription(self.room) #this needs to change because printing should just be printing the room, PRD is the compiler setting up the player not the room
         
     
     def printFailure(self):
@@ -30,9 +30,9 @@ class ConsoleManager:
              print("Invalid input. Please try again")
              self.userInput = input("\n... ")
     
-    def endGame(self)
+    def endGame(self):
         if WorldHandler().checkEnd() == True:
-        print("Game Over")
+            print("Game Over")
     
     def helper(self):
         print('''You have 7 different commands you can use in the game.
