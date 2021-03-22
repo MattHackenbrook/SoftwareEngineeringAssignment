@@ -12,3 +12,13 @@ def parserCommand(Action): #we might need to disscuss over command input confuss
         choice = input("\nWhat is your choice? ")
         choice = str(choice)
     return choice
+
+
+def parser(input):
+    command = ""
+    command_words = list(input.split(" "))
+    new_command = []
+    for word in command_words:
+        if word not in Quit_words:
+            if word in Action:
+                new_command.append(Action[word])
