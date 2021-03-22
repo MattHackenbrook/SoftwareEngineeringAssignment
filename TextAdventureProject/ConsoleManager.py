@@ -22,7 +22,7 @@ class ConsoleManager:
         
         
     def printRoom(self):
-        return CompileOutput().playerRoomDescription(self.room) #this needs to change because printing should just be printing the room, PRD is the compiler setting up the player not the room
+        print(self.room["LongDesc"]) #this needs to change because printing should just be printing the room, PRD is the compiler setting up the player not the room
         
     
     def printFailure(self):
