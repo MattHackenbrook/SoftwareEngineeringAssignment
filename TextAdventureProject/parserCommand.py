@@ -3,7 +3,7 @@ Action = {'THROW': 'TO THROW',
 
 
  
-def parserCommand(Action): #we might need to disscuss over command input confussion
+def parserCommand(Action):
     print("\nWhat action do you want to take?: ")
     for choice in Action:
          [print(key, ' : ', value) for key, value in Action.items()]
