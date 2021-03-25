@@ -1,11 +1,11 @@
 {
   "North_Cell_Block": {
     "doors": {
-      "Ivan's Cell": {
+      "Ivans_Cell": {
         "locked": false,
         "desc": "The cell door to Ivan's cell. It's torn off the wall."
       },
-      "North Hall": {
+      "North_Hall": {
         "locked": false,
         "desc": "The door to the hallway"
       }
@@ -30,6 +30,22 @@
           }
         },
         "desc": "The guard desk in the center of the block."
+      },
+      "Mop Bucket": {
+        "items":{
+          "Janitors key": {
+            "classification": "Key",
+            "desc": "A key to many doors in the prison",
+            "traits": {
+              "Damage": 0,
+              "opens": [
+                "Courtyard.Cafeteria",
+                "West_Hall.Cafeteria",
+                "South_Hall.Janitors_Closet"
+              ]
+            }
+          }
+        }
       }
     },
     "characters": {
@@ -100,15 +116,15 @@
   },
   "South_Cell_Block": {
     "doors": {
-      "South Hall": {
+      "South_Hall": {
         "locked": false,
         "desc": "The entrance to the south hall."
       },
-      "Bloody Cell": {
+      "Bloody_Cell": {
         "locked": false,
         "desc": "You can see that this cell is completely covered in blood. What happened here?"
       },
-      "Jones' Cell": {
+      "Jones_Cell": {
         "locked": true,
         "desc": "This cell is completely sealed up from a roof collapse. It belongs to your old friend, Jones, a friendly backyard chemist."
       }
@@ -275,11 +291,11 @@
         "locked": true,
         "desc": "A hole in the pipe."
       },
-      "South": {
+      "Waste_Dump": {
         "locked": false,
         "desc": "The sewage is running this direction, it's probably a way out!"
       },
-      "North": {
+      "Easter_Egg_Room": {
         "locked": false,
         "desc": "The sewage is draining from this direction. There's probably nothing of importance"
       }
@@ -297,7 +313,7 @@
   },
   "Start_Cell": {
     "doors": {
-      "West Cell Block": {
+      "West_Cell_Block": {
         "locked": false,
         "desc": "Your cell door."
       }
@@ -396,7 +412,7 @@
   },
   "Kitchen": {
     "doors": {
-      "Cafeteria Door": {
+      "Cafeteria": {
         "locked": false,
         "desc": "A swinging door leads to the cafeteria."
       }
@@ -458,15 +474,15 @@
   },
   "Cafeteria": {
     "doors": {
-      "Kitchen Door": {
+      "Kitchen": {
         "locked": false,
         "desc": "Inside you see what looks like a kitchen, and is that food?"
       },
-      "South Hall Door": {
+      "South_Hall": {
         "locked": false,
         "desc": "Looks like a hallway but heading in the south direction"
       },
-      "West Hall Door": {
+      "West_Hall": {
         "locked": true,
         "desc": "Looks like a halway but heading in the weat direction"
       },
@@ -546,25 +562,21 @@
   },
   "Courtyard": {
     "doors": {
-      "Front Gate Door": {
+      "Front_Gate": {
         "locked": true,
         "desc": "Through the metal Iron bars, it looks like there's another gate across this control room that leads to the road, freedom."
       },
-      "Guard Room Door": {
+      "Guard_Room": {
         "locked": true,
         "desc": "there are some computer screens that are still lit and something that looks like a metal cylinder."
       },
-      "Cafeteria Door": {
+      "Cafeteria": {
         "locked": true,
         "desc": "Looks like theres a mess of dinning tables and what looks like piles of waste all over."
       },
-      "South Hall Door": {
+      "South_Hall": {
         "locked": true,
         "desc": "There is a long dim lit corridor that seems to lead on for a bit."
-      },
-      "Tool Shed Door": {
-        "locked": true,
-        "desc": "A small dark room, you see some odd shapes in the shadows"
       }
     },
     "containers": {
@@ -602,11 +614,11 @@
   },
   "Hospital_Ward": {
     "doors": {
-      "West Hall Door": {
+      "West_Hall": {
         "locked": true,
         "desc": "This leads to the West Hall"
       },
-      "North Hall Door": {
+      "North_Hall": {
         "locked": true,
         "desc": "Leads to the North Hall"
       }
@@ -659,19 +671,19 @@
   },
   "North_Hall": {
     "doors": {
-      "North Cell Block Door": {
+      "North_Cell_Block": {
         "locked": true,
         "desc": "Dirty floor and walls and what looks like 2 moving bodies"
       },
-      "Guard Room Door": {
+      "Guard_Room": {
         "locked": true,
         "desc": "there are some computer screens that are still lit and something that looks like a metal cylinder."
       },
-      "Hospital Door": {
+      "Hospital": {
         "locked": true,
         "desc": "A series of what looks like unmade beds with dirty white sheets"
       },
-      "West Hall Door": {
+      "West_Hall": {
         "locked": true,
         "desc": "A long dirty corridor, must be the West hallway it looks like it has some other doors"
       }
@@ -696,19 +708,19 @@
   },
   "South_Hall": {
     "doors": {
-      "West Hall Door": {
+      "West_Hall": {
         "locked": true,
         "desc": "This leads to the West Hall"
       },
-      "Washroom Door": {
+      "Washroom": {
         "locked": false,
         "desc": "You can hear water running as you continue walking. This must be the door to the washroom"
       },
-      "South Cell Block Door": {
+      "South_Cell_Block": {
         "locked": false,
         "desc": "You see blood stains on the ground infront of the door. This leads to the South Cell Block"
       },
-      "Janitor's Closet Door": {
+      "Janitors_Closet": {
         "locked": true,
         "desc": "This leads to the Janitor's Closet. There might be something useful in there"
       },
@@ -801,7 +813,20 @@
       }
     },
     "containers": {
-      "Ground": {},
+      "Ground": {
+        "items": {
+          "Guard Key": {
+            "classification": "Key",
+            "desc": "The key to the guard room",
+            "traits": {
+              "Damage": 0,
+              "Opens": [
+                "North_Hall.Guard_Room"
+              ]
+            }
+          }
+        }
+      },
       "Joes Drawer": {
         "items": {
           "Half Used Crack Pipe": {
@@ -818,7 +843,17 @@
             "traits": {
               "Healing": 3
             }
-          }
+          },
+          "Shovel": {
+            "classification": "Key",
+            "desc": "You pick up a shovel, You can use it to break through somewhere",
+            "traits": {
+              "Damage": 3,
+              "Opens":[
+                "Washroom.Sewer"
+              ]
+            }
+          },
         },
         "desc": "Joe Dirt's draw is left open, he must of left in a rush"
       }
@@ -830,7 +865,7 @@
   },
   "Waste_Dump": {
     "doors": {
-      "Waste dump door": {
+      "Waste_dump": {
         "locked": false,
         "desc": "small metal bars attached to a hinge, the sewage tunnel you came through is beyond"
       }
@@ -859,7 +894,7 @@
   },
   "Washroom": {
     "doors": {
-      "South Hall Door": {
+      "South_Hall": {
         "locked": false,
         "desc": "This leads to the South Hall"
       },
@@ -888,7 +923,7 @@
   },
   "Bloody_Cell": {
     "doors": {
-      "South Cell Block Door": {
+      "South_Cell_Block": {
         "locked": false,
         "desc": "what looks like the empty cell block, the window is smudged in blood"
       }
@@ -913,7 +948,7 @@
   },
   "Ivans_Cell": {
     "doors": {
-      "NorthCellBlockDoor": {
+      "North_Cell_Block": {
         "locked": false,
         "desc": "This leads to the North Cell Block"
       }
@@ -932,10 +967,15 @@
         },
         "inv": {
           "Sledgehammer": {
-            "classification": "melee",
+            "classification": "Key",
             "desc": "A giant sledgehammer, good for smashing.",
             "traits": {
-              "Damage": 7
+              "Damage": 7,
+              "Opens": [
+                "North_Cell_Block.North_Hall",
+                "North_Hall.West_Hall",
+                "West_Hall.South_Hall"
+              ]
             }
           }
         },
@@ -950,11 +990,11 @@
   },
   "West_Cell_Block": {
     "doors": {
-      "My Cell Door": {
+      "Start_Cell": {
         "locked": false,
         "desc": "its the door that leads to your cell, nothing new"
       },
-      "West Hall Door": {
+      "West_Hall": {
         "locked": false,
         "desc": "You see that there is a hallway beyond, this must be the door to the west hall"
       }
@@ -963,12 +1003,14 @@
       "Ground": {},
       "Corpse": {
         "items": {
-          "key": {
+          "HallwayKey": {
             "classification": "Key",
-            "desc": "a small key card with some drops of blood",
+            "desc": "A key card to the hallways",
             "traits": {
               "Damage": 0,
-              "opens": []
+              "opens": {
+
+              }
             }
           }
         },
@@ -982,11 +1024,11 @@
   },
   "Guard_Room": {
     "doors": {
-      "CourtYard Door": {
+      "Courtyard": {
         "locked": true,
         "desc": "You can see into the courtyard, from what you can tell this is how you entered the prison, but now there's a bunch of zomies roaming around"
       },
-      "North Hall Door": {
+      "North_Hall": {
         "locked": false,
         "desc": "A long dirty corridor, must be the North hallway it looks like it has some other doors"
       }
@@ -1048,36 +1090,9 @@
     "longDesc": "Judging by the state of the prison you would expect this room to be empty, the lights are dim,the room is messy from people scavenging, they must be looking for weaopons, the guards areusually armed, its worth checking out",
     "visited": false
   },
-  "Tool_Shed": {
-    "doors": {
-      "CourtYard Door": {
-        "locked": true,
-        "desc": "This is the door to the Courtyard"
-      }
-    },
-    "containers": {
-      "Ground": {},
-      "Box": {
-        "items": {
-          "Shovel": {
-            "classification": "Key",
-            "desc": "You pick up a shovel, You can use it to break through somewhere",
-            "traits": {
-              "Damage": 3
-            }
-          }
-        },
-        "desc": "You see a box with something inside"
-      }
-    },
-    "characters": {},
-    "shortDesc": "The ToolShed",
-    "longDesc": "As you enter the tool shed you see a locker full of shovels. You remember the countless days you spent digging holes for the prison under the hot sun. The guards would laugh as they poured your water in the hole infront of you, leaving you with a burning sensation in your throat with no way to quench your thirst. 'Im glad those bastards are dead' you say to yourself.",
-    "visited": false
-  },
   "Easter_Egg_Room": {
     "doors": {
-      "West Hall Door Easter": {
+      "West_Hall": {
         "locked": true,
         "desc": "You can see you to the west hall, no one in sight but can't be sure if thats a good thing"
       }
@@ -1098,10 +1113,10 @@
         "items": {
           "key": {
             "classification": "Key",
-            "desc": "a small key card with some drops of blood",
+            "desc": "A metal key",
             "traits": {
               "Damage": 0,
-              "opens": []
+              "opens": [ "Easter_Egg_Room.West_Hall" ]
             }
           }
         },
@@ -1115,7 +1130,7 @@
   },
   "Jones_Cell": {
     "doors": {
-      "South Cell Block Door": {
+      "South_Cell_Block": {
         "locked": true,
         "desc": "what looks like the empty cell block, the window is smudged in blood"
       }
