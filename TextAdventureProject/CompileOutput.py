@@ -8,4 +8,4 @@ class CompileOutput:
     def playerRoomDescription(console):
         console.printRoom()
         choice = parserCommand()
-        
+        parsed = parser(choice)

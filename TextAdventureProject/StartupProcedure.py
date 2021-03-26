@@ -32,6 +32,7 @@ def startGame():
 def main(): #populate world
     startRoom = startGame()
     console = ConsoleManager(startRoom)
+    #add loop here for game turns if nesesary for loop that uses concole to check end
     CompileOutput.PlayerRoomDescription(console)
 
 
