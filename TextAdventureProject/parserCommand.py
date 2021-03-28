@@ -1,7 +1,7 @@
 Action = {'THROW': 'TO THROW',
           'HIT': 'TO HIT'}
 
-
+QUIT_HELP = ("quit" , "Help")
  
 def parserCommand(Action):
     print("\nWhat action do you want to take?: ")
@@ -12,6 +12,8 @@ def parserCommand(Action):
         choice = input("\nWhat is your choice? ")
         choice = str(choice)
     return choice
+
+
 
 def parse_input(input):
     command = ""
