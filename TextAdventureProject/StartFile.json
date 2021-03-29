@@ -18,7 +18,7 @@
             "desc": "A completely black banana. Almost certainly not safe to eat.",
             "traits": {
               "Damage": 0,
-              "Healing": -1
+              "Healing": 1
             }
           },
           "Empty handgun": {
@@ -741,7 +741,15 @@
           "armour": 1,
           "health": 1
         },
-        "inv": {},
+        "inv": {
+          "Teeth": {
+            "classification": "Melee",
+            "desc": "Eww... Teeth.",
+            "traits": {
+              "Damage": 4
+            }
+          }
+        },
         "wearing": {},
         "desc": "A Zombie",
         "classification": "zombie"
@@ -853,7 +861,7 @@
                 "Washroom.Sewer"
               ]
             }
-          },
+          }
         },
         "desc": "Joe Dirt's draw is left open, he must of left in a rush"
       }
@@ -981,7 +989,7 @@
         },
         "wearing": {},
         "desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you. He can be a great ally, but an even worse enemy.",
-        "classification": {}
+        "classification": "NPC"
       }
     },
     "shortDesc": "Ivan's Cell",
@@ -1083,7 +1091,7 @@
           }
         },
         "desc": "A Guard is hiding under his desk, he's been beaten and is scared",
-        "classification": "PrisonGuard"
+        "classification": "NPC"
       }
     },
     "shortDesc": "The guards room is dimly lit, maybe everyone left but its worth checking out for weapons",
@@ -1177,7 +1185,7 @@
           }
         },
         "desc": "A weak old man who landed in prison for crimes against humanity, his intelligence is all thats left",
-        "classification": "MikeJones"
+        "classification": "NPC"
       }
     },
     "shortDesc": "This cell contains the prisons most infamous felon, Mike Jones, anarchist",
