@@ -17,7 +17,7 @@ def parserCommand(Action):
 
 def parsrInput(input):
     command = ""
-    command_words = list(input.lower.split(" "))
+    command_words = list(input.split(" "))
     new_command = []
     
     for word in command_words:
