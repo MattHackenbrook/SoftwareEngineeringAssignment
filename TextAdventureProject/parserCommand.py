@@ -1,7 +1,7 @@
 Action = {'THROW': 'TO THROW',
           'HIT': 'TO HIT'}
 
-QUIT_HELP = ("quit" , "Help")
+helpWords = ("Helper" , "Help")
  
 def parserCommand(Action):
     print("\nWhat action do you want to take?: ")
@@ -21,19 +21,19 @@ def parseInput(input):
     new_command = []
     
     for word in command_words:
-        if word not in QUIT_HELP:
+        if word not in helpWords:
             if word in doorList:
                 new_command.append(doorList[word])
-        if word not in QUIT_HELP:
+        if word not in helpWords:
             if word in containerList:
                 new_command.append(containerList[word])
-        if word not in QUIT_HELP:
+        if word not in helpWords:
             if word in itemList:
                 new_command.append(itemList[word])
-        if word not in QUIT_HELP:
+        if word not in helpWords:
             if word in characterList:
                 new_command.append(characterList[word])
-        elif word in QUIT_HELP:
+        elif word in helpWords:
             self.console.helper()
     for word in new_command[:2]:
         command = command + word + " "
