@@ -7,5 +7,8 @@ class CompileOutput:
 
     def playerRoomDescription(console):
         console.printRoom()
+        currRoom = console.room
         choice = parserCommand()
-        parsed = parser(choice)
+        parsed = parserInput(choice, currRoom, console)
+
+
