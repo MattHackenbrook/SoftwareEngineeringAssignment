@@ -19,7 +19,7 @@ def parserCommand():
 
 
 def parseInput(input, room, console):
-    command = {"Action":, "Object":, "Owner":"player", "Target":"", "Room":room}
+    command = {"Action":"", "Object":"", "Owner":"player", "Target":"", "Room":room}
     command_words = list(input.split(" "))
     roomStuff = roomDict(room)
     doorList = roomStuff["Doors"]
@@ -46,7 +46,7 @@ def parseInput(input, room, console):
                 #new_command.append(characterList[word])
         elif word in helpWords:
             console.helper()
-    commandObject = commandModel.command(command["Action"], command["Object"], command["Owner"], command["Targer"], command["Room"])
+    commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Targer"], command["Room"])
     return commandObject
 
 def roomDict(room):
