@@ -15,7 +15,7 @@ def parserCommand(Action):
 
 
 
-def parsrInput(input):
+def parseInput(input):
     command = ""
     command_words = list(input.split(" "))
     new_command = []
@@ -33,7 +33,8 @@ def parsrInput(input):
         if word not in QUIT_HELP:
             if word in characterList:
                 new_command.append(characterList[word])
-
+        elif word in QUIT_HELP:
+            self.console.helper()
     for word in new_command[:2]:
         command = command + word + " "
     command = command.strip()
