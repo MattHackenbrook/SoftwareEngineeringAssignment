@@ -1,9 +1,12 @@
-Action = {'THROW': 'TO THROW',
-          'HIT': 'TO HIT'}
+import CommandModel
+
+#Action = {'THROW': 'TO THROW', 'HIT': 'TO HIT'}
+
+actionWords = ("throw", "hit", "inspect", "take", "use", "unlock", "wear", "eat", "speak", "go/enter", "throw")
 
 helpWords = ("Helper" , "Help")
  
-def parserCommand(Action):
+def parserCommand():
     print("\nWhat action do you want to take?: ")
     for choice in Action:
          [print(key, ' : ', value) for key, value in Action.items()]
@@ -16,9 +19,8 @@ def parserCommand(Action):
 
 
 def parseInput(input, room, console):
-    command = ""
+    command = {"Action":, "Object":, "Owner":"player", "Target":"", "Room":room}
     command_words = list(input.split(" "))
-    new_command = []
     roomStuff = roomDict(room)
     doorList = roomStuff["Doors"]
     containerList = roomStuff["Containers"]
@@ -26,24 +28,26 @@ def parseInput(input, room, console):
     characterList = roomStuff["Characters"]
     
     for word in command_words:
+        word = word.lower()
         if word not in helpWords:
-            if word in doorList:
-                new_command.append(doorList[word])
-        if word not in helpWords:
-            if word in containerList:
-                new_command.append(containerList[word])
-        if word not in helpWords:
-            if word in itemList:
-                new_command.append(itemList[word])
-        if word not in helpWords:
-            if word in characterList:
-                new_command.append(characterList[word])
+            if word in actionWords:
+                command["Action"] = word                
+            elif word in doorList:
+                command["target"] = word
+            elif word in containerList:
+                command["target"] = word
+            elif word in itemList:
+                if command["Action"] == "Take":
+                    command["target"] = word
+                else:
+                    command["object"] = word
+            elif word in characterList:
+                command["target"] = word
+                #new_command.append(characterList[word])
         elif word in helpWords:
             console.helper()
-    for word in new_command[:2]:
-        command = command + word + " "
-    command = command.strip()
-    return command
+    commandObject = commandModel.command(command["Action"], command["Object"], command["Owner"], command["Targer"], command["Room"])
+    return commandObject
 
 def roomDict(room):
     doorList = []
