@@ -6,8 +6,9 @@ Created on Sat Mar 13 13:52:34 2021
 @author: user1
 """
 import CompileOutput
-import Translator
+#import Translator
 import WorldHandler
+import parserCommand
 
 
 class ConsoleManager:
@@ -25,10 +26,12 @@ class ConsoleManager:
         print(self.room["LongDesc"])
         
     
-    def printFailure(self):
-        if Translator().checkValidInput(self.userInput) == False:
+    def printFailure(self, command):
+        if parserCommand.checkValidCommand(command) == False:
              print("Invalid input. Please try again")
-             self.userInput = input("\n... ")
+             return False
+        else:
+            return True
     
     def endGame(self):
         if WorldHandler().checkEnd() == True:

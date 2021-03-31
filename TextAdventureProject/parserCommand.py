@@ -6,21 +6,23 @@ actionWords = ("throw", "hit", "inspect", "take", "use", "unlock", "wear", "eat"
 
 helpWords = ("Helper" , "Help")
  
-def parserCommand():
-    print("\nWhat action do you want to take?: ")
-    for choice in Action:
-         [print(key, ' : ', value) for key, value in Action.items()]
-    choice = ''
-    while choice not in Action.keys():
-        choice = input("\nWhat is your choice? ")
-        choice = str(choice)
-    return choice
+# def parserCommand():
+#     print("\nWhat action do you want to take?: ")
+#     for choice in Action:
+#          [print(key, ' : ', value) for key, value in Action.items()]
+#     choice = ''
+#     while choice not in Action.keys():
+#         choice = input("\nWhat is your choice? ")
+#         choice = str(choice)
+#     return choice
 
 
 
-def parseInput(input, room, console):
+def parseInput(console):
+    inp = console.userInput
+    room = console.room
     command = {"Action":"", "Object":"", "Owner":"player", "Target":"", "Room":room}
-    command_words = list(input.split(" "))
+    command_words = list(inp.split(" "))
     roomStuff = roomDict(room)
     doorList = roomStuff["Doors"]
     containerList = roomStuff["Containers"]
@@ -48,6 +50,12 @@ def parseInput(input, room, console):
             console.helper()
     commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Targer"], command["Room"])
     return commandObject
+
+def checkValidCommand(command):
+    if command.action == "" or command.object == "" or command.target == "":
+        return False
+    else:
+        return True
 
 def roomDict(room):
     doorList = []

@@ -133,6 +133,6 @@ class WorldHandler:
             for character in toDelete:
                 del room.characters[character]
 
-cmd = CommandModel.Command(CommandModel.Action.HIT, "Teeth", "Zombie", "Zombie2", "South_Hall")
-wh = WorldHandler(cmd)
+#cmd = CommandModel.Command(CommandModel.Action.HIT, "Teeth", "Zombie", "Zombie2", "South_Hall")
+#wh = WorldHandler(cmd)
 

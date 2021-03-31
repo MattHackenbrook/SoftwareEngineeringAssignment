@@ -8,15 +8,18 @@ from parserCommand import parseInput
 class CompileOutput:
     @staticmethod
     def playerRoomDescription(console):
+        valid = False
         console.printRoom()
-        currRoom = console.room
-        print("what would you like to do?")
-        print("For help enter 'help'")
-        userInput = console.ReadUserInput()
-        if userInput =="help":
-            console.helper() 
-        parsed = parseInput(userInput, currRoom, console)
+        while valid == False:
+            print("what would you like to do?")
+            print("For help enter 'help'\n")
+            console.ReadUserInput()
+            if console.userInput == "help":
+                console.helper()
+            else:
+                parsed = parseInput(console)
+                valid = console.printFailure(parsed)
         wH = WorldHandler(parsed)
-        #recurse
-
+        #do something with w.e is returned from world handler start compile
+        #and then restart the turn sequence
 

@@ -30,5 +30,5 @@ class DataManager:
             self.rooms[room] = DataModels.Room(**data[room])
 
 
-x = DataManager()
-x.writeData()
+#x = DataManager()
+#x.writeData()
