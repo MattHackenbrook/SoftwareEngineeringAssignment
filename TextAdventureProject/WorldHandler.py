@@ -14,7 +14,8 @@ class WorldHandler:
             self.runCommand(command)
         self.checkDeaths()
         self.data.writeData()
-        #send playerResult to compileOutput
+        #send playerResult to compileOutput just put a CompileOutput.playerRoomDescription(console) after the print statement 
+        #or would it be better if self.playerResult was passed into compileoutput?
         print(self.playerResult)
 
 
