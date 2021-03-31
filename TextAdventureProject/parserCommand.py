@@ -48,7 +48,7 @@ def parseInput(console):
                 #new_command.append(characterList[word])
         elif word in helpWords:
             console.helper()
-    commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Targer"], command["Room"])
+    commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"], command["Room"])
     return commandObject
 
 def checkValidCommand(command):
@@ -62,13 +62,13 @@ def roomDict(room):
     containerList = []
     itemList = []
     characterList = []
-    for x in room["Doors"].keys():
+    for x in room.doors.keys():
         doorList.append(x)
-    for y in room["Container"].keys():
-        for z in room["Container"]["Items"].keys():
+    for y in room.containers.keys():
+        for z in room.containers[y].items.keys():
             itemList.append(z)
-    containerList.append(y)
-    for a in room["Characters"].keys():
+        containerList.append(y)
+    for a in room.characters.keys():
       characterList.append(a)  
     
     roomStuff = {"Doors" : doorList, "Containers" : containerList, "Items" : itemList, "Characters" : characterList}

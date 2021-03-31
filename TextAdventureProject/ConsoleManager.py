@@ -23,7 +23,7 @@ class ConsoleManager:
         
         
     def printRoom(self):
-        print(self.room["LongDesc"])
+        print(self.room.longDesc)
         
     
     def printFailure(self, command):
@@ -46,6 +46,6 @@ class ConsoleManager:
                  5.Inspect
                  6.Speak
                  7.Go 
-                  ''' + self.room["LongDesc"] )
+                  ''' + self.room.longDesc)
                   
                 
