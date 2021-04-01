@@ -5,7 +5,7 @@ import os
 from os import path
 from os import remove
 
-dataManager = DataManager.DataManager()
+dataManager = DataManager.DataManager(True)
 
 #check savefile for player in room and return that room
 def findPlayer():

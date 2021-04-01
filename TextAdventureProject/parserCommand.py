@@ -2,7 +2,7 @@ import CommandModel
 
 #Action = {'THROW': 'TO THROW', 'HIT': 'TO HIT'}
 
-actionWords = ("throw", "hit", "inspect", "take", "use", "unlock", "wear", "eat", "speak", "go/enter", "throw")
+actionWords = ("throw", "hit", "inspect", "take", "unlock", "wear", "eat", "enter")
 
 helpWords = ("Helper" , "Help")
  
@@ -18,41 +18,66 @@ helpWords = ("Helper" , "Help")
 
 
 
-def parseInput(console):
+def parseInput(console, owner):
     inp = console.userInput
     room = console.room
-    command = {"Action":"", "Object":"", "Owner":"player", "Target":"", "Room":room}
+    command = {"Action":"", "Object":"", "Owner":owner, "Target":"", "Room":room}
     command_words = list(inp.split(" "))
-    roomStuff = roomDict(room)
+    roomStuff = roomDict(itemList, room)
     doorList = roomStuff["Doors"]
     containerList = roomStuff["Containers"]
     itemList = roomStuff["Items"]
     characterList = roomStuff["Characters"]
+    characterList.remove(owner) #so you cant kill yourself
+    itemObjectsList = getItemObjects(itemList, room)
     
     for word in command_words:
         word = word.lower()
         if word not in helpWords:
             if word in actionWords:
-                command["Action"] = word                
+                command["Action"] = word
             elif word in doorList:
-                command["target"] = word
+                command["Target"] = word
             elif word in containerList:
-                command["target"] = word
+                command["Target"] = word
             elif word in itemList:
+                if command["Action"] == "unlock":
+                    if itemObjectsLis[word].classification == "Key":
+                        command["Object"] == word
+                if command["Action"] == "eat":
+                    if itemObjectsLis[word].classification == "Edible":
+                        command["Object"] = word
+                if command["Action"] == "wear":
+                    if itemObjectsLis[word].classification == "Wearable":
+                        command["Object"] = word
                 if command["Action"] == "Take":
-                    command["target"] = word
+                    command["Target"] = word
+                if command["Action"] == "inspect":
+                    command["Target"] = word
                 else:
-                    command["object"] = word
+                    command["Object"] = word
             elif word in characterList:
-                command["target"] = word
-                #new_command.append(characterList[word])
+                command["target"] = word                
         elif word in helpWords:
             console.helper()
     commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"], command["Room"])
     return commandObject
 
+def getItemObjects(items, room):
+    itemsList = {}
+    for each in items:
+        for container in room.container.keys():
+            itemsList[each] = room.container[container].items.values():
+    return itemsList
+
 def checkValidCommand(command):
-    if command.action == "" or command.object == "" or command.target == "":
+    if command.target == "" and command.action == "inspect":
+        command.target = command.room
+    if command.target == "" and command.action == "eat" or command.action == "wear" or command.action == "unlock":
+        command.target = None
+    if command.object == "" and command.action == "enter":
+        command.object = None
+    if command.action == "" or command.target == "":
         return False
     else:
         return True
