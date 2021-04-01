@@ -23,10 +23,10 @@ class ConsoleManager:
         
         
     def printRoom(self):
-        if self.room["Visited"] == False:
+        if self.room.visited == False:
            print(self.room.longDesc)
         else:
-            print(self.room.["shortDesc"])
+            print(self.room.shortDesc)
     
     def printFailure(self, command):
         if parserCommand.checkValidCommand(command) == False:
