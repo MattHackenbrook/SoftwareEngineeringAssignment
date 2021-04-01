@@ -6,8 +6,10 @@ class Action(Enum):
     HIT = 2
     INSPECT = 3
     TAKE = 4
-    USE = 5
-    SPEAK = 6
+    EAT = 5
+    WEAR = 6
+    UNLOCK = 7
+
 
 
 class Command:
