@@ -40,14 +40,15 @@ class ConsoleManager:
             print("Game Over")
     
     def helper(self):
-        print('''You have 7 different commands you can use in the game.
-                 1.Use
+        print('''You have 8 different commands you can use in the game.
+                 1.Unlock
                  2.Throw
                  3.Hit
                  4.Take
                  5.Inspect
-                 6.Speak
-                 7.Go 
+                 6.Eat
+                 7.Wear
+                 8.Go 
                   ''' + self.room.longDesc)
                   
                 
