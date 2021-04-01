@@ -9,6 +9,7 @@ class Action(Enum):
     EAT = 5
     WEAR = 6
     UNLOCK = 7
+    ENTER = 8
 
 
 
