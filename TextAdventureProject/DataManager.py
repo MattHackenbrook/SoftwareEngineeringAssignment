@@ -10,9 +10,12 @@ class RoomEncoder(JSONEncoder):
 
 class DataManager:
 
-    def __init__(self):
+    def __init__(self, isFirst):
         self.rooms = {}
-        self.filePath = 'StartFile.json'
+        if(isFirst):
+            self.filePath = 'StartFile.json'
+        else:
+            self.filePath = 'SaveFile.json'
         self.buildRoomsFromData()
         self.filePath = 'SaveFile.json'
 
@@ -29,6 +32,3 @@ class DataManager:
         for room in data:
             self.rooms[room] = DataModels.Room(**data[room])
 
-
-#x = DataManager()
-#x.writeData()
