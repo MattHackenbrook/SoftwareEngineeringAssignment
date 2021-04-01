@@ -26,7 +26,7 @@ class ConsoleManager:
         if self.room["Visited"] == False:
            print(self.room.longDesc)
         else:
-            print(self.room.["shortDesc"])
+            print(self.room["shortDesc"])
     
     def printFailure(self, command):
         if parserCommand.checkValidCommand(command) == False:
