@@ -186,6 +186,3 @@ class WorldHandler:
             for character in toDelete:
                 del room.characters[character]
 
-cmd = CommandModel.Command(CommandModel.Action.ENTER, None, "Zombie James", "South_Hall", "North_Hall")
-wh = WorldHandler(cmd)
-
