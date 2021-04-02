@@ -48,8 +48,15 @@ def parseInput(console, owner):
                     command["Target"] = word
             elif word in containerList:
                 command["Target"] = word
-            elif word in itemList:
-                if command["Action"] == "unlock":
+            elif word in itemList:           
+                if command["Action"] == "Take":
+                    command["Target"] = word
+                if command["Action"] == "inspect":
+                    command["Target"] = word
+                else:
+                    command["Object"] = word
+            elif word in invList:
+                 if command["Action"] == "unlock":
                     if itemObjectsList[word].classification == "Key":
                         command["Object"] == word
                 if command["Action"] == "eat":
@@ -58,12 +65,6 @@ def parseInput(console, owner):
                 if command["Action"] == "wear":
                     if itemObjectsList[word].classification == "Wearable":
                         command["Object"] = word
-                if command["Action"] == "Take":
-                    command["Target"] = word
-                if command["Action"] == "inspect":
-                    command["Target"] = word
-                else:
-                    command["Object"] = word
             elif word in characterList:
                 command["target"] = word                
         elif word in helpWords:
