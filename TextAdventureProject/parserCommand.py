@@ -61,12 +61,14 @@ def parseInput(console, owner):
                  if command["Action"] == "unlock":
                     if invObjectsList[word].classification == "Key":
                         command["Object"] == word
-                if command["Action"] == "eat":
+                 elif command["Action"] == "eat":
                     if invObjectsList[word].classification == "Edible":
                         command["Object"] = word
-                if command["Action"] == "wear":
+                 elif command["Action"] == "wear":
                     if invObjectsList[word].classification == "Wearable":
                         command["Object"] = word
+                 else:
+                      command["Object"] = word
             elif word in characterList:
                 command["target"] = word                
         elif word in helpWords:
