@@ -31,7 +31,7 @@ def parseInput(console, owner):
     characterList = roomStuff["Characters"]
     characterList.remove(owner) #so you cant kill yourself
     itemObjectsList = getItemObjects(itemList, room)
-    InvObjectsList = getItemObjects(invList, room)
+    invObjectsList = getItemObjects(invList, room)
     doorObjectsList = getDoorObjects(doorList, room)
     
     for word in command_words:
