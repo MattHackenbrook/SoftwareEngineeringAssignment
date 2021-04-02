@@ -19,6 +19,8 @@ class ConsoleManager:
             
     def readUserInput(self):
         self.userInput = input("... ")
+        if self.userInput == "inventory" or self.userInput == "inv":
+            print(room.characters.player.inv)
         return self.userInput
         
         
