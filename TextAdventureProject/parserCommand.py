@@ -101,6 +101,7 @@ def roomDict(room):
     doorList = []
     containerList = []
     itemList = []
+    invList = []
     characterList = []
     for x in room.doors.keys():
         doorList.append(x)
@@ -109,8 +110,10 @@ def roomDict(room):
             itemList.append(z)
         containerList.append(y)
     for a in room.characters.keys():
-      characterList.append(a)  
+      characterList.append(a)
+      for b in room.characters.inv.keys():
+          invList.append(b)
     
-    roomStuff = {"Doors" : doorList, "Containers" : containerList, "Items" : itemList, "Characters" : characterList}
+    roomStuff = {"Doors" : doorList, "Containers" : containerList, "Items" : itemList, "Inventory" : invList, "Characters" : characterList}
     
     return roomStuff
