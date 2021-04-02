@@ -27,9 +27,11 @@ def parseInput(console, owner):
     doorList = roomStuff["Doors"]
     containerList = roomStuff["Containers"]
     itemList = roomStuff["Items"]
+    invList = roomStuff["Inventory"]
     characterList = roomStuff["Characters"]
     characterList.remove(owner) #so you cant kill yourself
     itemObjectsList = getItemObjects(itemList, room)
+    InvObjectsList = getItemObjects(invList, room)
     doorObjectsList = getDoorObjects(doorList, room)
     
     for word in command_words:
@@ -57,13 +59,13 @@ def parseInput(console, owner):
                     command["Object"] = word
             elif word in invList:
                  if command["Action"] == "unlock":
-                    if itemObjectsList[word].classification == "Key":
+                    if invObjectsList[word].classification == "Key":
                         command["Object"] == word
                 if command["Action"] == "eat":
-                    if itemObjectsList[word].classification == "Edible":
+                    if invObjectsList[word].classification == "Edible":
                         command["Object"] = word
                 if command["Action"] == "wear":
-                    if itemObjectsList[word].classification == "Wearable":
+                    if invObjectsList[word].classification == "Wearable":
                         command["Object"] = word
             elif word in characterList:
                 command["target"] = word                
