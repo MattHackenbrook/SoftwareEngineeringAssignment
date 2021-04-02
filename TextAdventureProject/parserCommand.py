@@ -23,13 +23,14 @@ def parseInput(console, owner):
     room = console.room
     command = {"Action":"", "Object":"", "Owner":owner, "Target":"", "Room":room}
     command_words = list(inp.split(" "))
-    roomStuff = roomDict(itemList, room)
+    roomStuff = roomDict(room)
     doorList = roomStuff["Doors"]
     containerList = roomStuff["Containers"]
     itemList = roomStuff["Items"]
     characterList = roomStuff["Characters"]
     characterList.remove(owner) #so you cant kill yourself
     itemObjectsList = getItemObjects(itemList, room)
+    doorObjectsList = getDoorObjects(doorList, room)
     
     for word in command_words:
         word = word.lower()
@@ -37,18 +38,25 @@ def parseInput(console, owner):
             if word in actionWords:
                 command["Action"] = word
             elif word in doorList:
-                command["Target"] = word
+                if command["Action"] == "unlock":
+                    if doorObjectsList[word].locked == False: #check to see if door is even able to be unlocked, if door is already unlocked, u cannot unlock it again so returns invalid by setting target to empty string
+                        command["Target"] = ""
+                elif command["Action"] == "enter":
+                    if doorObjectsList[word].locked == True: #same here but for when u try to enter a locked door
+                        command["Target"] = ""
+                else:
+                    command["Target"] = word
             elif word in containerList:
                 command["Target"] = word
             elif word in itemList:
                 if command["Action"] == "unlock":
-                    if itemObjectsLis[word].classification == "Key":
+                    if itemObjectsList[word].classification == "Key":
                         command["Object"] == word
                 if command["Action"] == "eat":
-                    if itemObjectsLis[word].classification == "Edible":
+                    if itemObjectsList[word].classification == "Edible":
                         command["Object"] = word
                 if command["Action"] == "wear":
-                    if itemObjectsLis[word].classification == "Wearable":
+                    if itemObjectsList[word].classification == "Wearable":
                         command["Object"] = word
                 if command["Action"] == "Take":
                     command["Target"] = word
@@ -67,8 +75,15 @@ def getItemObjects(items, room):
     itemsList = {}
     for each in items:
         for container in room.container.keys():
-            itemsList[each] = room.container[container].items.values():
+            itemsList[each] = room.container[container].items.values()
     return itemsList
+
+def getDoorObjects(doors, room):
+    doorsList = {}
+    for each in doors:
+        for door in room.doors.keys():
+            doorsList[each] = room.doors[door].values()
+    return doorsList
 
 def checkValidCommand(command):
     if command.target == "" and command.action == "inspect":
