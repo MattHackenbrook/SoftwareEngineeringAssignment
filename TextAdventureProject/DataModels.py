@@ -24,7 +24,7 @@ class Door:
 
 
 class Container:
-    def __init__(self, items=None, desc=None):
+    def __init__(self, items={}, desc=None):
         self.items = items
         try:
             for item in self.items:
@@ -52,3 +52,5 @@ class Item:
         self.traits = traits
         self.classification = classification
         self.desc = desc
+
+

@@ -6,7 +6,7 @@ class WorldHandler:
 
     def __init__(self, cmd):
         self.playerCommand = CommandModel.Command(cmd.action, cmd.object, cmd.owner, cmd.target, cmd.room)
-        self.data = DataManager.DataManager()
+        self.data = DataManager.DataManager(False)
         self.rooms = self.data.rooms
         self.commandList = self.getCommandList()
         self.playerResult = self.runCommand(self.playerCommand)
@@ -14,8 +14,7 @@ class WorldHandler:
             self.runCommand(command)
         self.checkDeaths()
         self.data.writeData()
-        #send playerResult to compileOutput just put a CompileOutput.playerRoomDescription(console) after the print statement 
-        #or would it be better if self.playerResult was passed into compileoutput?
+        #send playerResult to compileOutput
         print(self.playerResult)
 
 
@@ -24,8 +23,14 @@ class WorldHandler:
         return commandList
 
     def runCommand(self, cmd):
-        if cmd.action == CommandModel.Action.USE:
-            return self.use(cmd)
+        if cmd.action == CommandModel.Action.WEAR:
+            return self.wear(cmd)
+        if cmd.action == CommandModel.Action.UNLOCK:
+            return self.unlock(cmd)
+        if cmd.action == CommandModel.Action.ENTER:
+            return self.enter(cmd)
+        if cmd.action == CommandModel.Action.EAT:
+            return self.eat(cmd)
         elif cmd.action == CommandModel.Action.INSPECT:
             return self.inspect(cmd)
         elif cmd.action == CommandModel.Action.TAKE:
@@ -34,8 +39,6 @@ class WorldHandler:
             return self.throw(cmd)
         elif cmd.action == CommandModel.Action.HIT:
             return self.hit(cmd)
-        elif cmd.action == CommandModel.Action.SPEAK:
-            return self.speak(cmd)
         else:
             print("No action for " + str(cmd.action))
 
@@ -68,9 +71,6 @@ class WorldHandler:
                         command.target = command.room.containers[container].items[item]
         return command
 
-    def use(self, cmd):
-        command = self.populateCommand(cmd)
-
     def unlock(self, cmd):
         command = self.populateCommand(cmd)
         for door in command.object.traits["Opens"]:
@@ -87,23 +87,66 @@ class WorldHandler:
 
     def wear(self, cmd):
         command = self.populateCommand(cmd)
-
+        if command.owner.wearing != {}:
+            item = command.owner.wearing.keys()[0]
+            command.owner.inv[item] = command.owner.wearing[item]
+        command.owner.wearing[cmd.object] = command.object
+        return "Wear " + cmd.object
 
     def eat(self, cmd):
         command = self.populateCommand(cmd)
-
+        command.owner.stats["health"] += command.object.traits["Healing"]
+        del command.owner.inv[cmd.object]
+        return "Eat " + cmd.object
 
     def inspect(self, cmd):
         command = self.populateCommand(cmd)
-        return command.target.desc
-
+        extra = ""
+        try:
+            if command.target.items != None:
+                if command.target.items == {}:
+                    extra = " It is empty."
+                else:
+                    extra = " It contains a "
+                    first = True
+                    for item in command.target.items.keys():
+                        if first:
+                            extra += item
+                            first = False
+                        else:
+                            extra += ", a " + item
+            if cmd.target != "Ground":
+                return command.target.desc + extra
+            else:
+                return "The floor." + extra
+        except:
+            if cmd.target == cmd.room:
+                command.target = command.room
+                if command.target.containers != None:
+                    if command.target.containers == {}:
+                        extra = " It is empty."
+                    else:
+                        extra = " Its containers are a "
+                        first = True
+                        for container in command.target.containers.keys():
+                            if first:
+                                extra += container
+                                first = False
+                            else:
+                                extra += ", a " + container
+            return command.target.longDesc + extra
+        return command.target.desc + extra
     def take(self, cmd):
         command = self.populateCommand(cmd)
         command.owner.inv[cmd.target] = command.target
-        for container in command.room.containers:
+        ctr = None
+        toDelete = None
+        for container in command.room.containers.values():
             for item in container.items.keys():
                 if cmd.target == item:
-                    del container[item]
+                    toDelete = item
+                    ctr = container
+        del ctr.items[toDelete]
         return "Take " + cmd.target
 
     def throw(self, cmd):
@@ -115,12 +158,21 @@ class WorldHandler:
 
     def hit(self, cmd):
         command = self.populateCommand(cmd)
-        command.target.stats["health"] -= command.object.traits["Damage"]
+        try:
+            armour = command.target.wearing.traits["armour"]
+            if armour <= 0:
+                armour = 1
+            command.target.stats["health"] -= command.object.traits["Damage"] / armour
+        except:
+            command.target.stats["health"] -= command.object.traits["Damage"]
         return "Hit " + cmd.target + " with " + cmd.object
 
-    def speak(self, cmd):
+    def enter(self, cmd):
         command = self.populateCommand(cmd)
-        return "Speak"
+        self.rooms[cmd.target].characters[cmd.owner] = command.owner
+        del command.room.characters[cmd.owner]
+        return "Enter " + cmd.target
+
 
     def checkDeaths(self):
         for roomKey in self.rooms.keys():
@@ -134,6 +186,6 @@ class WorldHandler:
             for character in toDelete:
                 del room.characters[character]
 
-#cmd = CommandModel.Command(CommandModel.Action.HIT, "Teeth", "Zombie", "Zombie2", "South_Hall")
-#wh = WorldHandler(cmd)
+cmd = CommandModel.Command(CommandModel.Action.ENTER, None, "Zombie James", "South_Hall", "North_Hall")
+wh = WorldHandler(cmd)
 

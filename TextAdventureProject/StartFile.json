@@ -3,7 +3,7 @@
     "doors": {
       "Ivans_Cell": {
         "locked": false,
-        "desc": "The cell door to Ivan's cell. It's torn off the wall."
+        "desc": "The cell door to Ivans cell. Its torn off the wall."
       },
       "North_Hall": {
         "locked": false,
@@ -110,8 +110,8 @@
         "classification": "Zombie"
       }
     },
-    "shortDesc": "Ivan's cell block. It appears to be nearly untouched.",
-    "longDesc": "An oddly tidy cell block. This is Ivan's cell block, and if he's here it could mean trouble for you. The man is terrifying!",
+    "shortDesc": "Ivans cell block. It appears to be nearly untouched.",
+    "longDesc": "An oddly tidy cell block. This is Ivans cell block, and if hes here it could mean trouble for you. The man is terrifying!",
     "visited": false
   },
   "South_Cell_Block": {
@@ -281,8 +281,8 @@
         "classification": "Zombie"
       }
     },
-    "shortDesc": "Jones' cell block. It's completely torn apart.",
-    "longDesc": "The entire room is falling apart. Its almost like a wreaking ball was swung around in here. This is the cell block where your friend Jones used to be. He's probably dead, or a zombie, but might as well check, right?",
+    "shortDesc": "Jones cell block. Its completely torn apart.",
+    "longDesc": "The entire room is falling apart. Its almost like a wreaking ball was swung around in here. This is the cell block where your friend Jones used to be. Hes probably dead, or a zombie, but might as well check, right?",
     "visited": false
   },
   "Sewer": {
@@ -293,11 +293,11 @@
       },
       "Waste_Dump": {
         "locked": false,
-        "desc": "The sewage is running this direction, it's probably a way out!"
+        "desc": "The sewage is running this direction, its probably a way out!"
       },
       "Easter_Egg_Room": {
         "locked": false,
-        "desc": "The sewage is draining from this direction. There's probably nothing of importance"
+        "desc": "The sewage is draining from this direction. Theres probably nothing of importance"
       }
     },
     "containers": {
@@ -307,7 +307,7 @@
       }
     },
     "characters": {},
-    "shortDesc": "The sewer again... it's not easier this time.",
+    "shortDesc": "The sewer again... its not easier this time.",
     "longDesc": "As you crawl on your belly into the vile sewer, you find yourself questioning if escape is even worth this horrible stench. It takes all of your might to keep going.",
     "visited": false
   },
@@ -385,7 +385,7 @@
       }
     },
     "shortDesc": "Home sweet home.",
-    "longDesc": "This is your cell, the miserable, disgusting hole you've spent your last few years.",
+    "longDesc": "This is your cell, the miserable, disgusting hole youve spent your last few years.",
     "visited": true
   },
   "Front_Gate": {
@@ -464,12 +464,12 @@
             }
           }
         },
-        "classification": "zombie",
+        "classification": "Zombie",
         "desc": "This zombie looks like Jim. He used to work in the kitchen, I think he was once a car thief."
       }
     },
     "shortDesc": "This place should not be used to prepare food. Everything is disgusting.",
-    "longDesc": "This room used to make food for the whole prison. It's tiny, very tiny, and extremely gross. You find yourself hoping that the mysterious liquids covering the walls only appeared after the apocalypse... but that seems like wishful thinking.",
+    "longDesc": "This room used to make food for the whole prison. Its tiny, very tiny, and extremely gross. You find yourself hoping that the mysterious liquids covering the walls only appeared after the apocalypse... but that seems like wishful thinking.",
     "visited": false
   },
   "Cafeteria": {
@@ -533,7 +533,7 @@
       }
     },
     "characters": {
-      "Zombie": {
+      "Jawless Zombie": {
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -541,7 +541,15 @@
           "armour": 1,
           "health": 1
         },
-        "inv": {},
+        "inv": {
+          "Teeth": {
+            "classification": "Melee",
+            "desc": "Eww... Teeth.",
+            "traits": {
+              "Damage": 4
+            }
+          }
+        },
         "wearing": {
           "Prison Uniform": {
             "classification": "Wearable",
@@ -552,8 +560,8 @@
             }
           }
         },
-        "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily",
-        "classification": "zombie"
+        "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant do much",
+        "classification": "Zombie"
       }
     },
     "shortDesc": "The moldy and messy Cafeteria appears to be unchanged and still dirty.",
@@ -564,7 +572,7 @@
     "doors": {
       "Front_Gate": {
         "locked": true,
-        "desc": "Through the metal Iron bars, it looks like there's another gate across this control room that leads to the road, freedom."
+        "desc": "Through the metal Iron bars, it looks like theres another gate across this control room that leads to the road, freedom."
       },
       "Guard_Room": {
         "locked": true,
@@ -656,17 +664,34 @@
           "strength": 1,
           "thrift": 0,
           "persuasion": 0,
-          "armour": 1,
-          "health": 1
+          "armour": 0,
+          "health": 4
         },
-        "inv": {},
-        "wearing": {},
+        "inv": {
+          "Teeth": {
+            "classification": "Melee",
+            "desc": "Eww... Teeth.",
+            "traits": {
+              "Damage": 4
+            }
+          }
+        },
+        "wearing": {
+          "Nurse Uniform": {
+            "classification": "Wearable",
+            "desc": "A nurse uniform. A little torn, and bloody, and covered in many fluids. Still wearable",
+            "traits": {
+              "Damage": 0,
+              "armour": 1
+            }
+          }
+        },
         "desc": "A zombie wearing a nurse uniform",
-        "classification": "zombie"
+        "classification": "Zombie"
       }
     },
     "shortDesc": "The Hospital Ward",
-    "longDesc": "You open the door and see a bed and a tray in the middle of the room. You look to your right and see the medical cabinet in the corner. 'There must be something in here I can use' you say to yourself. As you search the room you remember the time that Ivan almost beat you to death because you didn't give him your cookies. You spent a week in pain recovering in the Hopsital Ward, but it was nice not having to be in that cell for a little bit",
+    "longDesc": "You open the door and see a bed and a tray in the middle of the room. You look to your right and see the medical cabinet in the corner. There must be something in here I can use you say to yourself. As you search the room you remember the time that Ivan almost beat you to death because you didnt give him your cookies. You spent a week in pain recovering in the Hopsital Ward, but it was nice not having to be in that cell for a little bit",
     "visited": false
   },
   "North_Hall": {
@@ -722,9 +747,9 @@
       },
       "Janitors_Closet": {
         "locked": true,
-        "desc": "This leads to the Janitor's Closet. There might be something useful in there"
+        "desc": "This leads to the Janitors Closet. There might be something useful in there"
       },
-      "Cafeteria Door": {
+      "Cafeteria": {
         "locked": false,
         "desc": "This leads to the Cafeteria."
       }
@@ -733,13 +758,13 @@
       "Ground": {}
     },
     "characters": {
-      "Zombie": {
+      "Zombie Jacob": {
         "stats": {
           "strength": 1,
           "thrift": 0,
           "persuasion": 0,
-          "armour": 1,
-          "health": 1
+          "armour": 0,
+          "health": 4
         },
         "inv": {
           "Teeth": {
@@ -750,22 +775,48 @@
             }
           }
         },
-        "wearing": {},
-        "desc": "A Zombie",
-        "classification": "zombie"
+        "wearing": {
+          "Prison Uniform": {
+            "classification": "Wearable",
+            "desc": "Your standard, orange jumpsuit.",
+            "traits": {
+              "Damage": 0,
+              "armour": 1
+            }
+          }
+        },
+        "desc": "Jacob is a zombie!",
+        "classification": "Zombie"
       },
-      "Zombie2": {
+      "Zombie William": {
         "stats": {
           "strength": 1,
           "thrift": 0,
           "persuasion": 0,
-          "armour": 1,
-          "health": 1
+          "armour": 0,
+          "health": 4
         },
-        "inv": {},
-        "wearing": {},
-        "desc": "A Zombie",
-        "classification": "zombie"
+        "inv": {
+          "Teeth": {
+            "classification": "Melee",
+            "desc": "Eww... Teeth.",
+            "traits": {
+              "Damage": 4
+            }
+          }
+        },
+        "wearing": {
+          "Prison Uniform": {
+            "classification": "Wearable",
+            "desc": "Your standard, orange jumpsuit.",
+            "traits": {
+              "Damage": 0,
+              "armour": 1
+            }
+          }
+        },
+        "desc": "William is a zombie!",
+        "classification": "Zombie"
       }
     },
     "shortDesc": "The South Hall",
@@ -774,23 +825,23 @@
   },
   "West_Hall": {
     "doors": {
-      "West Cell Block Door": {
+      "West_Cell_Block": {
         "locked": true,
         "desc": "Dirty floor and walls , zombie free for now"
       },
-      "Easter Egg Room Door": {
+      "Easter_Egg_Room": {
         "locked": true,
         "desc": "there seems to be music playing and fuzz images in the back of the room, need to get closer"
       },
-      "Hospital Door": {
+      "Hospital": {
         "locked": true,
         "desc": "A series of what looks like unmade beds with dirty white sheets"
       },
-      "North Hall Door": {
+      "North_Hall": {
         "locked": true,
         "desc": "A long dirty corridor, must be the North hallway it looks like it has some other doors"
       },
-      "South Hall Door": {
+      "South_Hall": {
         "locked": true,
         "desc": "A long dirty corridor, must be the South hallway it looks like it has some other doors"
       }
@@ -815,7 +866,7 @@
   },
   "Janitors_Closet": {
     "doors": {
-      "South Hall Door": {
+      "South_Hall": {
         "locked": false,
         "desc": "Looks like a hallway but heading in the south direction"
       }
@@ -839,7 +890,7 @@
         "items": {
           "Half Used Crack Pipe": {
             "classification": "Misc",
-            "desc": "Joe Dirt's half used crack pipe, if i smoke it should help with my withdrawals",
+            "desc": "Joe Dirts half used crack pipe, if i smoke it should help with my withdrawals",
             "traits": {
               "Damage": 2,
               "Healing": 1
@@ -863,12 +914,12 @@
             }
           }
         },
-        "desc": "Joe Dirt's draw is left open, he must of left in a rush"
+        "desc": "Joe Dirts draw is left open, he must of left in a rush"
       }
     },
     "characters": {},
-    "shortDesc": "The Janitor’s Closet is a small room in the south hall.",
-    "longDesc": "The Janitor’s Closet is a small room in the south hall. Joe Dirt's the prison Janitor, he doens't carry a weapon but he's always high, his stash might be inside the closet. As you approach you don't hear any zombies inside",
+    "shortDesc": "The Janitors Closet is a small room in the south hall.",
+    "longDesc": "The Janitors Closet is a small room in the south hall. Joe Dirts the prison Janitor, he doesnt carry a weapon but hes always high, his stash might be inside the closet. As you approach you dont hear any zombies inside",
     "visited": false
   },
   "Waste_Dump": {
@@ -881,23 +932,9 @@
     "containers": {
       "Ground": {}
     },
-    "characters": {
-      "Half Zombie": {
-        "stats": {
-          "strength": 1,
-          "thrift": -1,
-          "persuasion": 0,
-          "armour": 0,
-          "health": 1
-        },
-        "inv": {},
-        "wearing": {},
-        "desc": "A zombie missing the lower half of its body tried to painfully crawl its way towards you using one of its decaying arms",
-        "classification": "legless"
-      }
-    },
+    "characters": {},
     "shortDesc": "opening up around you is the dump for all the sewage from the entire prison, gross",
-    "longDesc": "As you travel down this tunnel of refuse you slide out into the open air and land into an even bigger pile of waste as you are dumped out of the prison's sewage, as you are inches away from freedom.  theres seems to be something moving in the waste with you.",
+    "longDesc": "As you travel down this tunnel of refuse you slide out into the open air and land into an even bigger pile of waste as you are dumped out of the prisons sewage, as you are inches away from freedom.  theres seems to be something moving in the waste with you.",
     "visited": false
   },
   "Washroom": {
@@ -992,7 +1029,7 @@
         "classification": "NPC"
       }
     },
-    "shortDesc": "Ivan's Cell",
+    "shortDesc": "Ivans Cell",
     "longDesc": "This cell belongs to Ivan. The beast of the prison. You heard stories about how he killed 10 men with only his fists. You do not want to run into this guy",
     "visited": false
   },
@@ -1011,14 +1048,15 @@
       "Ground": {},
       "Corpse": {
         "items": {
-          "HallwayKey": {
+          "Hallway Key": {
             "classification": "Key",
             "desc": "A key card to the hallways",
             "traits": {
               "Damage": 0,
-              "opens": {
-
-              }
+              "opens": [
+                "South_Hall.West_Hall",
+                "West_Hall.North_Hall"
+              ]
             }
           }
         },
@@ -1034,7 +1072,7 @@
     "doors": {
       "Courtyard": {
         "locked": true,
-        "desc": "You can see into the courtyard, from what you can tell this is how you entered the prison, but now there's a bunch of zomies roaming around"
+        "desc": "You can see into the courtyard, from what you can tell this is how you entered the prison, but now theres a bunch of zomies roaming around"
       },
       "North_Hall": {
         "locked": false,
@@ -1046,17 +1084,17 @@
         "items": {
           "Bullet Proof Vest": {
             "classification": "Misc",
-            "desc": "A old vest with stab marks, but it's bullet proof",
+            "desc": "A old vest with stab marks, but its bullet proof",
             "traits": {
               "Damage": 1,
               "health": 15
             }
           },
-          "Gun": {
+          "Empty Gun": {
             "classification": "Misc",
-            "desc": "The Guards Gun still has ammo, this will come in handy real soon",
+            "desc": "The Gun has no ammo, this still might come in handy",
             "traits": {
-              "Damage": 15
+              "Damage": 5
             }
           }
         }
@@ -1083,14 +1121,14 @@
         "wearing": {
           "Tactical Vest": {
             "classification": "Misc",
-            "desc": "A old vest with stab marks, but it's bullet proof",
+            "desc": "A old vest with stab marks, but its bullet proof",
             "traits": {
               "Damage": 1,
               "health": 15
             }
           }
         },
-        "desc": "A Guard is hiding under his desk, he's been beaten and is scared",
+        "desc": "A Guard is hiding under his desk, hes been beaten and is scared",
         "classification": "NPC"
       }
     },
@@ -1102,7 +1140,7 @@
     "doors": {
       "West_Hall": {
         "locked": true,
-        "desc": "You can see you to the west hall, no one in sight but can't be sure if thats a good thing"
+        "desc": "You can see you to the west hall, no one in sight but cant be sure if thats a good thing"
       }
     },
     "containers": {
@@ -1128,7 +1166,7 @@
             }
           }
         },
-        "desc": "A corpse is lying face down holding a gun with no bullets while the song plays in the background.You can't tell at this point if he shot himself to get away from the zombies or the music"
+        "desc": "A corpse is lying face down holding a gun with no bullets while the song plays in the background.You cant tell at this point if he shot himself to get away from the zombies or the music"
       }
     },
     "characters": {},
@@ -1148,7 +1186,7 @@
         "items": {
           "Bomb": {
             "classification": "melee",
-            "desc": "Rick Asthly's Never gonna give you up is playing on a screen",
+            "desc": "Rick Asthlys Never gonna give you up is playing on a screen",
             "traits": {
               "Damage": 10
             }
@@ -1168,7 +1206,7 @@
         "inv": {
           "Bomb Making Equipment": {
             "classification": "Misc",
-            "desc": "With Jones' help this equipment can be used to make bombs",
+            "desc": "With Jones help this equipment can be used to make bombs",
             "traits": {
               "damage": 1
             }
