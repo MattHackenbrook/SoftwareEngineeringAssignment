@@ -32,8 +32,15 @@ class ConsoleManager:
     
     def printFailure(self, command):
         if parserCommand.checkValidCommand(command) == False:
-             print("Invalid input. Please try again")
-             return False
+            if command.action == "unlock":
+                print("the target is already unlocked or you do not have the item that unlocks it")
+            if command.action == "enter":
+                print("the door is currently locked")
+            elif command.action != "":
+                print("that item or object is not available to you")
+            else:
+                print("Invalid input. Please try again")
+            return False
         else:
             return True
     
