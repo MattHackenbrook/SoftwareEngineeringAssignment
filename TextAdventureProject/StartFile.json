@@ -50,6 +50,7 @@
     },
     "characters": {
       "Zombie James": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -80,6 +81,7 @@
         "classification": "Zombie"
       },
       "Zombie luke": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -161,6 +163,7 @@
     },
     "characters": {
       "Zombie steve": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -191,6 +194,7 @@
         "classification": "Zombie"
       },
       "Zombie jeff": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -221,6 +225,7 @@
         "classification": "Zombie"
       },
       "Zombie fred": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -251,6 +256,7 @@
         "classification": "Zombie"
       },
       "Zombie jack": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -354,6 +360,7 @@
     },
     "characters": {
       "Player": {
+        "state": "player_control",
         "stats": {
           "strength": 0,
           "thrift": 0,
@@ -438,6 +445,7 @@
     },
     "characters": {
       "Zombie Chef": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -534,6 +542,7 @@
     },
     "characters": {
       "Jawless Zombie": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -603,6 +612,7 @@
     },
     "characters": {
       "Horde": {
+        "state": "idle",
         "stats": {
           "strength": "50",
           "thrift": "0",
@@ -660,6 +670,7 @@
     },
     "characters": {
       "Nurse Zombie": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -759,6 +770,7 @@
     },
     "characters": {
       "Zombie Jacob": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -789,6 +801,7 @@
         "classification": "Zombie"
       },
       "Zombie William": {
+        "state": "idle",
         "stats": {
           "strength": 1,
           "thrift": 0,
@@ -1003,6 +1016,7 @@
     },
     "characters": {
       "Ivan": {
+        "state": "idle",
         "stats": {
           "strength": "20",
           "thrift": "1",
@@ -1102,6 +1116,7 @@
     },
     "characters": {
       "Prison Guard": {
+        "state": "idle",
         "stats": {
           "strength": 10,
           "thrift": 2,
@@ -1196,6 +1211,7 @@
     },
     "characters": {
       "Mike Jones": {
+        "state": "idle",
         "stats": {
           "strength": 0,
           "thrift": 15,

@@ -35,7 +35,7 @@ class Container:
 
 
 class Character:
-    def __init__(self, classification, stats, inv, wearing, desc):
+    def __init__(self, classification, stats, inv, wearing, desc, state):
         self.classification = classification
         self.stats = stats
         self.inv = inv
@@ -45,6 +45,7 @@ class Character:
         for item in self.wearing:
             wearing[item] = Item(**(wearing[item]))
         self.desc = desc
+        self.state = state
 
 
 class Item:

@@ -31,4 +31,3 @@ class DataManager:
         data = self.readData()
         for room in data:
             self.rooms[room] = DataModels.Room(**data[room])
-

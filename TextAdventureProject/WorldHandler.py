@@ -1,7 +1,6 @@
 import CommandModel
 import DataManager
 import DataModels
-import RunWorldAi
 
 class WorldHandler:
 
@@ -20,8 +19,7 @@ class WorldHandler:
 
 
     def getCommandList(self):
-        WAI = RunWorldAi.WorldAi()
-        commandList = WAI.commandList
+        commandList = []
         return commandList
 
     def runCommand(self, cmd):
