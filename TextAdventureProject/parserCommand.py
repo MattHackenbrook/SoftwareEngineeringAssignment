@@ -30,7 +30,7 @@ def parseInput(console, owner):
     invList = roomStuff["Inventory"]
     characterList = roomStuff["Characters"]
     characterList.remove(owner) #so you cant kill yourself
-    itemObjectsList = getItemObjects(itemList, room)
+    #itemObjectsList = getItemObjects(itemList, room)
     invObjectsList = getItemObjects(invList, room)
     doorObjectsList = getDoorObjects(doorList, room)
     
@@ -43,9 +43,13 @@ def parseInput(console, owner):
                 if command["Action"] == "unlock":
                     if doorObjectsList[word].locked == False: #check to see if door is even able to be unlocked, if door is already unlocked, u cannot unlock it again so returns invalid by setting target to empty string
                         command["Target"] = ""
+                    else:
+                        command["Target"] = word
                 elif command["Action"] == "enter":
                     if doorObjectsList[word].locked == True: #same here but for when u try to enter a locked door
                         command["Target"] = ""
+                    else:
+                        command["Target"] = word
                 else:
                     command["Target"] = word
             elif word in containerList:

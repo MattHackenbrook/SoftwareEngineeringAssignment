@@ -10,8 +10,8 @@ dataManager = DataManager.DataManager(True)
 #check savefile for player in room and return that room
 def findPlayer():
     for room in dataManager.rooms:
-        if len(room["caracters"]) > 0:
-            for thing in room["caracters"]:
+        if len(room.caracters) > 0:
+            for thing in room.caracters:
                 if thing == "Player":
                     return room
 
