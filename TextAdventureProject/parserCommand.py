@@ -105,9 +105,11 @@ def getDoorObjects(doors, room):
 
 
 def getInvObjects(invList, room):
+    invObjectList = {}
     for each in invList:
+        invObjectList[each] = {}
         for item in room.characters[each].inv.keys():
-            invList[each][item] = {item, room.characters[each].inv[item]}
+            invObjectList[each][item] = room.characters[each].inv[item]
     return invList
 
 
