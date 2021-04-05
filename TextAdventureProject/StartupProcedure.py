@@ -40,7 +40,6 @@ def startGame():
         print("invalid input")
         b = input("... ")
     if b == "Newgame":
-        dataManager.writeData()
         print("Let us begin the story of Prison escape (title pending)\nyou wake up in your miserable cell in prison\nthe smell of blood reaches your nose\nsomething isn't right.\n")
         dataManager = DataManager.DataManager(True)
         return dataManager.rooms["Start_Cell"]
