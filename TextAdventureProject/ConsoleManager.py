@@ -21,7 +21,8 @@ class ConsoleManager:
         self.userInput = input("... ")
         if self.userInput == "inventory" or self.userInput == "inv":
             print(self.room.characters.player.inv)
-        return self.userInput
+            return False
+        return True
 
     def printRoom(self):
         if self.room.visited == False:
