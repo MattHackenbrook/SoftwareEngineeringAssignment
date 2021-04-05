@@ -29,6 +29,13 @@ class ConsoleManager:
            print(self.room.longDesc)
         else:
             print(self.room.shortDesc)
+        print("This room contains the containers: ")
+        for container in self.room.containers.keys():
+            print(container)
+        print("\nThis room contains the characters: ")
+        for character in self.room.characters.keys():
+            if character != "Player":
+                print(character)
     
     def printFailure(self, command):
         if parserCommand.checkValidCommand(command) == False:
