@@ -393,7 +393,7 @@
     },
     "shortDesc": "Home sweet home.",
     "longDesc": "This is your cell, the miserable, disgusting hole youve spent your last few years.",
-    "visited": true
+    "visited": false
   },
   "Front_Gate": {
     "doors": {
