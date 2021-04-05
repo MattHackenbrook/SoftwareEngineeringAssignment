@@ -76,7 +76,7 @@ def parseInput(console, owner):
                     if invObjectsList[owner][word].classification == "Wearable":
                         command["Object"] = word
                 else:
-                      command["Object"] = word
+                    command["Object"] = word
             elif word in characterList:
                 command["target"] = word                
         elif word in helpWords:
