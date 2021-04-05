@@ -31,7 +31,7 @@ def parseInput(console, owner):
     characterList = roomStuff["Characters"]
     characterList.remove(owner) #so you cant kill yourself
     #itemObjectsList = getItemObjects(itemList, room)
-    invObjectsList = getItemObjects(invList, room)
+    invObjectsList = getInvObjects(invList, room)
     doorObjectsList = getDoorObjects(doorList, room)
     
     for word in command_words:
@@ -91,8 +91,15 @@ def getDoorObjects(doors, room):
     doorsList = {}
     for each in doors:
         for door in room.doors.keys():
-            doorsList[each] = room.doors[door].values()
+            if door == each:
+                doorsList[each] = room.doors[door]
     return doorsList
+
+def getInvObject(invList, room):
+    for each in invList:
+        for item in room.characters[each].inventory:
+            invList[each][item] = {item, room.characters[each].inventory[item]}
+    return invList
 
 def checkValidCommand(command):
     if command.target == "" and command.action == "inspect":
@@ -110,7 +117,7 @@ def roomDict(room):
     doorList = []
     containerList = []
     itemList = []
-    invList = []
+    invList = {}
     characterList = []
     for x in room.doors.keys():
         doorList.append(x)
@@ -120,8 +127,9 @@ def roomDict(room):
         containerList.append(y)
     for a in room.characters.keys():
       characterList.append(a)
-      for b in room.characters.inv.keys():
-          invList.append(b)
+      invList[a] = []
+      for b in room.characters[a].inv.keys():
+          invList[a].append(b)
     
     roomStuff = {"Doors" : doorList, "Containers" : containerList, "Items" : itemList, "Inventory" : invList, "Characters" : characterList}
     
