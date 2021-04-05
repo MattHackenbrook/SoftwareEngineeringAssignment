@@ -1,11 +1,12 @@
 import CommandModel
 
-#Action = {'THROW': 'TO THROW', 'HIT': 'TO HIT'}
+# Action = {'THROW': 'TO THROW', 'HIT': 'TO HIT'}
 
 actionWords = ("throw", "hit", "inspect", "take", "unlock", "wear", "eat", "enter")
 
-helpWords = ("Helper" , "Help")
- 
+helpWords = ("Helper", "Help")
+
+
 # def parserCommand():
 #     print("\nWhat action do you want to take?: ")
 #     for choice in Action:
@@ -17,11 +18,10 @@ helpWords = ("Helper" , "Help")
 #     return choice
 
 
-
 def parseInput(console, owner):
-    inp = console.userInput
+    inp = str(console.userInput)
     room = console.room
-    command = {"Action":"", "Object":"", "Owner":owner, "Target":"", "Room":room}
+    command = {"Action": "", "Object": "", "Owner": owner, "Target": "", "Room": room}
     command_words = list(inp.split(" "))
     roomStuff = roomDict(room)
     doorList = roomStuff["Doors"]
@@ -29,11 +29,11 @@ def parseInput(console, owner):
     itemList = roomStuff["Items"]
     invList = roomStuff["Inventory"]
     characterList = roomStuff["Characters"]
-    characterList.remove(owner) #so you cant kill yourself
-    #itemObjectsList = getItemObject(itemList, room)
+    characterList.remove(owner)  # so you cant kill yourself
+    # itemObjectsList = getItemObject(itemList, room)
     invObjectsList = getInvObjects(invList, room)
     doorObjectsList = getDoorObjects(doorList, room)
-    
+
     for word in command_words:
         word = word.lower()
         if word not in helpWords:
@@ -43,12 +43,13 @@ def parseInput(console, owner):
                 if command["Action"] == "inspect":
                     command["Target"] = word
                 elif command["Action"] == "unlock":
-                    if doorObjectsList[word].locked == False: #check to see if door is even able to be unlocked, if door is already unlocked, u cannot unlock it again so returns invalid by setting target to empty string
+                    if doorObjectsList[
+                        word].locked == False:  # check to see if door is even able to be unlocked, if door is already unlocked, u cannot unlock it again so returns invalid by setting target to empty string
                         command["Target"] = ""
                     else:
                         command["Target"] = word
                 elif command["Action"] == "enter":
-                    if doorObjectsList[word].locked == True: #same here but for when u try to enter a locked door
+                    if doorObjectsList[word].locked == True:  # same here but for when u try to enter a locked door
                         command["Target"] = ""
                     else:
                         command["Target"] = word
@@ -56,7 +57,7 @@ def parseInput(console, owner):
                     command["Target"] = word
             elif word in containerList:
                 command["Target"] = word
-            elif word in itemList:           
+            elif word in itemList:
                 if command["Action"] == "Take":
                     command["Target"] = word
                 if command["Action"] == "inspect":
@@ -78,11 +79,13 @@ def parseInput(console, owner):
                 else:
                     command["Object"] = word
             elif word in characterList:
-                command["target"] = word                
+                command["target"] = word
         elif word in helpWords:
             console.helper()
-    commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"], command["Room"])
+    commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"],
+                                         command["Room"])
     return commandObject
+
 
 def getItemObjects(items, room):
     itemsList = {}
@@ -90,6 +93,7 @@ def getItemObjects(items, room):
         for container in room.container.keys():
             itemsList[each] = room.container[container].items.values()
     return itemsList
+
 
 def getDoorObjects(doors, room):
     doorsList = {}
@@ -99,11 +103,13 @@ def getDoorObjects(doors, room):
                 doorsList[each] = room.doors[door]
     return doorsList
 
+
 def getInvObjects(invList, room):
     for each in invList:
-        for item in room.characters[each].inventory.keys():
-            invList[each][item] = {item, room.characters[each].inventory[item]}
+        for item in room.characters[each].inv.keys():
+            invList[each][item] = {item, room.characters[each].inv[item]}
     return invList
+
 
 def checkValidCommand(command):
     if command.target == "" and command.action == "inspect":
@@ -116,6 +122,7 @@ def checkValidCommand(command):
         return False
     else:
         return command
+
 
 def roomDict(room):
     doorList = []
@@ -130,11 +137,12 @@ def roomDict(room):
             itemList.append(z)
         containerList.append(y)
     for a in room.characters.keys():
-      characterList.append(a)
-      invList[a] = []
-      for b in room.characters[a].inv.keys():
-          invList[a].append(b)
-    
-    roomStuff = {"Doors" : doorList, "Containers" : containerList, "Items" : itemList, "Inventory" : invList, "Characters" : characterList}
-    
+        characterList.append(a)
+        invList[a] = []
+        for b in room.characters[a].inv.keys():
+            invList[a].append(b)
+
+    roomStuff = {"Doors": doorList, "Containers": containerList, "Items": itemList, "Inventory": invList,
+                 "Characters": characterList}
+
     return roomStuff
