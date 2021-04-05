@@ -19,24 +19,22 @@ def startGame():
     """
     o = """
     Loadgame
-    Deletegame"""
+    """
     if path.exists("SaveFile.json") ==True:
-        c = a + o  
+        c = a + o
         print(c)
         b = input()
-        while b != "Loadgame" or b != "deletegame":
+        while b.lower() != "loadgame" and b.lower() != "newgame":
             print("invalid input")
             input("... ")
         if b == "Loadgame":
             dataManager = DataManager.DataManager(False)
-            currRoom = findPlayer()
+            currRoom = findPlayer(dataManager)
             print("We last left off...")
             return dataManager.rooms[currRoom]
-        elif b == "Deletegame":
-            os.remove("SaveFile.json")    
     print(a)
     b = input()
-    while b != "Newgame":
+    while b.lower != "newgame":
         print("invalid input")
         b = input("... ")
     if b == "Newgame":
