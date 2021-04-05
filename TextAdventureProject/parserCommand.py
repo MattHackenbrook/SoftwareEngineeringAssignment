@@ -40,7 +40,9 @@ def parseInput(console, owner):
             if word in actionWords:
                 command["Action"] = word
             elif word in doorList:
-                if command["Action"] == "unlock":
+                if command["Action"] == "inspect":
+                    command["Target"] = word
+                elif command["Action"] == "unlock":
                     if doorObjectsList[word].locked == False: #check to see if door is even able to be unlocked, if door is already unlocked, u cannot unlock it again so returns invalid by setting target to empty string
                         command["Target"] = ""
                     else:
@@ -62,16 +64,18 @@ def parseInput(console, owner):
                 else:
                     command["Object"] = word
             elif word in invList:
-                 if command["Action"] == "unlock":
+                if command["Action"] == "inspect":
+                    command["Target"] = word
+                if command["Action"] == "unlock":
                     if invObjectsList[owner][word].classification == "Key":
                         command["Object"] == word
-                 elif command["Action"] == "eat":
+                elif command["Action"] == "eat":
                     if invObjectsList[owner][word].classification == "Edible":
                         command["Object"] = word
-                 elif command["Action"] == "wear":
+                elif command["Action"] == "wear":
                     if invObjectsList[owner][word].classification == "Wearable":
                         command["Object"] = word
-                 else:
+                else:
                       command["Object"] = word
             elif word in characterList:
                 command["target"] = word                
