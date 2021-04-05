@@ -30,7 +30,7 @@ def parseInput(console, owner):
     invList = roomStuff["Inventory"]
     characterList = roomStuff["Characters"]
     characterList.remove(owner) #so you cant kill yourself
-    #itemObjectsList = getItemObjects(itemList, room)
+    #itemObjectsList = getItemObject(itemList, room)
     invObjectsList = getInvObjects(invList, room)
     doorObjectsList = getDoorObjects(doorList, room)
     
