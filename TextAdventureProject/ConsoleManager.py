@@ -6,27 +6,26 @@ Created on Sat Mar 13 13:52:34 2021
 @author: user1
 """
 import CompileOutput
-#import Translator
+# import Translator
 import WorldHandler
 import parserCommand
 
 
 class ConsoleManager:
-    
+
     def __init__(self, room):
         self.room = room
         self.userInput = ""
-            
+
     def readUserInput(self):
         self.userInput = input("... ")
         if self.userInput == "inventory" or self.userInput == "inv":
             print(self.room.characters.player.inv)
         return self.userInput
-        
-        
+
     def printRoom(self):
         if self.room.visited == False:
-           print(self.room.longDesc)
+            print(self.room.longDesc)
         else:
             print(self.room.shortDesc)
         print("You may find items in/on the: ")
@@ -36,7 +35,10 @@ class ConsoleManager:
         for character in self.room.characters.keys():
             if character != "Player":
                 print(character)
-    
+        print("\nThis room contains doors leading to: ")
+        for door in self.room.doors.keys():
+            print(door)
+
     def printFailure(self, command):
         if parserCommand.checkValidCommand(command) == False:
             if command.action == "unlock":
@@ -50,11 +52,11 @@ class ConsoleManager:
             return False
         else:
             return True
-    
+
     def endGame(self):
         if WorldHandler().checkEnd() == True:
             print("Game Over")
-    
+
     def helper(self):
         print('''You have 8 different commands you can use in the game.
                  1.Unlock
@@ -65,6 +67,10 @@ class ConsoleManager:
                  6.Eat
                  7.Wear
                  8.Go 
+                 
+                 You can also check your inventory using:
+                 inv
+                 
                   ''' + self.room.longDesc)
-                  
-                
+
+
