@@ -60,18 +60,18 @@ class ConsoleManager:
 
     def helper(self):
         print('''You have 8 different commands you can use in the game.
-                 1.Unlock
-                 2.Throw
-                 3.Hit
-                 4.Take
-                 5.Inspect
-                 6.Eat
-                 7.Wear
-                 8.Go 
+1.Unlock
+2.Throw
+3.Hit
+4.Take
+5.Inspect
+6.Eat
+7.Wear
+8.Enter 
+
+You can also check your inventory using:
+inv
                  
-                 You can also check your inventory using:
-                 inv
-                 
-                  ''' + self.room.longDesc)
+''' + self.room.longDesc)
 
 
