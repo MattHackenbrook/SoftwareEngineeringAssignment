@@ -63,13 +63,13 @@ def parseInput(console, owner):
                     command["Object"] = word
             elif word in invList:
                  if command["Action"] == "unlock":
-                    if invObjectsList[word].classification == "Key":
+                    if invObjectsList[owner][word].classification == "Key":
                         command["Object"] == word
                  elif command["Action"] == "eat":
-                    if invObjectsList[word].classification == "Edible":
+                    if invObjectsList[owner][word].classification == "Edible":
                         command["Object"] = word
                  elif command["Action"] == "wear":
-                    if invObjectsList[word].classification == "Wearable":
+                    if invObjectsList[owner][word].classification == "Wearable":
                         command["Object"] = word
                  else:
                       command["Object"] = word
@@ -95,7 +95,7 @@ def getDoorObjects(doors, room):
                 doorsList[each] = room.doors[door]
     return doorsList
 
-def getInvObject(invList, room):
+def getInvObjects(invList, room):
     for each in invList:
         for item in room.characters[each].inventory:
             invList[each][item] = {item, room.characters[each].inventory[item]}
@@ -111,7 +111,7 @@ def checkValidCommand(command):
     if command.action == "" or command.target == "":
         return False
     else:
-        return True
+        return command
 
 def roomDict(room):
     doorList = []

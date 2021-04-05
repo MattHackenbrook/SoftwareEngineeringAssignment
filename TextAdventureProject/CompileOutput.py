@@ -16,9 +16,9 @@ class CompileOutput:
             if console.userInput == "help":
                 console.helper()
             else:
-                parsed = parseInput(console)
+                parsed = parseInput(console, "Player")
                 valid = console.printFailure(parsed)
-        wH = WorldHandler(parsed)
-        #do something with w.e is returned from world handler start compile
+        wH = WorldHandler(valid)
+        #print()
         #and then restart the turn sequence
 

@@ -44,7 +44,7 @@ class WorldAi:
         
         
         if checkHostile(caracterObject, characterObjects):
-            setState(caracter, data, "aggressive")
+            setState(caracter, caracterObject, data, "aggressive")
             command["Action"] = random.choice(hostileActionWords)
             #if command["Action"] == "throw":
             command["Object"] = random.choice(roomStuff["Inventory"][caracter])
@@ -61,31 +61,30 @@ class WorldAi:
                 #     while characterObjects[command["Target"]].classification == "Zombie":
                 #         command["Target"] = random.choice(roomStuff["Characters"])
         else:
-            setState(caracter, data, "idle")
+            setState(caracter, caracterObject, data, random.choice(stateWords))
+            if caracterObject.state == "idle":
+                command["Action"] = "stay"
             if caracterObject.classification == "NPC":
                 command["Action"] = random.choice(npcActionWords)
-                if command["Action"] == "take" and (caracterObject.state == "idle" or caracterObject.state == "wander"):
+                if command["Action"] == "take" and caracterObject.state == "wander":
                     command["Object"] = None
                     if len(roomStuff["Items"]) > 0:
                         command["Target"] = random.choice(roomStuff["Items"])
                     else:
                         command["Target"] = None #ask about this default actions if first try is unusable for npc only
                         command["Action"] = "stay" 
-                if command["Action"] == "unlock" and (caracterObject.state == "idle" or caracterObject.state == "wander"):
+                if command["Action"] == "unlock" and caracterObject.state == "wander":
                     command["Target"] = random.choice(roomStuff["Doors"])
                     if doorObjectsList[command["Target"]].locked == False:
                         command["Object"] = None 
-                        #if caracterObject.state == "idle":
-                            #command["Action"] = "stay"
-                        #else:
-                            #command["Action"] = "enter"
+                        command["Action"] = "enter"
                     else:
                         if caracter == "Ivan":
                             command["Object"] = "Sledgehammer"
                         else:
                             command["Object"] = None 
-                            #command["Action"] =ask about this too
-                if command["Action"] == "enter" and (caracterObject.state == "idle" or caracterObject.state == "wander"):
+                            command["Action"] = "stay"
+                if command["Action"] == "enter" and caracterObject.state == "wander":
                     command["Target"] = random.choice(roomStuff["Doors"])
                     if doorObjectsList[command["Target"]].locked == True:
                         if caracter == "Ivan":
@@ -94,17 +93,15 @@ class WorldAi:
                         else:
                             command["Action"] = "stay" 
                     else:
-                        command["Object"] = None    
+                        command["Object"] = None
             else:
                 command["Action"] = random.choice(zombieActionWords)
-                if command["Action"] == "enter":
+                if command["Action"] == "enter" and caracterObject.state == "wander":
                     command["Target"] = random.choice(roomStuff["Doors"])
                     if doorObjectsList[command["Target"]].locked == True:
                         command["Action"] = "stay"
                     else:
-                        command["Object"] = None
-            newState = random.choice(stateWords)  
-            setState(caracter, data, newState)          
+                        command["Object"] = None      
         if command["Action"] == "stay":
             commandObject = None
         else:
@@ -142,18 +139,19 @@ def checkHostile(charObject, charObjects):
             return True        
     return False
 
-def setState(caracter, data, state):
+def setState(caracter, charObject, data, state):
     for room in data.rooms:
         for each in data.rooms[room].characters:
             if each == caracter:
                 data.rooms[room].characters[caracter].state = state
+                charObject.state = state
                 return True
     
     
 
 #testing
-data = DataManager.DataManager(True)
-worldAI = WorldAi(data)
-worldAI = WorldAi(data)
-worldAI = WorldAi(data)
-worldAI = WorldAi(data)
+#data = DataManager.DataManager(True)
+#worldAI = WorldAi(data)
+#worldAI = WorldAi(data)
+#worldAI = WorldAi(data)
+#worldAI = WorldAi(data)
