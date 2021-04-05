@@ -123,7 +123,7 @@ def checkValidCommand(command):
     if command.action == "" or command.target == "":
         return False
     else:
-        return command
+        return True
 
 
 def roomDict(room):
