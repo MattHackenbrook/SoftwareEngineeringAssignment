@@ -27,17 +27,22 @@ def startGame():
         while b.lower() != "loadgame" and b.lower() != "newgame":
             print("invalid input")
             input("... ")
-        if b == "Loadgame":
+        if b.lower == "loadgame":
             dataManager = DataManager.DataManager(False)
             currRoom = findPlayer(dataManager)
             print("We last left off...")
             return dataManager.rooms[currRoom]
-    print(a)
-    b = input()
-    while b.lower != "newgame":
-        print("invalid input")
-        b = input("... ")
-    if b == "Newgame":
+        else:
+            print(
+                "Let us begin the story of Prison escape (title pending)\nyou wake up in your miserable cell in prison\nthe smell of blood reaches your nose\nsomething isn't right.\n")
+            dataManager = DataManager.DataManager(True)
+            return dataManager.rooms["Start_Cell"]
+    else:
+        print(a)
+        b = input()
+        while b.lower != "newgame":
+            print("invalid input")
+            b = input("... ")
         print("Let us begin the story of Prison escape (title pending)\nyou wake up in your miserable cell in prison\nthe smell of blood reaches your nose\nsomething isn't right.\n")
         dataManager = DataManager.DataManager(True)
         return dataManager.rooms["Start_Cell"]
