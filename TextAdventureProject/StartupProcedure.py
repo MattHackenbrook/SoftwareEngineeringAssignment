@@ -26,7 +26,7 @@ def startGame():
         b = input()
         while b.lower() != "loadgame" and b.lower() != "newgame":
             print("invalid input")
-            input("... ")
+            b = input("... ")
         if b.lower == "loadgame":
             dataManager = DataManager.DataManager(False)
             currRoom = findPlayer(dataManager)

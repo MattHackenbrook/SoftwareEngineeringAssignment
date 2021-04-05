@@ -20,7 +20,9 @@ class ConsoleManager:
     def readUserInput(self):
         self.userInput = input("... ")
         if self.userInput == "inventory" or self.userInput == "inv":
-            print(self.room.characters.player.inv)
+            print("Your inventory contains: ")
+            for item in self.room.characters["Player"].inv.keys():
+                print(item)
             return False
         return True
 
@@ -60,18 +62,15 @@ class ConsoleManager:
 
     def helper(self):
         print('''You have 8 different commands you can use in the game.
-1.Unlock
-2.Throw
-3.Hit
-4.Take
-5.Inspect
-6.Eat
-7.Wear
-8.Enter 
+        1.Unlock
+        2.Throw
+        3.Hit
+        4.Take
+        5.Inspect
+        6.Eat
+        7.Wear
+        8.Enter 
+        You can also check your inventory using:
+        inv
 
-You can also check your inventory using:
-inv
-                 
-''' + self.room.longDesc)
-
-
+        ''' + self.room.longDesc)
