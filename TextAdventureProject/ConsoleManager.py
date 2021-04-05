@@ -29,7 +29,7 @@ class ConsoleManager:
            print(self.room.longDesc)
         else:
             print(self.room.shortDesc)
-        print("This room contains the containers: ")
+        print("You may find items in/on the: ")
         for container in self.room.containers.keys():
             print(container)
         print("\nThis room contains the characters: ")
