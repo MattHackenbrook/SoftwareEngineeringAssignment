@@ -5,11 +5,9 @@ import os
 from os import path
 from os import remove
 
-dataManager = DataManager.DataManager(True)
-
 #check savefile for player in room and return that room
-def findPlayer():
-    for room in dataManager.rooms:
+def findPlayer(dataMan):
+    for room in dataMan.rooms:
         if len(room.caracters) > 0:
             for thing in room.caracters:
                 if thing == "Player":
@@ -30,7 +28,7 @@ def startGame():
             print("invalid input")
             input("... ")
         if b == "Loadgame":
-            dataManager.buildRoomsFromData()
+            dataManager = DataManager.DataManager(False)
             currRoom = findPlayer()
             print("We last left off...")
             return dataManager.rooms[currRoom]
@@ -44,6 +42,7 @@ def startGame():
     if b == "Newgame":
         dataManager.writeData()
         print("Let us begin the story of Prison escape (title pending)\nyou wake up in your miserable cell in prison\nthe smell of blood reaches your nose\nsomething isn't right.\n")
+        dataManager = DataManager.DataManager(True)
         return dataManager.rooms["Start_Cell"]
 
 def main(): #populate world
