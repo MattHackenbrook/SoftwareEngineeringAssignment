@@ -151,8 +151,8 @@ def setState(caracter, charObject, data, state):
     
 
 #testing
-data = DataManager.DataManager(True)
-worldAI = WorldAi(data)
+#data = DataManager.DataManager(True)
+#worldAI = WorldAi(data)
 #worldAI = WorldAi(data)
 #worldAI = WorldAi(data)
 #worldAI = WorldAi(data)
