@@ -20,7 +20,7 @@ class WorldHandler:
 
 
     def getCommandList(self):
-        AI = RunWorldAi.WorldAi()
+        AI = RunWorldAi.WorldAi(self.data)
         return AI.commandList
 
     def runCommand(self, cmd):
