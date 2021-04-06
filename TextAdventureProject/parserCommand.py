@@ -53,14 +53,16 @@ def parseInput(console, owner):
             else:
                 command["Target"] = word.title()
         elif word.title() in containerList:
-            command["Target"] = word.title()
+            if command["Action"] == "inspect":              
+                command["Target"] = word.title()
         elif word.title() in itemList:
-            if command["Action"] == "Take":
-                command["Target"] = word.title()
-            if command["Action"] == "inspect":
-                command["Target"] = word.title()
-            else:
-                command["Object"] = word
+            if command["Action"] != "eat" and command["Action"] != "wear" and command["Action"] != "unlock":
+                if command["Action"] == "take":
+                    command["Target"] = word.title()
+                if command["Action"] == "inspect":
+                    command["Target"] = word.title()
+                else:
+                    command["Object"] = word
         elif word.title() in invList:
             if command["Action"] == "inspect":
                 command["Target"] = word.title()
