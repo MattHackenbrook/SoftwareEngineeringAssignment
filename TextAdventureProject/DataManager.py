@@ -18,6 +18,7 @@ class DataManager:
             self.filePath = 'SaveFile.json'
         self.buildRoomsFromData()
         self.filePath = 'SaveFile.json'
+        self.writeData()
 
     def readData(self):
         with open(self.filePath, 'r') as saveFile:
