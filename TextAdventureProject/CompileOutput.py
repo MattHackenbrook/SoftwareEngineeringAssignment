@@ -1,6 +1,7 @@
 import ConsoleManager 
 #import Translator
 import WorldHandler
+import StartupProcedure
 from parserCommand import parseInput
 
 
@@ -19,6 +20,8 @@ class CompileOutput:
                 parsed = parseInput(console, "Player")
                 valid = console.printFailure(parsed)
         wH = WorldHandler.WorldHandler(parsed)
-        #print()
+        print(wH.playerResult)
+        console.room = wH.data.rooms[StartupProcedure.findPlayer(wH.data)]
+        CompileOutput.playerRoomDescription(console)
         #and then restart the turn sequence
 

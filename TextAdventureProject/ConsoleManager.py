@@ -21,25 +21,25 @@ class ConsoleManager:
         self.userInput = input("... ")
         if self.userInput == "inventory" or self.userInput == "inv":
             print("Your inventory contains: ")
-            for item in self.room.characters["Player"].inv.keys():
+            for item in self.room[1].characters["Player"].inv.keys():
                 print(item)
             return False
         return True
 
     def printRoom(self):
-        if self.room.visited == False:
-            print(self.room.longDesc)
+        if self.room[1].visited == False:
+            print(self.room[1].longDesc)
         else:
-            print(self.room.shortDesc)
+            print(self.room[1].shortDesc)
         print("You may find items in/on the: ")
-        for container in self.room.containers.keys():
+        for container in self.room[1].containers.keys():
             print(container)
         print("\nThis room contains the characters: ")
-        for character in self.room.characters.keys():
+        for character in self.room[1].characters.keys():
             if character != "Player":
                 print(character)
         print("\nThis room contains doors leading to: ")
-        for door in self.room.doors.keys():
+        for door in self.room[1].doors.keys():
             print(door)
 
     def printFailure(self, command):
@@ -73,4 +73,4 @@ class ConsoleManager:
         You can also check your inventory using:
         inv
 
-        ''' + self.room.longDesc)
+        ''' + self.room[1].longDesc)

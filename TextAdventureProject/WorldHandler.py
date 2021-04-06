@@ -6,9 +6,12 @@ import DataModels
 class WorldHandler:
 
     def __init__(self, cmd):
-        self.playerCommand = CommandModel.Command(cmd.action, cmd.object, cmd.owner, cmd.target, cmd.room)
         self.data = DataManager.DataManager(False)
         self.rooms = self.data.rooms
+        # for room in self.rooms.keys():
+        #     if "Player" in self.rooms[room].characters.keys():
+        #         cmd.room = room
+        self.playerCommand = CommandModel.Command(cmd.action, cmd.object, cmd.owner, cmd.target, cmd.room)
         self.commandList = self.getCommandList()
         self.playerResult = self.runCommand(self.playerCommand)
         for command in self.commandList:
@@ -16,7 +19,20 @@ class WorldHandler:
         self.checkDeaths()
         self.data.writeData()
         #send playerResult to compileOutput
-        print(self.playerResult)
+        #print(self.playerResult)
+
+    # def __init__(self, cmd):
+    #     self.playerCommand = CommandModel.Command(cmd.action, cmd.object, cmd.owner, cmd.target, cmd.room)
+    #     self.data = DataManager.DataManager(False)
+    #     self.rooms = self.data.rooms
+    #     self.commandList = self.getCommandList()
+    #     self.playerResult = self.runCommand(self.playerCommand)
+    #     for command in self.commandList:
+    #         self.runCommand(command)
+    #     self.checkDeaths()
+    #     self.data.writeData()
+    #     #send playerResult to compileOutput
+    #     #print(self.playerResult)
 
 
     def getCommandList(self):

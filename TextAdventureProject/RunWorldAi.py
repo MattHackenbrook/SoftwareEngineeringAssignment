@@ -19,7 +19,7 @@ class WorldAi:
             generatedCommand = self.generateCommand(each, self.worldCaracters[each], data)
             if generatedCommand != None:
                 self.commandList.append(generatedCommand)
-        print("commands generated")
+        #print("commands generated")
          
 
     def findCaracters(self, data): #this needs to get caracter object
@@ -105,6 +105,7 @@ class WorldAi:
         if command["Action"] == "stay":
             commandObject = None
         else:
+            command["Action"] = parserCommand.getEnum(command["Action"].lower())
             commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"], command["Room"])
         return commandObject
         
@@ -150,8 +151,8 @@ def setState(caracter, charObject, data, state):
     
 
 #testing
-#data = DataManager.DataManager(True)
-#worldAI = WorldAi(data)
+data = DataManager.DataManager(True)
+worldAI = WorldAi(data)
 #worldAI = WorldAi(data)
 #worldAI = WorldAi(data)
 #worldAI = WorldAi(data)

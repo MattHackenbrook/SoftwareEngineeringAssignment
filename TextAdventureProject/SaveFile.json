@@ -13,7 +13,7 @@
         "containers": {
             "Desk": {
                 "items": {
-                    "Rotten banana": {
+                    "Rotten Banana": {
                         "traits": {
                             "Damage": 0,
                             "Healing": 1
@@ -21,7 +21,7 @@
                         "classification": "Edible",
                         "desc": "A completely black banana. Almost certainly not safe to eat."
                     },
-                    "Empty handgun": {
+                    "Empty Handgun": {
                         "traits": {
                             "Damage": 3
                         },
@@ -33,7 +33,7 @@
             },
             "Mop Bucket": {
                 "items": {
-                    "Janitors key": {
+                    "Janitors Key": {
                         "traits": {
                             "Damage": 0,
                             "opens": [
@@ -81,7 +81,7 @@
                 "desc": "James, but a zombie.",
                 "state": "idle"
             },
-            "Zombie luke": {
+            "Zombie Luke": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -142,7 +142,7 @@
                         "classification": "Melee",
                         "desc": "A simple ballpoint pen."
                     },
-                    "Note from warden": {
+                    "Note From Warden": {
                         "traits": {
                             "Damage": 1,
                             "Text": "Remember to keep prisoner 203, Jones, away from the janitors closet!"
@@ -150,7 +150,7 @@
                         "classification": "Readable",
                         "desc": "A note from the warden to the guard stationed in the south block."
                     },
-                    "Guard hat": {
+                    "Guard Hat": {
                         "traits": {
                             "Damage": 1,
                             "armour": 1
@@ -163,7 +163,7 @@
             }
         },
         "characters": {
-            "Zombie steve": {
+            "Zombie Steve": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -194,7 +194,7 @@
                 "desc": "Steve, but a zombie.",
                 "state": "idle"
             },
-            "Zombie jeff": {
+            "Zombie Jeff": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -225,7 +225,7 @@
                 "desc": "Jeff, but a zombie.",
                 "state": "idle"
             },
-            "Zombie fred": {
+            "Zombie Fred": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -256,7 +256,7 @@
                 "desc": "Fred, but a zombie.",
                 "state": "idle"
             },
-            "Zombie jack": {
+            "Zombie Jack": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -394,7 +394,7 @@
         },
         "shortDesc": "Home sweet home.",
         "longDesc": "This is your cell, the miserable, disgusting hole youve spent your last few years.",
-        "visited": true
+        "visited": false
     },
     "Front_Gate": {
         "doors": {
@@ -521,7 +521,7 @@
                 },
                 "desc": "a dirty old trash can with the smell of old garbage coming out of it."
             },
-            "Pile of leftovers": {
+            "Pile Of Leftovers": {
                 "items": {
                     "Big Spoon": {
                         "traits": {
@@ -535,7 +535,7 @@
             },
             "Vending Machine": {
                 "items": {
-                    "Can of Spripesi Cola Up": {
+                    "Can Of Spripesi Cola Up": {
                         "traits": {
                             "Damage": 1,
                             "Healing": 1
@@ -606,7 +606,7 @@
         "containers": {
             "Ground": {
                 "items": {
-                    "basketball": {
+                    "Basketball": {
                         "traits": {
                             "Damage": 1,
                             "Throw": 1

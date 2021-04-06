@@ -7,9 +7,9 @@ from os import remove
 
 #check savefile for player in room and return that room
 def findPlayer(dataMan):
-    for room in dataMan.rooms:
-        if len(room.caracters) > 0:
-            for thing in room.caracters:
+    for room in dataMan.rooms.items:
+        if len(dataMan.rooms[room[1]].characters) > 0:
+            for thing in dataMan.rooms[room[1]].characters:
                 if thing == "Player":
                     return room
 
@@ -31,12 +31,12 @@ def startGame():
             dataManager = DataManager.DataManager(False)
             currRoom = findPlayer(dataManager)
             print("We last left off...")
-            return dataManager.rooms[currRoom]
+            return currRoom
         else:
             print(
                 "Let us begin the story of Prison escape (title pending)\nyou wake up in your miserable cell in prison\nthe smell of blood reaches your nose\nsomething isn't right.\n")
             dataManager = DataManager.DataManager(True)
-            return dataManager.rooms["Start_Cell"]
+            return ("Start_Cell" , dataManager.rooms["Start_Cell"])
     else:
         print(a)
         b = input()
@@ -45,14 +45,14 @@ def startGame():
             b = input("... ")
         print("Let us begin the story of Prison escape (title pending)\nyou wake up in your miserable cell in prison\nthe smell of blood reaches your nose\nsomething isn't right.\n")
         dataManager = DataManager.DataManager(True)
-        return dataManager.rooms["Start_Cell"]
+        return ("Start_Cell" , dataManager.rooms["Start_Cell"])
 
 def main(): #populate world
     startRoom = startGame()
     console = ConsoleManager.ConsoleManager(startRoom)
     CompileOutput.CompileOutput.playerRoomDescription(console)
 
-main()
+#main()
 
-#if __name__ == "__main__":
-#    main()
+if __name__ == "__main__":
+    main()

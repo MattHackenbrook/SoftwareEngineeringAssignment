@@ -13,7 +13,7 @@
     "containers": {
       "Desk": {
         "items": {
-          "Rotten banana": {
+          "Rotten Banana": {
             "classification": "Edible",
             "desc": "A completely black banana. Almost certainly not safe to eat.",
             "traits": {
@@ -21,7 +21,7 @@
               "Healing": 1
             }
           },
-          "Empty handgun": {
+          "Empty Handgun": {
             "classification": "Melee",
             "desc": "A guards handgun. There is no magazine.",
             "traits": {
@@ -33,7 +33,7 @@
       },
       "Mop Bucket": {
         "items":{
-          "Janitors key": {
+          "Janitors Key": {
             "classification": "Key",
             "desc": "A key to many doors in the prison",
             "traits": {
@@ -80,7 +80,7 @@
         "desc": "James, but a zombie.",
         "classification": "Zombie"
       },
-      "Zombie luke": {
+      "Zombie Luke": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -141,7 +141,7 @@
               "Damage": 3
             }
           },
-          "Note from warden": {
+          "Note From Warden": {
             "classification": "Readable",
             "desc": "A note from the warden to the guard stationed in the south block.",
             "traits": {
@@ -149,7 +149,7 @@
               "Text": "Remember to keep prisoner 203, Jones, away from the janitors closet!"
             }
           },
-          "Guard hat": {
+          "Guard Hat": {
             "classification": "Wearable",
             "desc": "A guards hat",
             "traits": {
@@ -162,7 +162,7 @@
       }
     },
     "characters": {
-      "Zombie steve": {
+      "Zombie Steve": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -193,7 +193,7 @@
         "desc": "Steve, but a zombie.",
         "classification": "Zombie"
       },
-      "Zombie jeff": {
+      "Zombie Jeff": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -224,7 +224,7 @@
         "desc": "Jeff, but a zombie.",
         "classification": "Zombie"
       },
-      "Zombie fred": {
+      "Zombie Fred": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -255,7 +255,7 @@
         "desc": "Fred, but a zombie.",
         "classification": "Zombie"
       },
-      "Zombie jack": {
+      "Zombie Jack": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -514,7 +514,7 @@
         },
         "desc": "a dirty old trash can with the smell of old garbage coming out of it."
       },
-      "Pile of leftovers": {
+      "Pile Of Leftovers": {
         "items": {
           "Big Spoon": {
             "classification": "Misc",
@@ -528,7 +528,7 @@
       },
       "Vending Machine": {
         "items": {
-          "Can of Spripesi Cola Up": {
+          "Can Of Spripesi Cola Up": {
             "classification": "Edible",
             "desc": "A can of Diet Spripesi Cola Up, its the quenchiest! looks edible",
             "traits": {
@@ -599,7 +599,7 @@
     "containers": {
       "Ground": {
         "items":{
-          "basketball": {
+          "Basketball": {
             "classification": "Throwable",
             "desc": "A roughed up faded orange basketball",
             "traits": {
