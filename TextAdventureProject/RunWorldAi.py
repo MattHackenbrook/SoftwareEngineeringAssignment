@@ -4,10 +4,11 @@ import DataModels
 import parserCommand
 import random
 import CommandModel
+from CommandModel import Action
 
-npcActionWords = ("take", "unlock", "enter", "stay")
-zombieActionWords = ("enter", "stay")
-hostileActionWords = ("throw", "hit")
+npcActionWords = (Action.TAKE, Action.UNLOCK, Action.ENTER, None)
+zombieActionWords = (Action.ENTER, None)
+hostileActionWords = (Action.THROW, Action.HIT)
 stateWords = ("idle", "wander")
 
 class WorldAi:
@@ -34,13 +35,11 @@ class WorldAi:
 
     def generateCommand(self, caracter, room, data):
         roomStuff = parserCommand.roomDict(room[1])
-        roomStuff["Characters"].remove(caracter)
-        roomStuff["Inventory"].pop(caracter)
         caracterObject = getCharObject(caracter, room[1])
         characterObjects = getCharObjects(roomStuff["Characters"], room[1])
         doorObjectsList = parserCommand.getDoorObjects(roomStuff["Doors"], room[1])
         
-        command = {"Action":"", "Object":"", "Owner":caracter, "Target":"", "Room":room[0]}
+        command = {"Action":None, "Object":None, "Owner":caracter, "Target":None, "Room":room[0]}
         
         
         if checkHostile(caracterObject, characterObjects):
@@ -51,8 +50,12 @@ class WorldAi:
             if caracterObject.classification == "NPC":
                 command["Target"] = random.choice(roomStuff["Characters"])
             else:
-                while characterObjects[command["Target"]].classification == "Zombie":
-                    command["Target"] = random.choice(roomStuff["Characters"])
+                try:
+                    while characterObjects[command["Target"]].classification == "Zombie":
+                        command["Target"] = random.choice(roomStuff["Characters"])
+                except KeyError:
+                    pass
+
             #if command["Action"] == "hit": #this is redundant, can be removed as long as there is no distinguishing between hit or throw for npc or zombies.
                 # command["Object"] = random.choice(roomStuff["Inventory"][caracter])
                 # if caracterObject.classification == "NPC":
@@ -63,50 +66,53 @@ class WorldAi:
         else:
             setState(caracter, caracterObject, data, random.choice(stateWords))
             if caracterObject.state == "idle":
-                command["Action"] = "stay"
+                command["Action"] = None
             if caracterObject.classification == "NPC":
                 command["Action"] = random.choice(npcActionWords)
-                if command["Action"] == "take" and caracterObject.state == "wander":
+                if command["Action"] == Action.TAKE:
                     command["Object"] = None
                     if len(roomStuff["Items"]) > 0:
                         command["Target"] = random.choice(roomStuff["Items"])
                     else:
                         command["Target"] = None #ask about this default actions if first try is unusable for npc only
-                        command["Action"] = "stay" 
-                if command["Action"] == "unlock" and caracterObject.state == "wander":
+                        command["Action"] = None
+                if command["Action"] == Action.UNLOCK:
                     command["Target"] = random.choice(roomStuff["Doors"])
                     if doorObjectsList[command["Target"]].locked == False:
                         command["Object"] = None 
-                        command["Action"] = "enter"
+                        command["Action"] = Action.ENTER
                     else:
                         if caracter == "Ivan":
                             command["Object"] = "Sledgehammer"
                         else:
                             command["Object"] = None 
-                            command["Action"] = "stay"
-                if command["Action"] == "enter" and caracterObject.state == "wander":
+                            command["Action"] = None
+                if command["Action"] == Action.ENTER:
                     command["Target"] = random.choice(roomStuff["Doors"])
                     if doorObjectsList[command["Target"]].locked == True:
                         if caracter == "Ivan":
-                            command["Action"] = "unlock"
+                            command["Action"] = Action.UNLOCK
                             command["Object"] = "Sledgehammer" #ask about this
                         else:
-                            command["Action"] = "stay" 
+                            command["Action"] = None
                     else:
                         command["Object"] = None
             else:
                 command["Action"] = random.choice(zombieActionWords)
-                if command["Action"] == "enter" and caracterObject.state == "wander":
+                if command["Action"] == Action.ENTER:
                     command["Target"] = random.choice(roomStuff["Doors"])
+                    if command["Target"] is None:
+                        print("FAILURE")
                     if doorObjectsList[command["Target"]].locked == True:
-                        command["Action"] = "stay"
+                        command["Action"] = None
                     else:
                         command["Object"] = None      
-        if command["Action"] == "stay":
+        if command["Action"] == None:
             commandObject = None
         else:
-            command["Action"] = parserCommand.getEnum(command["Action"].lower())
             commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"], command["Room"])
+            if commandObject.target is None:
+                print("FAILURE")
         return commandObject
         
     # def getCharClass(self, charObject):
@@ -151,8 +157,8 @@ def setState(caracter, charObject, data, state):
     
 
 #testing
-data = DataManager.DataManager(True)
-worldAI = WorldAi(data)
+#data = DataManager.DataManager(True)
+#worldAI = WorldAi(data)
 #worldAI = WorldAi(data)
 #worldAI = WorldAi(data)
 #worldAI = WorldAi(data)

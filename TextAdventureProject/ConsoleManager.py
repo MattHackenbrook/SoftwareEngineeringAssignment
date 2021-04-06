@@ -27,20 +27,36 @@ class ConsoleManager:
         return True
 
     def printRoom(self):
-        if self.room[1].visited == False:
-            print(self.room[1].longDesc)
-        else:
-            print(self.room[1].shortDesc)
-        print("You may find items in/on the: ")
-        for container in self.room[1].containers.keys():
-            print(container)
-        print("\nThis room contains the characters: ")
-        for character in self.room[1].characters.keys():
-            if character != "Player":
-                print(character)
-        print("\nThis room contains doors leading to: ")
-        for door in self.room[1].doors.keys():
-            print(door)
+        try:
+            if self.room[1].visited == False:
+                print(self.room[1].longDesc)
+            else:
+                print(self.room[1].shortDesc)
+            print("You may find items in/on the: ")
+            for container in self.room[1].containers.keys():
+                print(container)
+            print("\nThis room contains the characters: ")
+            for character in self.room[1].characters.keys():
+                if character != "Player":
+                    print(character)
+            print("\nThis room contains doors leading to: ")
+            for door in self.room[1].doors.keys():
+                print(door)
+        except TypeError:
+            if self.room.visited == False:
+                print(self.room.longDesc)
+            else:
+                print(self.room.shortDesc)
+            print("You may find items in/on the: ")
+            for container in self.room.containers.keys():
+                print(container)
+            print("\nThis room contains the characters: ")
+            for character in self.room.characters.keys():
+                if character != "Player":
+                    print(character)
+            print("\nThis room contains doors leading to: ")
+            for door in self.room.doors.keys():
+                print(door)
 
     def printFailure(self, command):
         if parserCommand.checkValidCommand(command) == False:

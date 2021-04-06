@@ -1,4 +1,5 @@
 import CommandModel
+from CommandModel import Action
 
 # Action = {'THROW': 'TO THROW', 'HIT': 'TO HIT'}
 
@@ -20,8 +21,12 @@ helpWords = ("Helper", "Help")
 
 def parseInput(console, owner):
     inp = str(console.userInput)
-    room = console.room[1]
-    command = {"Action": "", "Object": "", "Owner": owner, "Target": "", "Room": console.room[0]}
+    try:
+        room = console.room[1]
+        command = {"Action": None, "Object": None, "Owner": owner, "Target": None, "Room": console.room[0]}
+    except TypeError:
+        room = console.room
+        command = {"Action": None, "Object": None, "Owner": owner, "Target": None, "Room": console.room}
     command_words = list(inp.split(" "))
     roomStuff = roomDict(room)
     doorList = roomStuff["Doors"]
@@ -80,9 +85,8 @@ def parseInput(console, owner):
         elif word.title() in characterList:
             command["target"] = word.title()
     if command["Object"] == "":
-        command["Object"] = None    
-    command["Action"] = getEnum(command["Action"].lower())
-    commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"],
+        command["Object"] = None
+    commandObject = CommandModel.Command(getEnum(command["Action"].lower()), command["Object"], command["Owner"], command["Target"],
                                          command["Room"])
     return commandObject
 
@@ -134,11 +138,11 @@ def getInvObjects(invList, room):
 
 
 def checkValidCommand(command):
-    if command.target == "" and command.action == "inspect":
+    if command.target == None and command.action == Action.INSPECT:
         command.target = command.room
-    if command.target == "" and command.action == "eat" or command.action == "wear" or command.action == "unlock":
+    if command.target == None and command.action == Action.EAT or command.action == Action.WEAR or command.action == Action.UNLOCK:
         command.target = None
-    if command.action == "" or command.target == "":
+    if command.action == None or command.target == None:
         return False
     else:
         return True
