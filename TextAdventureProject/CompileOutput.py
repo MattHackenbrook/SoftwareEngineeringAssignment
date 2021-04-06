@@ -18,7 +18,7 @@ class CompileOutput:
             else:
                 parsed = parseInput(console, "Player")
                 valid = console.printFailure(parsed)
-        wH = WorldHandler(parsed)
+        wH = WorldHandler.WorldHandler(parsed)
         #print()
         #and then restart the turn sequence
 
