@@ -1,5 +1,6 @@
 import CommandModel
 import DataManager
+import RunWorldAi
 import DataModels
 
 class WorldHandler:
@@ -19,8 +20,8 @@ class WorldHandler:
 
 
     def getCommandList(self):
-        commandList = []
-        return commandList
+        AI = RunWorldAi.WorldAi()
+        return AI.commandList
 
     def runCommand(self, cmd):
         if cmd.action == CommandModel.Action.WEAR:
@@ -185,4 +186,3 @@ class WorldHandler:
                     toDelete.append(character)
             for character in toDelete:
                 del room.characters[character]
-
