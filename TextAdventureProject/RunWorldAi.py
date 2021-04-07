@@ -144,12 +144,10 @@ def getCharObjects(chars, room):
 def checkHostile(charObject, charObjects):
     for each in charObjects:
         if charObject.classification == "NPC" and charObjects[each].classification == "Zombie":
-            charObject.state = "aggressive" 
+            return True
         if charObject.classification == "Zombie" and charObjects[each].classification == "NPC":
-            charObject.state = "aggressive"
+            return True
         if charObject.classification == "Zombie" and charObjects[each].classification == "Player":
-            charObject.state = "aggressive"            
-        if charObject.state == "aggressive":
             return True        
     return False
 
