@@ -75,6 +75,9 @@ class ConsoleManager:
     def endGame(self, dataMan):
         if CompileOutput.checkEnd(dataMan) == True:
             print("Game Over")
+            return True
+        else:
+            return False
 
     def helper(self):
         print('''You have 8 different commands you can use in the game.
