@@ -37,6 +37,7 @@ class WorldAi:
         roomStuff = parserCommand.roomDict(room[1])
         characterObject = getCharObject(caracter, room[1])
         characterObjects = getCharObjects(roomStuff["Characters"], room[1])
+        characterObjects.pop(caracter)# to remove the owner of the command so they dont target themselves
         doorObjectsList = parserCommand.getDoorObjects(roomStuff["Doors"], room[1])
         
         command = {"Action":None, "Object":None, "Owner":caracter, "Target":None, "Room":room[0]}

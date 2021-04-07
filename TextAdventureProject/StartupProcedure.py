@@ -36,7 +36,7 @@ def startGame():
             print(
                 "Let us begin the story of Prison escape (title pending)\nyou wake up in your miserable cell in prison\nthe smell of blood reaches your nose\nsomething isn't right.\n")
             dataManager = DataManager.DataManager(True)
-            return ("Start_Cell" , dataManager.rooms["Start_Cell"])
+            return ["Start_Cell" , dataManager.rooms["Start_Cell"]]
     else:
         print(a)
         b = input()
@@ -45,7 +45,7 @@ def startGame():
             b = input("... ")
         print("Let us begin the story of Prison escape (title pending)\nyou wake up in your miserable cell in prison\nthe smell of blood reaches your nose\nsomething isn't right.\n")
         dataManager = DataManager.DataManager(True)
-        return ("Start_Cell" , dataManager.rooms["Start_Cell"])
+        return ["Start_Cell" , dataManager.rooms["Start_Cell"]]
 
 def main(): #populate world
     startRoom = startGame()

@@ -68,7 +68,7 @@ def parseInput(console, owner):
                     command["Target"] = word.title()
                 else:
                     command["Object"] = word
-        elif word.title() in invList:
+        elif word.title() in invList[owner]:
             if command["Action"] == Action.INSPECT:
                 command["Target"] = word.title()
             if command["Action"] == Action.UNLOCK:
