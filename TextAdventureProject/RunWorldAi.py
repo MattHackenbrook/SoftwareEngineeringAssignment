@@ -6,7 +6,7 @@ import random
 import CommandModel
 
 npcActionWords = ("take", "unlock", "enter", "stay")
-zombieActionWords = ("enter", "stay")
+#zombieActionWords = ("enter", "stay")
 hostileActionWords = ("throw", "hit")
 stateWords = ("idle", "wander")
 
@@ -62,8 +62,6 @@ class WorldAi:
                 #         command["Target"] = random.choice(roomStuff["Characters"])
         else:
             setState(caracter, caracterObject, data, random.choice(stateWords))
-            if caracterObject.state == "idle":
-                command["Action"] = "stay"
             if caracterObject.classification == "NPC":
                 command["Action"] = random.choice(npcActionWords)
                 if command["Action"] == "take" and caracterObject.state == "wander":
@@ -95,13 +93,15 @@ class WorldAi:
                     else:
                         command["Object"] = None
             else:
-                command["Action"] = random.choice(zombieActionWords)
-                if command["Action"] == "enter" and caracterObject.state == "wander":
+                #command["Action"] = random.choice(zombieActionWords)
+                if caracterObject.state == "wander":
+                    command["Action"] = "enter"
                     command["Target"] = random.choice(roomStuff["Doors"])
                     if doorObjectsList[command["Target"]].locked == True:
                         command["Action"] = "stay"
-                    else:
-                        command["Object"] = None      
+                    command["Object"] = None
+        if caracterObject.state == "idle":
+            command["Action"] = "stay"
         if command["Action"] == "stay":
             commandObject = None
         else:
