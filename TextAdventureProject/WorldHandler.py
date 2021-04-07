@@ -174,7 +174,7 @@ class WorldHandler:
     def throw(self, cmd):
         command = self.populateCommand(cmd)
         del command.owner.inv[cmd.object]
-        command.target.stats["health"] -= command.object.traits["Damage"]
+        command.target.stats["health"] = int(command.target.stats["health"]) - command.object.traits["Damage"]
         command.room.containers["Ground"].items[cmd.object] = command.object
         return "Throw " + cmd.object + " at " + cmd.target
 
