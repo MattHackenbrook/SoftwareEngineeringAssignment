@@ -49,6 +49,9 @@ def startGame():
 
 def main(): #populate world
     startRoom = startGame()
+    if startRoom == None:
+        print("Game over please start new game")
+        raise SystemExit()
     console = ConsoleManager.ConsoleManager(startRoom)
     CompileOutput.CompileOutput.playerRoomDescription(console)
 
