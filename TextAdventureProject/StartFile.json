@@ -511,7 +511,7 @@
       "Ground": {
                 "items": {},
                 "desc": null
-            },
+      },
       "Trash_Can": {
         "items": {
           "Garbage": {
@@ -783,7 +783,8 @@
       "Ground": {
                 "items": {},
                 "desc": null
-            },
+            }
+    },
     "characters": {
       "Zombie_Jacob": {
         "state": "idle",
@@ -966,7 +967,8 @@
       "Ground": {
                 "items": {},
                 "desc": null
-            },
+            }
+    },
     "characters": {},
     "shortDesc": "opening up around you is the dump for all the sewage from the entire prison, gross",
     "longDesc": "As you travel down this tunnel of refuse you slide out into the open air and land into an even bigger pile of waste as you are dumped out of the prisons sewage, as you are inches away from freedom.  theres seems to be something moving in the waste with you.",
@@ -1037,6 +1039,7 @@
       "Ground": {
                 "items": {},
                 "desc": null
+            }
     },
     "characters": {
       "Ivan": {
