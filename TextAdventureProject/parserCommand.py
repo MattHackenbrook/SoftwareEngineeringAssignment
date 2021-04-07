@@ -136,7 +136,7 @@ def getInvObjects(invList, room):
     invObjectList = {}
     for each in invList:
         invObjectList[each] = {}
-        for item in room.characters[each].inv.keys():
+        for item in room.characters[each].inv:
             invObjectList[each][item] = room.characters[each].inv[item]
     return invList
 
