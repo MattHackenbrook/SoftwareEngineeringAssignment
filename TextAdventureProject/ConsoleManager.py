@@ -72,8 +72,8 @@ class ConsoleManager:
         else:
             return True
 
-    def endGame(self):
-        if WorldHandler().checkEnd() == True:
+    def endGame(self, dataMan):
+        if CompileOutput.checkEnd(dataMan) == True:
             print("Game Over")
 
     def helper(self):

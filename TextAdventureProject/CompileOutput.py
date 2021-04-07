@@ -24,8 +24,26 @@ class CompileOutput:
                 parsed = parseInput(console, "Player")
                 valid = console.printFailure(parsed)
         wH = WorldHandler.WorldHandler(parsed)
-        curRoom = StartupProcedure.findPlayer(wH.data)[0]
+        if console.checkEnd(wH.data):
+            sys.exit("thank you for playing")
+        curRoom = StartupProcedure.findPlayer(wH.data)[0]        
         console.room = [curRoom, wH.data.rooms[curRoom]]
         CompileOutput.playerRoomDescription(console)
         #and then restart the turn sequence
 
+
+def checkEnd(dataMan):
+    curRoom = StartupProcedure.findPlayer(dataMan)
+    if curRoom == None:
+        print("You have died\n")
+        return True
+    else:
+        if curRoom[0] == "Waste_Dump":
+            print("you find your way out of the dirty waste dump and take your first breath of somewhat fresh air, a world free of zombies awaits!")
+            return True
+    return False
+        
+        
+        
+        
+        
