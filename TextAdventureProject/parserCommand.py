@@ -47,12 +47,12 @@ def parseInput(console, owner):
                 command["Target"] = word.title()
             elif command["Action"] == Action.UNLOCK:
                 if doorObjectsList[word.title()].locked == False:  # check to see if door is even able to be unlocked, if door is already unlocked, u cannot unlock it again so returns invalid by setting target to empty string
-                    command["Target"] = ""
+                    command["Target"] = None
                 else:
-                    command["Target"] = word
+                    command["Target"] = word.title()
             elif command["Action"] == Action.ENTER:
                 if doorObjectsList[word.title()].locked == True:  # same here but for when u try to enter a locked door
-                    command["Target"] = ""
+                    command["Target"] = None
                 else:
                     command["Target"] = word.title()
             else:
