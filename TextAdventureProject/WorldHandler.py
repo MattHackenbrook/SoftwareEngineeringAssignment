@@ -154,7 +154,9 @@ class WorldHandler:
                                 first = False
                             else:
                                 extra += ", a " + container
-            return command.target.longDesc + extra
+                return command.target.longDesc + extra
+            elif cmd.target in command.room.doors:
+                return command.room.doors[cmd.target].desc
         return command.target.desc + extra
     def take(self, cmd):
         command = self.populateCommand(cmd)
@@ -184,7 +186,9 @@ class WorldHandler:
                 armour = 1
             command.target.stats["health"] -= command.object.traits["Damage"] / armour
         except:
-            command.target.stats["health"] -= command.object.traits["Damage"]
+            health = int(command.target.stats["health"])
+            health -= command.object.traits["Damage"]
+            command.target.stats["health"] = str(health)
         return "Hit " + cmd.target + " with " + cmd.object
 
     def enter(self, cmd):

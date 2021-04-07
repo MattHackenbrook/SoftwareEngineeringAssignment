@@ -35,29 +35,29 @@ class WorldAi:
 
     def generateCommand(self, caracter, room, data):
         roomStuff = parserCommand.roomDict(room[1])
-        caracterObject = getCharObject(caracter, room[1])
+        characterObject = getCharObject(caracter, room[1])
         characterObjects = getCharObjects(roomStuff["Characters"], room[1])
         doorObjectsList = parserCommand.getDoorObjects(roomStuff["Doors"], room[1])
         
         command = {"Action":None, "Object":None, "Owner":caracter, "Target":None, "Room":room[0]}
-        
-        
-        if checkHostile(caracterObject, characterObjects):
-            setState(caracter, caracterObject, data, "aggressive")
+
+        if checkHostile(characterObject, characterObjects):
+            print("creating hostile action for", characterObject)
+            setState(caracter, characterObject, data, "aggressive")
             command["Action"] = random.choice(hostileActionWords)
             #if command["Action"] == "throw":
             command["Object"] = random.choice(roomStuff["Inventory"][caracter])
-            if caracterObject.classification == "NPC":
+            if characterObject.classification == "NPC":
                 command["Target"] = random.choice(roomStuff["Characters"])
             else:
-                try:
-                    command["Target"] = characterObjects[0]
-                    while characterObjects[command["Target"]].classification == "Zombie":
-                        charList = roomStuff["Characters"]
-                        charList.remove(command["Owner"])
-                        command["Target"] = random.choice(charList)
-                except KeyError:
-                    pass
+                run = True
+                while run == True:
+                    first = False
+                    charList = roomStuff["Characters"]
+                    command["Target"] = random.choice(charList)
+                    print("TARGET: ", command["Target"])
+                    if characterObjects[command["Target"]].classification != "Zombie":
+                        run = False
 
             #if command["Action"] == "hit": #this is redundant, can be removed as long as there is no distinguishing between hit or throw for npc or zombies.
                 # command["Object"] = random.choice(roomStuff["Inventory"][caracter])
@@ -67,8 +67,8 @@ class WorldAi:
                 #     while characterObjects[command["Target"]].classification == "Zombie":
                 #         command["Target"] = random.choice(roomStuff["Characters"])
         else:
-            setState(caracter, caracterObject, data, random.choice(stateWords))
-            if caracterObject.classification == "NPC":
+            setState(caracter, characterObject, data, random.choice(stateWords))
+            if characterObject.classification == "NPC":
                 command["Action"] = random.choice(npcActionWords)
                 if command["Action"] == Action.TAKE:
                     command["Object"] = None
@@ -108,14 +108,18 @@ class WorldAi:
                         command["Action"] = None
                     else:
                         command["Object"] = None
-        if caracterObject.state == "idle":
-            command["Action"] = None
+            if characterObject.state == "idle":
+                command["Action"] = None
         if command["Action"] == None:
             commandObject = None
         else:
             commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"], command["Room"])
             if commandObject.target is None:
                 print("FAILURE")
+        if commandObject is not None:
+            if commandObject.action == Action.HIT or commandObject.action == Action.THROW:
+                if commandObject.target is None:
+                    print("FAILED!!! ", commandObject.owner, "FAILED")
         return commandObject
         
     # def getCharClass(self, charObject):

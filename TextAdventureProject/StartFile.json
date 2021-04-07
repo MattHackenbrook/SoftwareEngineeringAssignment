@@ -839,7 +839,7 @@
   "West_Hall": {
     "doors": {
       "West_Cell_Block": {
-        "locked": true,
+        "locked": false,
         "desc": "Dirty floor and walls , zombie free for now"
       },
       "Easter_Egg_Room": {
@@ -857,6 +857,10 @@
       "South_Hall": {
         "locked": true,
         "desc": "A long dirty corridor, must be the South hallway it looks like it has some other doors"
+      },
+      "Cafeteria": {
+        "locked": true,
+        "desc": "The door to the cafeteria. Covered in grease, like always"
       }
     },
     "containers": {
