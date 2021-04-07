@@ -253,8 +253,8 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "Jack, but a zombie.",
-                "state": "idle"
+                "desc": "Jacob is a zombie!",
+                "state": "wander"
             }
         },
         "shortDesc": "Jones cell block. Its completely torn apart.",
@@ -415,6 +415,37 @@
                 },
                 "desc": "This zombie looks like Jim. He used to work in the kitchen, I think he was once a car thief.",
                 "state": "idle"
+            },
+            "Jawless Zombie": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 1,
+                    "health": 1
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant do much",
+                "state": "wander"
             }
         },
         "shortDesc": "This place should not be used to prepare food. Everything is disgusting.",
@@ -568,7 +599,7 @@
                 "inv": {},
                 "wearing": {},
                 "desc": "A Huge horde of almost 50 zombies wanders around aimlesly together as they look for any way to move around.",
-                "state": "idle"
+                "state": "wander"
             }
         },
         "shortDesc": "The dried grass sways in the wind and the concrete walls stand firm",
@@ -781,8 +812,8 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "Jacob is a zombie!",
-                "state": "idle"
+                "desc": "William is a zombie!",
+                "state": "wander"
             },
             "Zombie_William": {
                 "classification": "Zombie",
@@ -812,8 +843,8 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "William is a zombie!",
-                "state": "idle"
+                "desc": "Steve, but a zombie.",
+                "state": "wander"
             }
         },
         "shortDesc": "The South Hall",
@@ -990,7 +1021,70 @@
                 "desc": null
             }
         },
-        "characters": {},
+        "characters": {
+            "Zombie Fred": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Fred, but a zombie.",
+                "state": "wander"
+            },
+            "Zombie Jack": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Jack, but a zombie.",
+                "state": "wander"
+            }
+        },
         "shortDesc": "a bloody mess on the floor from the previous inmates remains",
         "longDesc": "A grotestesque scene of blood and gore, it looks as though the inmate who belonged in this cell is now the bloody puddle of red slop in the floor. the cell is turned upsidedown, there must have been a terrible struggle before he was pinned down on the floor and eaten alive. note to self, dont get cornered.",
         "visited": false
