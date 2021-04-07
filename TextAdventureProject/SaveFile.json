@@ -36,7 +36,7 @@
                     "Janitors_Key": {
                         "traits": {
                             "Damage": 0,
-                            "opens": [
+                            "Opens": [
                                 "Courtyard.Cafeteria",
                                 "West_Hall.Cafeteria",
                                 "South_Hall.Janitors_Closet"
@@ -54,36 +54,32 @@
             }
         },
         "characters": {
-            "Zombie_Luke": {
-                "classification": "Zombie",
+            "Ivan": {
+                "classification": "NPC",
                 "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
+                    "strength": "20",
+                    "thrift": "1",
+                    "persuasion": "0",
+                    "armour": "5",
+                    "health": "6"
                 },
                 "inv": {
-                    "Teeth": {
+                    "Sledgehammer": {
                         "traits": {
-                            "Damage": 4
+                            "Damage": 7,
+                            "Opens": [
+                                "North_Cell_Block.North_Hall",
+                                "North_Hall.West_Hall",
+                                "West_Hall.South_Hall"
+                            ]
                         },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
+                        "classification": "Key",
+                        "desc": "A giant sledgehammer, good for smashing."
                     }
                 },
-                "wearing": {
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "Luke, but a zombie.",
-                "state": "wander"
+                "wearing": {},
+                "desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you. He can be a great ally, but an even worse enemy.",
+                "state": "idle"
             }
         },
         "shortDesc": "Ivans cell block. It appears to be nearly untouched.",
@@ -140,7 +136,7 @@
             }
         },
         "characters": {
-            "Zombie_Fred": {
+            "Zombie_Steve": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -168,7 +164,7 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "Fred, but a zombie.",
+                "desc": "Steve, but a zombie.",
                 "state": "wander"
             },
             "Zombie_Jack": {
@@ -200,9 +196,9 @@
                     }
                 },
                 "desc": "Jack, but a zombie.",
-                "state": "idle"
+                "state": "wander"
             },
-            "Zombie_Jacob": {
+            "Zombie_Jeff": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -230,38 +226,7 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "Jacob is a zombie!",
-                "state": "idle"
-            },
-            "Zombie_Steve": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 4
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "Steve, but a zombie.",
+                "desc": "Jeff, but a zombie.",
                 "state": "wander"
             }
         },
@@ -490,7 +455,7 @@
                     }
                 },
                 "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant do much",
-                "state": "wander"
+                "state": "idle"
             },
             "Zombie_Chef": {
                 "classification": "Zombie",
@@ -575,7 +540,7 @@
                 "inv": {},
                 "wearing": {},
                 "desc": "A Huge horde of almost 50 zombies wanders around aimlesly together as they look for any way to move around.",
-                "state": "wander"
+                "state": "idle"
             }
         },
         "shortDesc": "The dried grass sways in the wind and the concrete walls stand firm",
@@ -653,7 +618,7 @@
                     }
                 },
                 "desc": "A zombie wearing a nurse uniform",
-                "state": "idle"
+                "state": "wander"
             }
         },
         "shortDesc": "The Hospital Ward",
@@ -682,15 +647,27 @@
         "containers": {
             "Ground": {
                 "items": {
-                    "Toothbrush_Shank": {
+                    "Gun": {
                         "traits": {
-                            "Damage": 3
+                            "Damage": 15
                         },
-                        "classification": "melee",
-                        "desc": "A small plastic toothbrush with a sharp filled end"
+                        "classification": "Misc",
+                        "desc": "The Guards Gun still has ammo, this will come in handy real soon"
                     }
                 },
                 "desc": null
+            },
+            "Zombie_James": {
+                "items": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "desc": "The corpse of Zombie_James"
             }
         },
         "characters": {
@@ -701,15 +678,15 @@
                     "thrift": 2,
                     "persuasion": 0,
                     "armour": 15,
-                    "health": 15
+                    "health": "11"
                 },
                 "inv": {
-                    "Gun": {
+                    "Toothbrush_Shank": {
                         "traits": {
-                            "Damage": 15
+                            "Damage": 3
                         },
-                        "classification": "Misc",
-                        "desc": "The Guards Gun still has ammo, this will come in handy real soon"
+                        "classification": "melee",
+                        "desc": "A small plastic toothbrush with a sharp filled end"
                     }
                 },
                 "wearing": {
@@ -723,7 +700,49 @@
                     }
                 },
                 "desc": "A Guard is hiding under his desk, hes been beaten and is scared",
-                "state": "idle"
+                "state": "aggressive"
+            },
+            "Player": {
+                "classification": "Player",
+                "stats": {
+                    "strength": 0,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 1
+                },
+                "inv": {
+                    "Hand": {
+                        "traits": {
+                            "Damage": 2
+                        },
+                        "classification": "Melee",
+                        "desc": "Your hand."
+                    },
+                    "Hallway_Key": {
+                        "traits": {
+                            "Damage": 0,
+                            "Opens": [
+                                "South_Hall.West_Hall",
+                                "West_Hall.North_Hall"
+                            ]
+                        },
+                        "classification": "Key",
+                        "desc": "A key card to the hallways"
+                    }
+                },
+                "wearing": {
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "You.",
+                "state": "player_control"
             }
         },
         "shortDesc": "the long ominous hallway with doors for the Hospital wing, West hallway and north cell block",
@@ -760,6 +779,37 @@
             }
         },
         "characters": {
+            "Zombie_Jacob": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Jacob is a zombie!",
+                "state": "idle"
+            },
             "Zombie_William": {
                 "classification": "Zombie",
                 "stats": {
@@ -789,9 +839,9 @@
                     }
                 },
                 "desc": "William is a zombie!",
-                "state": "idle"
+                "state": "wander"
             },
-            "Zombie_Jeff": {
+            "Zombie_Fred": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -819,8 +869,8 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "Jeff, but a zombie.",
-                "state": "idle"
+                "desc": "Fred, but a zombie.",
+                "state": "wander"
             }
         },
         "shortDesc": "The South Hall",
@@ -842,7 +892,7 @@
                 "desc": "A series of what looks like unmade beds with dirty white sheets"
             },
             "North_Hall": {
-                "locked": true,
+                "locked": false,
                 "desc": "A long dirty corridor, must be the North hallway it looks like it has some other doors"
             },
             "South_Hall": {
@@ -868,50 +918,7 @@
                 "desc": null
             }
         },
-        "characters": {
-            "Player": {
-                "classification": "Player",
-                "stats": {
-                    "strength": 0,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 1
-                },
-                "inv": {
-                    "Hand": {
-                        "traits": {
-                            "Damage": 2
-                        },
-                        "classification": "Melee",
-                        "desc": "Your hand."
-                    },
-                    "Hallway_Key": {
-                        "traits": {
-                            "Damage": 0,
-                            "opens": [
-                                "South_Hall.West_Hall",
-                                "West_Hall.North_Hall"
-                            ]
-                        },
-                        "classification": "Key",
-                        "desc": "A key card to the hallways"
-                    }
-                },
-                "wearing": {
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "You.",
-                "state": "player_control"
-            }
-        },
+        "characters": {},
         "shortDesc": "the long ominous hallway with doors for the Hospital wing, north and south hallway and West cell block",
         "longDesc": "the long ominous hallway with doors you hear the sounds the prison echoing through the doors, down the hall you can see the hospital wing, more hallways, north and south and halls leading,back the way you came. ",
         "visited": false
@@ -1058,19 +1065,11 @@
         },
         "containers": {
             "Ground": {
+                "items": {},
+                "desc": null
+            },
+            "Zombie_Luke": {
                 "items": {
-                    "Sledgehammer": {
-                        "traits": {
-                            "Damage": 7,
-                            "Opens": [
-                                "North_Cell_Block.North_Hall",
-                                "North_Hall.West_Hall",
-                                "West_Hall.South_Hall"
-                            ]
-                        },
-                        "classification": "Key",
-                        "desc": "A giant sledgehammer, good for smashing."
-                    },
                     "Teeth": {
                         "traits": {
                             "Damage": 4
@@ -1079,29 +1078,10 @@
                         "desc": "Eww... Teeth."
                     }
                 },
-                "desc": null
-            },
-            "Zombie_James": {
-                "items": {},
-                "desc": "The corpse of Zombie_James"
+                "desc": "The corpse of Zombie_Luke"
             }
         },
-        "characters": {
-            "Ivan": {
-                "classification": "NPC",
-                "stats": {
-                    "strength": "20",
-                    "thrift": "1",
-                    "persuasion": "0",
-                    "armour": "5",
-                    "health": 6
-                },
-                "inv": {},
-                "wearing": {},
-                "desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you. He can be a great ally, but an even worse enemy.",
-                "state": "idle"
-            }
-        },
+        "characters": {},
         "shortDesc": "Ivans Cell",
         "longDesc": "This cell belongs to Ivan. The beast of the prison. You heard stories about how he killed 10 men with only his fists. You do not want to run into this guy",
         "visited": false
@@ -1195,7 +1175,7 @@
                     "key": {
                         "traits": {
                             "Damage": 0,
-                            "opens": [
+                            "Opens": [
                                 "Easter_Egg_Room.West_Hall"
                             ]
                         },
@@ -1220,15 +1200,7 @@
         },
         "containers": {
             "Ground": {
-                "items": {
-                    "Bomb": {
-                        "traits": {
-                            "Damage": 10
-                        },
-                        "classification": "melee",
-                        "desc": "Rick Asthlys Never gonna give you up is playing on a screen"
-                    }
-                },
+                "items": {},
                 "desc": null
             }
         },
@@ -1249,6 +1221,13 @@
                         },
                         "classification": "Misc",
                         "desc": "With Jones help this equipment can be used to make bombs"
+                    },
+                    "Bomb": {
+                        "traits": {
+                            "Damage": 10
+                        },
+                        "classification": "melee",
+                        "desc": "Rick Asthlys Never gonna give you up is playing on a screen"
                     }
                 },
                 "wearing": {
@@ -1262,7 +1241,7 @@
                     }
                 },
                 "desc": "A weak old man who landed in prison for crimes against humanity, his intelligence is all thats left",
-                "state": "idle"
+                "state": "wander"
             }
         },
         "shortDesc": "This cell contains the prisons most infamous felon, Mike Jones, anarchist",

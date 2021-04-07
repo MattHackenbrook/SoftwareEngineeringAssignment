@@ -38,7 +38,7 @@
             "desc": "A key to many doors in the prison",
             "traits": {
               "Damage": 0,
-              "opens": [
+              "Opens": [
                 "Courtyard.Cafeteria",
                 "West_Hall.Cafeteria",
                 "South_Hall.Janitors_Closet"
@@ -1097,7 +1097,7 @@
             "desc": "A key card to the hallways",
             "traits": {
               "Damage": 0,
-              "opens": [
+              "Opens": [
                 "South_Hall.West_Hall",
                 "West_Hall.North_Hall"
               ]
@@ -1207,7 +1207,7 @@
             "desc": "A metal key",
             "traits": {
               "Damage": 0,
-              "opens": [ "Easter_Egg_Room.West_Hall" ]
+              "Opens": [ "Easter_Egg_Room.West_Hall" ]
             }
           }
         },

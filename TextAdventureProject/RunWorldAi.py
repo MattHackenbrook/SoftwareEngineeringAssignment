@@ -48,7 +48,7 @@ class WorldAi:
             setState(caracter, characterObject, data, "aggressive")
             command["Action"] = random.choice(hostileActionWords)
             #if command["Action"] == "throw":
-            command["Object"] = random.choice(roomStuff["Inventory"][caracter])
+            command["Object"] = random.choice(roomStuff["Inventory"][caracter])#bug here when cracter has nothing to attack with
             if characterObject.classification == "NPC":
                 command["Target"] = random.choice(roomStuff["Characters"])
             else:

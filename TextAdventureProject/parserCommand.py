@@ -74,7 +74,7 @@ def parseInput(console, owner):
             if command["Action"] == Action.UNLOCK:
                 print("Word title: ", word.title(), " word: ", word)
                 if invObjectsList[owner][word.title()].classification == "Key":
-                    command["Object"] == word.title()
+                    command["Object"] = word.title()
             elif command["Action"] == Action.EAT:
                 if invObjectsList[owner][word.title()].classification == "Edible":
                     command["Object"] = word.title()
@@ -144,8 +144,8 @@ def getInvObjects(invList, room):
 def checkValidCommand(command):
     if command.target == None and command.action == Action.INSPECT:
         command.target = command.room
-    if command.target == None and command.action == Action.EAT or command.action == Action.WEAR or command.action == Action.UNLOCK:
-        command.target = None
+    if command.target == None and (command.action == Action.EAT or command.action == Action.WEAR):
+        command.target = command.owner
     if command.action == None or command.target == None:
         return False
     else:
