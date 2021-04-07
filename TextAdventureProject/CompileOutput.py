@@ -19,13 +19,15 @@ class CompileOutput:
             if console.userInput.lower() == "help":
                 console.helper()
             if console.userInput.lower() == "exit":
-                sys.exit("thank you for playing")
+                print("thank you for playing")
+                raise SystemExit()
             else:
                 parsed = parseInput(console, "Player")
                 valid = console.printFailure(parsed)
         wH = WorldHandler.WorldHandler(parsed)
         if console.endGame(wH.data):
-            sys.exit("thank you for playing")
+            print("thank you for playing")
+            raise SystemExit()
         curRoom = StartupProcedure.findPlayer(wH.data)[0]        
         console.room = [curRoom, wH.data.rooms[curRoom]]
         CompileOutput.playerRoomDescription(console)
