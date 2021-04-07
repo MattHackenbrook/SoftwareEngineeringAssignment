@@ -68,8 +68,6 @@ class WorldAi:
                 #         command["Target"] = random.choice(roomStuff["Characters"])
         else:
             setState(caracter, caracterObject, data, random.choice(stateWords))
-            if caracterObject.state == "idle":
-                command["Action"] = None
             if caracterObject.classification == "NPC":
                 command["Action"] = random.choice(npcActionWords)
                 if command["Action"] == Action.TAKE:
@@ -109,7 +107,9 @@ class WorldAi:
                     if doorObjectsList[command["Target"]].locked == True:
                         command["Action"] = None
                     else:
-                        command["Object"] = None      
+                        command["Object"] = None
+        if caracterObject.state == "idle":
+            command["Action"] = None
         if command["Action"] == None:
             commandObject = None
         else:
