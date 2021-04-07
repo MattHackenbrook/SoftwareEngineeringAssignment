@@ -138,7 +138,7 @@ def getInvObjects(invList, room):
         invObjectList[each] = {}
         for item in room.characters[each].inv:
             invObjectList[each][item] = room.characters[each].inv[item]
-    return invList
+    return invObjectList
 
 
 def checkValidCommand(command):
