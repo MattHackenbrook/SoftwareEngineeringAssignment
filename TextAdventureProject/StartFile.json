@@ -46,7 +46,11 @@
             }
           }
         }
-      }
+      },
+      "Ground": {
+                "items": {},
+                "desc": null
+            }
     },
     "characters": {
       "Zombie_James": {
@@ -159,7 +163,11 @@
           }
         },
         "desc": "The guard desk in the center of the block."
-      }
+      },
+      "Ground": {
+                "items": {},
+                "desc": null
+            }
     },
     "characters": {
       "Zombie_Steve": {
@@ -500,7 +508,10 @@
       }
     },
     "containers": {
-      "Ground": {},
+      "Ground": {
+                "items": {},
+                "desc": null
+            },
       "Trash_Can": {
         "items": {
           "Garbage": {
@@ -642,7 +653,10 @@
       }
     },
     "containers": {
-      "Ground": {},
+      "Ground": {
+                "items": {},
+                "desc": null
+      },
       "Cabinet": {
         "items": {
           "Pills": {
@@ -766,8 +780,10 @@
       }
     },
     "containers": {
-      "Ground": {}
-    },
+      "Ground": {
+                "items": {},
+                "desc": null
+            },
     "characters": {
       "Zombie_Jacob": {
         "state": "idle",
@@ -947,8 +963,10 @@
       }
     },
     "containers": {
-      "Ground": {}
-    },
+      "Ground": {
+                "items": {},
+                "desc": null
+            },
     "characters": {},
     "shortDesc": "opening up around you is the dump for all the sewage from the entire prison, gross",
     "longDesc": "As you travel down this tunnel of refuse you slide out into the open air and land into an even bigger pile of waste as you are dumped out of the prisons sewage, as you are inches away from freedom.  theres seems to be something moving in the waste with you.",
@@ -1016,7 +1034,9 @@
       }
     },
     "containers": {
-      "Ground": {}
+      "Ground": {
+                "items": {},
+                "desc": null
     },
     "characters": {
       "Ivan": {
@@ -1063,7 +1083,10 @@
       }
     },
     "containers": {
-      "Ground": {},
+      "Ground": {
+                "items": {},
+                "desc": null
+      },
       "Corpse": {
         "items": {
           "Hallway_Key": {
