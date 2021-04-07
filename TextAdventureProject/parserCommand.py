@@ -72,6 +72,7 @@ def parseInput(console, owner):
             if command["Action"] == Action.INSPECT:
                 command["Target"] = word.title()
             if command["Action"] == Action.UNLOCK:
+                print("Word title: ", word.title(), " word: ", word)
                 if invObjectsList[owner][word.title()].classification == "Key":
                     command["Object"] == word.title()
             elif command["Action"] == Action.EAT:

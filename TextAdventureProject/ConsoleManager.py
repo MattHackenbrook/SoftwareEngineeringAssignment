@@ -9,7 +9,7 @@ import CompileOutput
 # import Translator
 import WorldHandler
 import parserCommand
-
+from CommandModel import Action
 
 class ConsoleManager:
 
@@ -60,9 +60,9 @@ class ConsoleManager:
 
     def printFailure(self, command):
         if parserCommand.checkValidCommand(command) == False:
-            if command.action == "unlock":
+            if command.action == Action.UNLOCK:
                 print("the target is already unlocked or you do not have the item that unlocks it")
-            if command.action == "enter":
+            if command.action == Action.ENTER:
                 print("the door is currently locked")
             elif command.action != "" and command.action != None:
                 print("that item or object is not available to you")

@@ -184,7 +184,7 @@ class WorldHandler:
             armour = command.target.wearing.traits["armour"]
             if armour <= 0:
                 armour = 1
-            command.target.stats["health"] -= command.object.traits["Damage"] / armour
+            command.target.stats["health"] = str( int(command.target.stats["health"]) - command.object.traits["Damage"] / armour)
         except:
             health = int(command.target.stats["health"])
             health -= command.object.traits["Damage"]
