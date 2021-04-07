@@ -64,9 +64,9 @@ class ConsoleManager:
                 print("the target is already unlocked or you do not have the item that unlocks it")
             if command.action == "enter":
                 print("the door is currently locked")
-            elif command.action != "":
+            elif command.action != "" and command.action != None:
                 print("that item or object is not available to you")
-            else:
+            elif command.action != None:
                 print("Invalid input. Please try again")
             return False
         else:

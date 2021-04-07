@@ -64,7 +64,10 @@ class WorldHandler:
         command.room = self.rooms[cmd.room]
         command.owner = command.room.characters[cmd.owner]
         if cmd.object is not None:
-            command.object = command.owner.inv[cmd.object]
+            try:
+                command.object = command.owner.inv[cmd.object]
+            except KeyError:
+                command.object = None
         if cmd.target is not None:
             command.target = None
             for container in command.room.containers.keys():

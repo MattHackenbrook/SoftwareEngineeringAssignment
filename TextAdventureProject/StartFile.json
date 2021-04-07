@@ -13,7 +13,7 @@
     "containers": {
       "Desk": {
         "items": {
-          "Rotten Banana": {
+          "Rotten_Banana": {
             "classification": "Edible",
             "desc": "A completely black banana. Almost certainly not safe to eat.",
             "traits": {
@@ -21,7 +21,7 @@
               "Healing": 1
             }
           },
-          "Empty Handgun": {
+          "Empty_Handgun": {
             "classification": "Melee",
             "desc": "A guards handgun. There is no magazine.",
             "traits": {
@@ -31,9 +31,9 @@
         },
         "desc": "The guard desk in the center of the block."
       },
-      "Mop Bucket": {
+      "Mop_Bucket": {
         "items":{
-          "Janitors Key": {
+          "Janitors_Key": {
             "classification": "Key",
             "desc": "A key to many doors in the prison",
             "traits": {
@@ -49,7 +49,7 @@
       }
     },
     "characters": {
-      "Zombie James": {
+      "Zombie_James": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -68,7 +68,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -80,7 +80,7 @@
         "desc": "James, but a zombie.",
         "classification": "Zombie"
       },
-      "Zombie Luke": {
+      "Zombie_Luke": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -99,7 +99,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -141,7 +141,7 @@
               "Damage": 3
             }
           },
-          "Note From Warden": {
+          "Note_From_Warden": {
             "classification": "Readable",
             "desc": "A note from the warden to the guard stationed in the south block.",
             "traits": {
@@ -149,7 +149,7 @@
               "Text": "Remember to keep prisoner 203, Jones, away from the janitors closet!"
             }
           },
-          "Guard Hat": {
+          "Guard_Hat": {
             "classification": "Wearable",
             "desc": "A guards hat",
             "traits": {
@@ -162,7 +162,7 @@
       }
     },
     "characters": {
-      "Zombie Steve": {
+      "Zombie_Steve": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -181,7 +181,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -193,7 +193,7 @@
         "desc": "Steve, but a zombie.",
         "classification": "Zombie"
       },
-      "Zombie Jeff": {
+      "Zombie_Jeff": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -212,7 +212,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -224,7 +224,7 @@
         "desc": "Jeff, but a zombie.",
         "classification": "Zombie"
       },
-      "Zombie Fred": {
+      "Zombie_Fred": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -243,7 +243,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -255,7 +255,7 @@
         "desc": "Fred, but a zombie.",
         "classification": "Zombie"
       },
-      "Zombie Jack": {
+      "Zombie_Jack": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -274,7 +274,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -378,7 +378,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -444,7 +444,7 @@
       }
     },
     "characters": {
-      "Zombie Chef": {
+      "Zombie_Chef": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -501,9 +501,9 @@
     },
     "containers": {
       "Ground": {},
-      "Trash Can": {
+      "Trash_Can": {
         "items": {
-          "Hard Garbage": {
+          "Garbage": {
             "classification": "Throwable",
             "desc": "A hard solid mass of dried up Garvage, who knows what this used to be, its got some weight to it",
             "traits": {
@@ -514,9 +514,9 @@
         },
         "desc": "a dirty old trash can with the smell of old garbage coming out of it."
       },
-      "Pile Of Leftovers": {
+      "Food_Pile": {
         "items": {
-          "Big Spoon": {
+          "Spoon": {
             "classification": "Misc",
             "desc": "A large Wooden Spoon about a foot and a half long, a little chipped at the ends",
             "traits": {
@@ -526,9 +526,9 @@
         },
         "desc": "A smelly pile of waste that might possibly have been food lying on a table"
       },
-      "Vending Machine": {
+      "Vending_Machine": {
         "items": {
-          "Can Of Spripesi Cola Up": {
+          "Soda_can": {
             "classification": "Edible",
             "desc": "A can of Diet Spripesi Cola Up, its the quenchiest! looks edible",
             "traits": {
@@ -541,7 +541,7 @@
       }
     },
     "characters": {
-      "Jawless Zombie": {
+      "Jawless_Zombie": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -560,7 +560,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -657,7 +657,7 @@
       },
       "Tray": {
         "items": {
-          "Surgical Knife": {
+          "Surgical_Knife": {
             "classification": "melee",
             "desc": "You find a surgical knife with some blood still left on it. This place was never that clean anyway",
             "traits": {
@@ -669,7 +669,7 @@
       }
     },
     "characters": {
-      "Nurse Zombie": {
+      "Nurse_Zombie": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -688,7 +688,7 @@
           }
         },
         "wearing": {
-          "Nurse Uniform": {
+          "Nurse_Uniform": {
             "classification": "Wearable",
             "desc": "A nurse uniform. A little torn, and bloody, and covered in many fluids. Still wearable",
             "traits": {
@@ -727,7 +727,7 @@
     "containers": {
       "Ground": {
         "items": {
-          "Toothbrush Shank": {
+          "Toothbrush_Shank": {
             "classification": "melee",
             "desc": "A small plastic toothbrush with a sharp filled end",
             "traits": {
@@ -769,7 +769,7 @@
       "Ground": {}
     },
     "characters": {
-      "Zombie Jacob": {
+      "Zombie_Jacob": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -788,7 +788,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -800,7 +800,7 @@
         "desc": "Jacob is a zombie!",
         "classification": "Zombie"
       },
-      "Zombie William": {
+      "Zombie_William": {
         "state": "idle",
         "stats": {
           "strength": 1,
@@ -819,7 +819,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
@@ -887,7 +887,7 @@
     "containers": {
       "Ground": {
         "items": {
-          "Guard Key": {
+          "Guard_Key": {
             "classification": "Key",
             "desc": "The key to the guard room",
             "traits": {
@@ -899,9 +899,9 @@
           }
         }
       },
-      "Joes Drawer": {
+      "Joes_Drawer": {
         "items": {
-          "Half Used Crack Pipe": {
+          "Crack_Pipe": {
             "classification": "Misc",
             "desc": "Joe Dirts half used crack pipe, if i smoke it should help with my withdrawals",
             "traits": {
@@ -909,7 +909,7 @@
               "Healing": 1
             }
           },
-          "Band Aids": {
+          "Bandaids": {
             "classification": "Misc",
             "desc": "Band-aids may come in handy if i run into zombies or worse",
             "traits": {
@@ -964,7 +964,7 @@
     "containers": {
       "Ground": {
         "items": {
-          "Metal Pipe": {
+          "Metal_Pipe": {
             "classification": "Melee",
             "desc": "This pipe must have fallen from the ceiling after the pipes burst",
             "traits": {
@@ -1062,7 +1062,7 @@
       "Ground": {},
       "Corpse": {
         "items": {
-          "Hallway Key": {
+          "Hallway_Key": {
             "classification": "Key",
             "desc": "A key card to the hallways",
             "traits": {
@@ -1096,7 +1096,7 @@
     "containers": {
       "Ground": {
         "items": {
-          "Bullet Proof Vest": {
+          "Bullet_Proof_Vest": {
             "classification": "Misc",
             "desc": "A old vest with stab marks, but its bullet proof",
             "traits": {
@@ -1104,7 +1104,7 @@
               "health": 15
             }
           },
-          "Empty Gun": {
+          "Empty_Gun": {
             "classification": "Misc",
             "desc": "The Gun has no ammo, this still might come in handy",
             "traits": {
@@ -1115,7 +1115,7 @@
       }
     },
     "characters": {
-      "Prison Guard": {
+      "Prison_Guard": {
         "state": "idle",
         "stats": {
           "strength": 10,
@@ -1134,7 +1134,7 @@
           }
         },
         "wearing": {
-          "Tactical Vest": {
+          "Tactical_Vest": {
             "classification": "Misc",
             "desc": "A old vest with stab marks, but its bullet proof",
             "traits": {
@@ -1210,7 +1210,7 @@
       }
     },
     "characters": {
-      "Mike Jones": {
+      "Mike_Jones": {
         "state": "idle",
         "stats": {
           "strength": 0,
@@ -1220,7 +1220,7 @@
           "health": 5
         },
         "inv": {
-          "Bomb Making Equipment": {
+          "Bomb_Making_Equipment": {
             "classification": "Misc",
             "desc": "With Jones help this equipment can be used to make bombs",
             "traits": {
@@ -1229,7 +1229,7 @@
           }
         },
         "wearing": {
-          "Prison Uniform": {
+          "Prison_Uniform": {
             "classification": "Wearable",
             "desc": "Your standard, orange jumpsuit.",
             "traits": {

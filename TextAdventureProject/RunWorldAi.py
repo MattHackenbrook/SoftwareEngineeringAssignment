@@ -51,8 +51,11 @@ class WorldAi:
                 command["Target"] = random.choice(roomStuff["Characters"])
             else:
                 try:
+                    command["Target"] = characterObjects[0]
                     while characterObjects[command["Target"]].classification == "Zombie":
-                        command["Target"] = random.choice(roomStuff["Characters"])
+                        charList = roomStuff["Characters"]
+                        charList.remove(command["Owner"])
+                        command["Target"] = random.choice(charList)
                 except KeyError:
                     pass
 

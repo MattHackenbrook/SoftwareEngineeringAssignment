@@ -20,9 +20,8 @@ class CompileOutput:
                 parsed = parseInput(console, "Player")
                 valid = console.printFailure(parsed)
         wH = WorldHandler.WorldHandler(parsed)
-        print(wH.playerResult)
         curRoom = StartupProcedure.findPlayer(wH.data)[0]
-        console.room = wH.data.rooms[curRoom]
+        console.room = [curRoom, wH.data.rooms[curRoom]]
         CompileOutput.playerRoomDescription(console)
         #and then restart the turn sequence
 

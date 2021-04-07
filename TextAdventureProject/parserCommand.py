@@ -41,16 +41,16 @@ def parseInput(console, owner):
 
     for word in command_words:
         if word.lower() in actionWords:            
-            command["Action"] = word.lower()
+            command["Action"] = getEnum(word.lower())
         elif word.title() in doorList:
-            if command["Action"] == "inspect":
+            if command["Action"] == Action.INSPECT:
                 command["Target"] = word.title()
-            elif command["Action"] == "unlock":
+            elif command["Action"] == Action.UNLOCK:
                 if doorObjectsList[word.title()].locked == False:  # check to see if door is even able to be unlocked, if door is already unlocked, u cannot unlock it again so returns invalid by setting target to empty string
                     command["Target"] = ""
                 else:
                     command["Target"] = word
-            elif command["Action"] == "enter":
+            elif command["Action"] == Action.ENTER:
                 if doorObjectsList[word.title()].locked == True:  # same here but for when u try to enter a locked door
                     command["Target"] = ""
                 else:
@@ -58,26 +58,26 @@ def parseInput(console, owner):
             else:
                 command["Target"] = word.title()
         elif word.title() in containerList:
-            if command["Action"] == "inspect":              
+            if command["Action"] == Action.INSPECT:
                 command["Target"] = word.title()
         elif word.title() in itemList:
-            if command["Action"] != "eat" and command["Action"] != "wear" and command["Action"] != "unlock":
-                if command["Action"] == "take":
+            if command["Action"] != Action.EAT and command["Action"] != Action.WEAR and command["Action"] != Action.UNLOCK:
+                if command["Action"] == Action.TAKE:
                     command["Target"] = word.title()
-                if command["Action"] == "inspect":
+                if command["Action"] == Action.INSPECT:
                     command["Target"] = word.title()
                 else:
                     command["Object"] = word
         elif word.title() in invList:
-            if command["Action"] == "inspect":
+            if command["Action"] == Action.INSPECT:
                 command["Target"] = word.title()
-            if command["Action"] == "unlock":
+            if command["Action"] == Action.UNLOCK:
                 if invObjectsList[owner][word.title()].classification == "Key":
                     command["Object"] == word.title()
-            elif command["Action"] == "eat":
+            elif command["Action"] == Action.EAT:
                 if invObjectsList[owner][word.title()].classification == "Edible":
                     command["Object"] = word.title()
-            elif command["Action"] == "wear":
+            elif command["Action"] == Action.WEAR:
                 if invObjectsList[owner][word.title()].classification == "Wearable":
                     command["Object"] = word.title()
             else:
@@ -86,29 +86,32 @@ def parseInput(console, owner):
             command["target"] = word.title()
     if command["Object"] == "":
         command["Object"] = None
-    commandObject = CommandModel.Command(getEnum(command["Action"].lower()), command["Object"], command["Owner"], command["Target"],
+    commandObject = CommandModel.Command(getEnum(command["Action"]), command["Object"], command["Owner"], command["Target"],
                                          command["Room"])
     return commandObject
 
 
 def getEnum(word):
-    if word == "throw":
-        return CommandModel.Action.THROW
-    if word == "hit":
-        return CommandModel.Action.HIT
-    if word == "inspect":
-        return CommandModel.Action.INSPECT
-    if word == "take":
-        return CommandModel.Action.TAKE
-    if word == "eat":
-        return CommandModel.Action.EAT
-    if word == "wear":
-        return CommandModel.Action.WEAR
-    if word == "unlock":
-        return CommandModel.Action.UNLOCK
-    if word == "enter":
-        return CommandModel.Action.ENTER
-        
+    if type(word) == str:
+        word = word.lower()
+        if word == "throw":
+            return CommandModel.Action.THROW
+        if word == "hit":
+            return CommandModel.Action.HIT
+        if word == "inspect":
+            return CommandModel.Action.INSPECT
+        if word == "take":
+            return CommandModel.Action.TAKE
+        if word == "eat":
+            return CommandModel.Action.EAT
+        if word == "wear":
+            return CommandModel.Action.WEAR
+        if word == "unlock":
+            return CommandModel.Action.UNLOCK
+        if word == "enter":
+            return CommandModel.Action.ENTER
+    else:
+        return word
 
 
 def getItemObjects(items, room):
