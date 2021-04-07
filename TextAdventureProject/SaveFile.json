@@ -165,7 +165,7 @@
                     }
                 },
                 "desc": "Steve, but a zombie.",
-                "state": "wander"
+                "state": "idle"
             },
             "Zombie_Jack": {
                 "classification": "Zombie",
@@ -196,7 +196,7 @@
                     }
                 },
                 "desc": "Jack, but a zombie.",
-                "state": "wander"
+                "state": "idle"
             },
             "Zombie_Jeff": {
                 "classification": "Zombie",
@@ -227,7 +227,7 @@
                     }
                 },
                 "desc": "Jeff, but a zombie.",
-                "state": "wander"
+                "state": "idle"
             }
         },
         "shortDesc": "Jones cell block. Its completely torn apart.",
@@ -618,7 +618,7 @@
                     }
                 },
                 "desc": "A zombie wearing a nurse uniform",
-                "state": "wander"
+                "state": "idle"
             }
         },
         "shortDesc": "The Hospital Ward",
@@ -678,7 +678,7 @@
                     "thrift": 2,
                     "persuasion": 0,
                     "armour": 15,
-                    "health": "11"
+                    "health": "9"
                 },
                 "inv": {
                     "Toothbrush_Shank": {
@@ -700,7 +700,7 @@
                     }
                 },
                 "desc": "A Guard is hiding under his desk, hes been beaten and is scared",
-                "state": "aggressive"
+                "state": "wander"
             },
             "Player": {
                 "classification": "Player",
@@ -870,7 +870,7 @@
                     }
                 },
                 "desc": "Fred, but a zombie.",
-                "state": "wander"
+                "state": "idle"
             }
         },
         "shortDesc": "The South Hall",
@@ -1241,7 +1241,7 @@
                     }
                 },
                 "desc": "A weak old man who landed in prison for crimes against humanity, his intelligence is all thats left",
-                "state": "wander"
+                "state": "idle"
             }
         },
         "shortDesc": "This cell contains the prisons most infamous felon, Mike Jones, anarchist",

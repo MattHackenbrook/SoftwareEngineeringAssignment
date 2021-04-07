@@ -24,7 +24,7 @@ class CompileOutput:
                 parsed = parseInput(console, "Player")
                 valid = console.printFailure(parsed)
         wH = WorldHandler.WorldHandler(parsed)
-        if console.checkEnd(wH.data):
+        if console.endGame(wH.data):
             sys.exit("thank you for playing")
         curRoom = StartupProcedure.findPlayer(wH.data)[0]        
         console.room = [curRoom, wH.data.rooms[curRoom]]
