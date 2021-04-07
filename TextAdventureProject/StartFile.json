@@ -631,7 +631,15 @@
           "armour": "50",
           "health": "50"
         },
-        "inv": {},
+        "inv": {
+          "Teeth": {
+            "classification": "Melee",
+            "desc": "Eww... Teeth.",
+            "traits": {
+              "Damage": 4
+            }
+          }
+        },
         "wearing": {},
         "desc": "A Huge horde of almost 50 zombies wanders around aimlesly together as they look for any way to move around.",
         "classification": "Horde"
