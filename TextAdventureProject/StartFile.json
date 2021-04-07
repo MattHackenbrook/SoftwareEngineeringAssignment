@@ -374,7 +374,7 @@
           "thrift": 0,
           "persuasion": 0,
           "armour": 0,
-          "health": 1
+          "health": 10
         },
         "inv": {
           "Hand": {
