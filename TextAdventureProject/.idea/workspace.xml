@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="570f1c39-8934-4fa2-a490-2a4ef305a64f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CompileOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/CompileOutput.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RunWorldAi.py" beforeDir="false" afterPath="$PROJECT_DIR$/RunWorldAi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveFile.json" beforeDir="false" afterPath="$PROJECT_DIR$/SaveFile.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StartFile.json" beforeDir="false" afterPath="$PROJECT_DIR$/StartFile.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorldHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorldHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parserCommand.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserCommand.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/RunWorldAi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+              <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -389,7 +383,7 @@
     <entry file="file://$PROJECT_DIR$/RunWorldAi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+          <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
