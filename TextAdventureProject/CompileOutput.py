@@ -21,7 +21,7 @@ class CompileOutput:
                 valid = console.printFailure(parsed)
         wH = WorldHandler.WorldHandler(parsed)
         print(wH.playerResult)
-        console.room = wH.data.rooms[StartupProcedure.findPlayer(wH.data)]
+        console.room = StartupProcedure.findPlayer(wH.data)
         CompileOutput.playerRoomDescription(console)
         #and then restart the turn sequence
 

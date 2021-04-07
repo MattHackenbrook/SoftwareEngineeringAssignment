@@ -7,9 +7,9 @@ from os import remove
 
 #check savefile for player in room and return that room
 def findPlayer(dataMan):
-    for room in dataMan.rooms.items:
-        if len(dataMan.rooms[room[1]].characters) > 0:
-            for thing in dataMan.rooms[room[1]].characters:
+    for room in dataMan.rooms.items():
+        if len(room[1].characters) > 0:
+            for thing in room[1].characters:
                 if thing == "Player":
                     return room
 

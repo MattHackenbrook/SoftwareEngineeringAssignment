@@ -80,37 +80,6 @@
                 },
                 "desc": "James, but a zombie.",
                 "state": "idle"
-            },
-            "Zombie Luke": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 4
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "Luke, but a zombie.",
-                "state": "idle"
             }
         },
         "shortDesc": "Ivans cell block. It appears to be nearly untouched.",
@@ -163,37 +132,6 @@
             }
         },
         "characters": {
-            "Zombie Steve": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 4
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "Steve, but a zombie.",
-                "state": "idle"
-            },
             "Zombie Jeff": {
                 "classification": "Zombie",
                 "stats": {
@@ -223,9 +161,9 @@
                     }
                 },
                 "desc": "Jeff, but a zombie.",
-                "state": "idle"
+                "state": "wander"
             },
-            "Zombie Fred": {
+            "Zombie Jacob": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -253,39 +191,8 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "Fred, but a zombie.",
-                "state": "idle"
-            },
-            "Zombie Jack": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 4
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "Jack, but a zombie.",
-                "state": "idle"
+                "desc": "Jacob is a zombie!",
+                "state": "wander"
             }
         },
         "shortDesc": "Jones cell block. Its completely torn apart.",
@@ -359,39 +266,7 @@
                 "desc": "You remember stuffing your mattress with contraband."
             }
         },
-        "characters": {
-            "Player": {
-                "classification": "Player",
-                "stats": {
-                    "strength": 0,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 1
-                },
-                "inv": {
-                    "Hand": {
-                        "traits": {
-                            "Damage": 2
-                        },
-                        "classification": "Melee",
-                        "desc": "Your hand."
-                    }
-                },
-                "wearing": {
-                    "Prison Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "You.",
-                "state": "player_control"
-            }
-        },
+        "characters": {},
         "shortDesc": "Home sweet home.",
         "longDesc": "This is your cell, the miserable, disgusting hole youve spent your last few years.",
         "visited": false
@@ -478,6 +353,37 @@
                 },
                 "desc": "This zombie looks like Jim. He used to work in the kitchen, I think he was once a car thief.",
                 "state": "idle"
+            },
+            "Jawless Zombie": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 1,
+                    "health": 1
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant do much",
+                "state": "wander"
             }
         },
         "shortDesc": "This place should not be used to prepare food. Everything is disgusting.",
@@ -547,39 +453,7 @@
                 "desc": "A banged up old vending machine, looks like its still powered, with a few drinks left."
             }
         },
-        "characters": {
-            "Jawless Zombie": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 1,
-                    "health": 1
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 4
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant do much",
-                "state": "idle"
-            }
-        },
+        "characters": {},
         "shortDesc": "The moldy and messy Cafeteria appears to be unchanged and still dirty.",
         "longDesc": "You walk into a big open room with rectangular dinning tables strewn about. Old plates of food and broken chairs are thrown around, a smell of mold permeates the air, im glad im not hungry right now",
         "visited": false
@@ -631,7 +505,7 @@
                 "inv": {},
                 "wearing": {},
                 "desc": "A Huge horde of almost 50 zombies wanders around aimlesly together as they look for any way to move around.",
-                "state": "idle"
+                "state": "wander"
             }
         },
         "shortDesc": "The dried grass sways in the wind and the concrete walls stand firm",
@@ -749,7 +623,39 @@
                 "desc": null
             }
         },
-        "characters": {},
+        "characters": {
+            "Prison Guard": {
+                "classification": "NPC",
+                "stats": {
+                    "strength": 10,
+                    "thrift": 2,
+                    "persuasion": 0,
+                    "armour": 15,
+                    "health": 15
+                },
+                "inv": {
+                    "Gun": {
+                        "traits": {
+                            "Damage": 15
+                        },
+                        "classification": "Misc",
+                        "desc": "The Guards Gun still has ammo, this will come in handy real soon"
+                    }
+                },
+                "wearing": {
+                    "Tactical Vest": {
+                        "traits": {
+                            "Damage": 1,
+                            "health": 15
+                        },
+                        "classification": "Misc",
+                        "desc": "A old vest with stab marks, but its bullet proof"
+                    }
+                },
+                "desc": "A Guard is hiding under his desk, hes been beaten and is scared",
+                "state": "wander"
+            }
+        },
         "shortDesc": "the long ominous hallway with doors for the Hospital wing, West hallway and north cell block",
         "longDesc": "A long dusty hallway stretches ahead with another barred door at the other end, along with others leading to what seems like more cells.  One of these doors has a red cross on it. there are scattered belongings accross the floor",
         "visited": false
@@ -784,37 +690,6 @@
             }
         },
         "characters": {
-            "Zombie Jacob": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 4
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "Jacob is a zombie!",
-                "state": "idle"
-            },
             "Zombie William": {
                 "classification": "Zombie",
                 "stats": {
@@ -844,7 +719,38 @@
                     }
                 },
                 "desc": "William is a zombie!",
-                "state": "idle"
+                "state": "wander"
+            },
+            "Zombie Steve": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Steve, but a zombie.",
+                "state": "wander"
             }
         },
         "shortDesc": "The South Hall",
@@ -1021,7 +927,70 @@
                 "desc": null
             }
         },
-        "characters": {},
+        "characters": {
+            "Zombie Fred": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Fred, but a zombie.",
+                "state": "wander"
+            },
+            "Zombie Jack": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Jack, but a zombie.",
+                "state": "wander"
+            }
+        },
         "shortDesc": "a bloody mess on the floor from the previous inmates remains",
         "longDesc": "A grotestesque scene of blood and gore, it looks as though the inmate who belonged in this cell is now the bloody puddle of red slop in the floor. the cell is turned upsidedown, there must have been a terrible struggle before he was pinned down on the floor and eaten alive. note to self, dont get cornered.",
         "visited": false
@@ -1066,6 +1035,37 @@
                 "wearing": {},
                 "desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you. He can be a great ally, but an even worse enemy.",
                 "state": "idle"
+            },
+            "Zombie Luke": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 4
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Luke, but a zombie.",
+                "state": "wander"
             }
         },
         "shortDesc": "Ivans Cell",
@@ -1105,7 +1105,39 @@
                 "desc": "the mutilated corpse of one of the inmates, Pedro, face first in the ground, his back completly devoured.  his right arm is outstretched looks like he was holding something. Bugger always had sticky fingers"
             }
         },
-        "characters": {},
+        "characters": {
+            "Player": {
+                "classification": "Player",
+                "stats": {
+                    "strength": 0,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 1
+                },
+                "inv": {
+                    "Hand": {
+                        "traits": {
+                            "Damage": 2
+                        },
+                        "classification": "Melee",
+                        "desc": "Your hand."
+                    }
+                },
+                "wearing": {
+                    "Prison Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "You.",
+                "state": "player_control"
+            }
+        },
         "shortDesc": "the now completly destroyed cell block lacks any of its former security, or sanitation due to the blodd.  Poor Pedros burial will have to wait",
         "longDesc": "The familiar cell block no longer looks the same.  the once clean interior is now spattered with blood, littered with broken furniture, busted cell doors and metal bars, near the exit door you see the body of an inmate, he looks like someone you know.",
         "visited": false
@@ -1143,39 +1175,7 @@
                 "desc": null
             }
         },
-        "characters": {
-            "Prison Guard": {
-                "classification": "NPC",
-                "stats": {
-                    "strength": 10,
-                    "thrift": 2,
-                    "persuasion": 0,
-                    "armour": 15,
-                    "health": 15
-                },
-                "inv": {
-                    "Gun": {
-                        "traits": {
-                            "Damage": 15
-                        },
-                        "classification": "Misc",
-                        "desc": "The Guards Gun still has ammo, this will come in handy real soon"
-                    }
-                },
-                "wearing": {
-                    "Tactical Vest": {
-                        "traits": {
-                            "Damage": 1,
-                            "health": 15
-                        },
-                        "classification": "Misc",
-                        "desc": "A old vest with stab marks, but its bullet proof"
-                    }
-                },
-                "desc": "A Guard is hiding under his desk, hes been beaten and is scared",
-                "state": "idle"
-            }
-        },
+        "characters": {},
         "shortDesc": "The guards room is dimly lit, maybe everyone left but its worth checking out for weapons",
         "longDesc": "Judging by the state of the prison you would expect this room to be empty, the lights are dim,the room is messy from people scavenging, they must be looking for weaopons, the guards areusually armed, its worth checking out",
         "visited": false
