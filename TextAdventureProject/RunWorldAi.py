@@ -47,7 +47,8 @@ class WorldAi:
             print("creating hostile action for", characterObject)
             setState(caracter, characterObject, data, "aggressive")
             command["Action"] = random.choice(hostileActionWords)
-            #if command["Action"] == "throw":
+            if command["Action"] == Action.THROW and (len(roomStuff["Inventory"][caracter]) <= 1 ):
+                command["Action"] == Action.HIT
             command["Object"] = random.choice(roomStuff["Inventory"][caracter])#bug here when cracter has nothing to attack with
             if characterObject.classification == "NPC":
                 command["Target"] = random.choice(roomStuff["Characters"])

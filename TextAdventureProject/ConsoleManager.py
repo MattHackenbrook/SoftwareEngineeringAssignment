@@ -19,7 +19,7 @@ class ConsoleManager:
 
     def readUserInput(self):
         self.userInput = input("... ")
-        if self.userInput == "inventory" or self.userInput == "inv":
+        if self.userInput.lower() == "inventory" or self.userInput == "inv":
             print("Your inventory contains: ")
             for item in self.room[1].characters["Player"].inv.keys():
                 print(item)

@@ -84,7 +84,7 @@ def parseInput(console, owner):
             else:
                 command["Object"] = word.title()
         elif word.title() in characterList:
-            command["target"] = word.title()
+            command["Target"] = word.title()
     if command["Object"] == "":
         command["Object"] = None
     commandObject = CommandModel.Command(getEnum(command["Action"]), command["Object"], command["Owner"], command["Target"],

@@ -3,6 +3,7 @@ import ConsoleManager
 import WorldHandler
 import StartupProcedure
 from parserCommand import parseInput
+import sys
 
 
 class CompileOutput:
@@ -13,9 +14,12 @@ class CompileOutput:
         while valid == False:
             print("what would you like to do?")
             print("For help enter 'help'\n")
+            print("to end game enter exit\n")
             console.readUserInput()
-            if console.userInput == "help":
+            if console.userInput.lower() == "help":
                 console.helper()
+            if console.userInput.lower() == "exit":
+                sys.exit("thank you for playing")
             else:
                 parsed = parseInput(console, "Player")
                 valid = console.printFailure(parsed)
