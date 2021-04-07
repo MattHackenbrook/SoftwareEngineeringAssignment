@@ -89,6 +89,11 @@ class WorldHandler:
                 for item in command.room.containers[container].items.keys():
                     if cmd.target == item:
                         command.target = command.room.containers[container].items[item]
+            for invItem in command.owner.inv.keys():
+                if cmd.target == invItem:
+                    command.target = command.owner.inv[invItem]
+            if command.target is not None:
+                return command
         return command
 
     def unlock(self, cmd):
