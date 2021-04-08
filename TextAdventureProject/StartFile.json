@@ -1018,7 +1018,7 @@
     "containers": {
       "Ground": {
         "items": {
-          "Hand": {
+          "Bloody_hand": {
             "classification": "Edible",
             "desc": "a bloody hand attached to what remains of an arm",
             "traits": {
