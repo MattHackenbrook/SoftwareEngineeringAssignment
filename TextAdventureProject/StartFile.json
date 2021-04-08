@@ -738,7 +738,7 @@
         "locked": true,
         "desc": "there are some computer screens that are still lit and something that looks like a metal cylinder."
       },
-      "Hospital": {
+      "Hospital_Ward": {
         "locked": true,
         "desc": "A series of what looks like unmade beds with dirty white sheets"
       },
@@ -872,7 +872,7 @@
         "locked": true,
         "desc": "there seems to be music playing and fuzz images in the back of the room, need to get closer"
       },
-      "Hospital": {
+      "Hospital_Ward": {
         "locked": true,
         "desc": "A series of what looks like unmade beds with dirty white sheets"
       },
@@ -1070,7 +1070,8 @@
                 "North_Cell_Block.North_Hall",
                 "North_Hall.West_Hall",
                 "West_Hall.South_Hall",
-                "South_Cell_Block.Jones_Cell"
+                "South_Cell_Block.Jones_Cell",
+                "Hospital_Ward.North_Hall"
               ]
             }
           }
