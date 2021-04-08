@@ -15,7 +15,7 @@ class CompileOutput:
             print("what would you like to do?")
             print("For help enter 'help'\n")
             print("to end game enter exit\n")
-            print("HEALTH: ", console.room[1].characters["Player"].stats["health"])
+            print("HEALTH: ", console.room[1].characters["Player"].stats["health"], "\n\n")
             console.readUserInput()
             if console.userInput.lower() == "help":
                 console.helper()
