@@ -113,7 +113,7 @@ class WorldHandler:
                 if rooms[0] == cmd.target:
                     command.target.locked = False
                     return "Opened " + cmd.target + " with " + cmd.object
-        return "Cannot open" + cmd.target + " with " + cmd.object
+        return "Cannot open " + cmd.target + " with " + cmd.object
 
     def wear(self, cmd):
         command = self.populateCommand(cmd)
