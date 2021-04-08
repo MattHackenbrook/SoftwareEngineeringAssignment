@@ -1019,9 +1019,10 @@
       "Ground": {
         "items": {
           "Hand": {
-            "classification": "Misc",
+            "classification": "Edible",
             "desc": "a bloody hand attached to what remains of an arm",
             "traits": {
+              "Healing": 100,
               "Damage": 1
             }
           }
