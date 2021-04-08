@@ -311,8 +311,8 @@
         "desc": "The sewage is running this direction, its probably a way out!"
       },
       "Easter_Egg_Room": {
-        "locked": false,
-        "desc": "The sewage is draining from this direction. Theres probably nothing of importance"
+        "locked": true,
+        "desc": "The sewage is draining from this direction. There is probably something extremely interesting in that\ndirection, but the pipe gets too narrow to explore further."
       }
     },
     "containers": {
@@ -868,10 +868,6 @@
         "locked": false,
         "desc": "Dirty floor and walls , zombie free for now"
       },
-      "Easter_Egg_Room": {
-        "locked": true,
-        "desc": "there seems to be music playing and fuzz images in the back of the room, need to get closer"
-      },
       "Hospital_Ward": {
         "locked": true,
         "desc": "A series of what looks like unmade beds with dirty white sheets"
@@ -1195,15 +1191,11 @@
   },
   "Easter_Egg_Room": {
     "doors": {
-      "West_Hall": {
-        "locked": true,
-        "desc": "You can see you to the west hall, no one in sight but cant be sure if thats a good thing"
-      }
     },
     "containers": {
       "Ground": {
         "items": {
-          "Empty Gun": {
+          "Empty_Gun": {
           "classification": "Misc",
           "desc": "A corpse is clutching a gun with no bullets, he looks to have shot himself from the music",
           "traits": {
