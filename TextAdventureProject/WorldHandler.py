@@ -182,9 +182,9 @@ class WorldHandler:
         return "Take " + cmd.target
 
     def throw(self, cmd):
-        if cmd.target is None or cmd.object is None:
-            return "Invalid command"
         command = self.populateCommand(cmd)
+        if command.target is None or command.object is None:
+            return "Invalid command"
         del command.owner.inv[cmd.object]
         command.target.stats["health"] = int(command.target.stats["health"]) - command.object.traits["Damage"]
         command.room.containers["Ground"].items[cmd.object] = command.object
@@ -192,7 +192,7 @@ class WorldHandler:
 
     def hit(self, cmd):
         command = self.populateCommand(cmd)
-        if cmd.target is None or cmd.object is None:
+        if command.target is None or command.object is None:
             return "Invalid command"
         try:
             armour = command.target.wearing.traits["armour"]
