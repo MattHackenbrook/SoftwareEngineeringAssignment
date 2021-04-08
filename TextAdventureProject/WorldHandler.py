@@ -62,6 +62,8 @@ class WorldHandler:
     def populateCommand(self, cmd):
         command = CommandModel.Command(cmd.action, None, None, None, None)
         command.room = self.rooms[cmd.room]
+        if cmd.owner == "Player":
+            command.room.visited = True
         command.owner = command.room.characters[cmd.owner]
         if cmd.object is not None:
             try:
@@ -98,6 +100,8 @@ class WorldHandler:
 
     def unlock(self, cmd):
         command = self.populateCommand(cmd)
+        if cmd.target is None or cmd.object is None:
+            return "Invalid command"
         for door in command.object.traits["Opens"]:
             rooms = door.split('.')
             if rooms[0] == cmd.room:
@@ -178,6 +182,8 @@ class WorldHandler:
         return "Take " + cmd.target
 
     def throw(self, cmd):
+        if cmd.target is None or cmd.object is None:
+            return "Invalid command"
         command = self.populateCommand(cmd)
         del command.owner.inv[cmd.object]
         command.target.stats["health"] = int(command.target.stats["health"]) - command.object.traits["Damage"]
@@ -186,6 +192,8 @@ class WorldHandler:
 
     def hit(self, cmd):
         command = self.populateCommand(cmd)
+        if cmd.target is None or cmd.object is None:
+            return "Invalid command"
         try:
             armour = command.target.wearing.traits["armour"]
             if armour <= 0:
