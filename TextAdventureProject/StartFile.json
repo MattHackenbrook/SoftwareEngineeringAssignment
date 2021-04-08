@@ -45,7 +45,8 @@
               ]
             }
           }
-        }
+        },
+        "desc": "A mop bucket filled with blood"
       },
       "Ground": {
                 "items": {},
