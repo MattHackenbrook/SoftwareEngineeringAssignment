@@ -102,6 +102,7 @@ class WorldHandler:
             rooms = door.split('.')
             if rooms[0] == cmd.room:
                 if rooms[1] == cmd.target:
+                    self.rooms[cmd.target].doors[cmd.room].locked = False
                     command.target.locked = False
                     return "Opened " + cmd.target + " with " + cmd.object
             if rooms[1] == cmd.room:

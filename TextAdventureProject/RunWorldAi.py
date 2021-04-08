@@ -48,8 +48,13 @@ class WorldAi:
             setState(caracter, characterObject, data, "aggressive")
             command["Action"] = random.choice(hostileActionWords)
             if command["Action"] == Action.THROW and len(roomStuff["Inventory"][caracter]) <= 1:
-                command["Action"] == Action.HIT
-            command["Object"] = random.choice(roomStuff["Inventory"][caracter])#bug here when cracter has nothing to attack with
+                command["Action"] = Action.HIT
+            try:
+                command["Object"] = random.choice(roomStuff["Inventory"][caracter])#bug here when cracter has nothing to attack with
+            except IndexError:
+                command["Action"] = None
+                command["Object"] = None
+                command["Target"] = None
             if characterObject.classification == "NPC":
                 command["Target"] = random.choice(roomStuff["Characters"])
             else:
@@ -116,6 +121,8 @@ class WorldAi:
         if command["Action"] == None:
             commandObject = None
         else:
+            if command["Owner"] == "Ivan" and command["Action"] == Action.THROW and command["Object"] == "Sledgehammer":
+                command["Action"] = Action.HIT
             commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"], command["Room"])
             if commandObject.target is None:
                 print("FAILURE")
