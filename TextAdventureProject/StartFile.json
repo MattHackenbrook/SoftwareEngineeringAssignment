@@ -6,7 +6,7 @@
         "desc": "The cell door to Ivans cell. Its torn off the wall."
       },
       "North_Hall": {
-        "locked": false,
+        "locked": true,
         "desc": "The door to the hallway"
       }
     },
@@ -910,7 +910,7 @@
   "Janitors_Closet": {
     "doors": {
       "South_Hall": {
-        "locked": false,
+        "locked": true,
         "desc": "Looks like a hallway but heading in the south direction"
       }
     },
@@ -1129,7 +1129,7 @@
         "desc": "You can see into the courtyard, from what you can tell this is how you entered the prison, but now theres a bunch of zomies roaming around"
       },
       "North_Hall": {
-        "locked": false,
+        "locked": true,
         "desc": "A long dirty corridor, must be the North hallway it looks like it has some other doors"
       }
     },
