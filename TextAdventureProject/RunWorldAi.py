@@ -20,7 +20,6 @@ class WorldAi:
             generatedCommand = self.generateCommand(each, self.worldCaracters[each], data)
             if generatedCommand != None:
                 self.commandList.append(generatedCommand)
-        #print("commands generated")
          
 
     def findCaracters(self, data): #this needs to get caracter object
@@ -63,7 +62,6 @@ class WorldAi:
                     first = False
                     charList = roomStuff["Characters"]
                     command["Target"] = random.choice(charList)
-                    print("TARGET: ", command["Target"])
                     if characterObjects[command["Target"]].classification != "Zombie":
                         run = False
 
@@ -110,8 +108,6 @@ class WorldAi:
                 command["Action"] = random.choice(zombieActionWords)
                 if command["Action"] == Action.ENTER:
                     command["Target"] = random.choice(roomStuff["Doors"])
-                    if command["Target"] is None:
-                        print("FAILURE")
                     if doorObjectsList[command["Target"]].locked == True:
                         command["Action"] = None
                     else:
@@ -124,8 +120,6 @@ class WorldAi:
             if command["Owner"] == "Ivan" and command["Action"] == Action.THROW and command["Object"] == "Sledgehammer":
                 command["Action"] = Action.HIT
             commandObject = CommandModel.Command(command["Action"], command["Object"], command["Owner"], command["Target"], command["Room"])
-            if commandObject.target is None:
-                print("FAILURE")
         if commandObject is not None:
             if commandObject.action == Action.HIT or commandObject.action == Action.THROW:
                 if commandObject.target is None:

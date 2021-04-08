@@ -188,6 +188,8 @@ class WorldHandler:
         del command.owner.inv[cmd.object]
         command.target.stats["health"] = int(command.target.stats["health"]) - command.object.traits["Damage"]
         command.room.containers["Ground"].items[cmd.object] = command.object
+        if cmd.target == "Player":
+            print(cmd.owner, " threw ", cmd.object, " at you!")
         return "Throw " + cmd.object + " at " + cmd.target
 
     def hit(self, cmd):
@@ -203,6 +205,8 @@ class WorldHandler:
             health = int(command.target.stats["health"])
             health -= command.object.traits["Damage"]
             command.target.stats["health"] = str(health)
+        if cmd.target == "Player":
+            print(cmd.owner, " hit you with ", cmd.object, "!")
         return "Hit " + cmd.target + " with " + cmd.object
 
     def enter(self, cmd):
