@@ -1107,7 +1107,8 @@
               "Damage": 0,
               "Opens": [
                 "South_Hall.West_Hall",
-                "West_Hall.North_Hall"
+                "West_Hall.North_Hall",
+                "North_Hall.North_Cell_Block"
               ]
             }
           }
