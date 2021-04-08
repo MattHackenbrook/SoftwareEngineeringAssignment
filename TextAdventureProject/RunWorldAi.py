@@ -43,7 +43,6 @@ class WorldAi:
         command = {"Action":None, "Object":None, "Owner":caracter, "Target":None, "Room":room[0]}
 
         if checkHostile(characterObject, characterObjects):
-            print("creating hostile action for", characterObject)
             setState(caracter, characterObject, data, "aggressive")
             command["Action"] = random.choice(hostileActionWords)
             if command["Action"] == Action.THROW and len(roomStuff["Inventory"][caracter]) <= 1:

@@ -190,6 +190,9 @@ class WorldHandler:
         command.room.containers["Ground"].items[cmd.object] = command.object
         if cmd.target == "Player":
             print(cmd.owner, " threw ", cmd.object, " at you!")
+        elif cmd.object == "Bomb" and cmd.owner == "Player":
+            print("You threw a very large bomb... not a good idea.")
+            command.owner.stats["health"] = 0
         return "Throw " + cmd.object + " at " + cmd.target
 
     def hit(self, cmd):
@@ -207,6 +210,9 @@ class WorldHandler:
             command.target.stats["health"] = str(health)
         if cmd.target == "Player":
             print(cmd.owner, " hit you with ", cmd.object, "!")
+        elif cmd.object == "Bomb" and cmd.owner == "Player":
+            print("You smashed a very large bomb... not a good idea.")
+            command.owner.stats["health"] = 0
         return "Hit " + cmd.target + " with " + cmd.object
 
     def enter(self, cmd):

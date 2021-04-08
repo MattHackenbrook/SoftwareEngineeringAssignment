@@ -68,7 +68,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -99,7 +99,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -118,7 +118,7 @@
       }
     },
     "shortDesc": "Ivans cell block. It appears to be nearly untouched.",
-    "longDesc": "An oddly tidy cell block. This is Ivans cell block, and if hes here it could mean trouble for you. The man is terrifying!",
+    "longDesc": "An oddly tidy cell block. This is Ivans cell block, and if hes here it could mean trouble for you.\nThe man is terrifying!",
     "visited": false
   },
   "South_Cell_Block": {
@@ -133,7 +133,7 @@
       },
       "Jones_Cell": {
         "locked": true,
-        "desc": "This cell is completely sealed up from a roof collapse. It belongs to your old friend, Jones, a friendly backyard chemist."
+        "desc": "This cell is completely sealed up from a roof collapse. It belongs to your old friend, Jones, a\nfriendly backyard chemist."
       }
     },
     "containers": {
@@ -185,7 +185,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -216,7 +216,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -247,7 +247,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -278,7 +278,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -297,7 +297,7 @@
       }
     },
     "shortDesc": "Jones cell block. Its completely torn apart.",
-    "longDesc": "The entire room is falling apart. Its almost like a wreaking ball was swung around in here. This is the cell block where your friend Jones used to be. Hes probably dead, or a zombie, but might as well check, right?",
+    "longDesc": "The entire room is falling apart. Its almost like a wreaking ball was swung around in here. This is\nthe cell block where your friend Jones used to be. Hes probably dead, or a zombie, but might as well check, right?",
     "visited": false
   },
   "Sewer": {
@@ -323,7 +323,7 @@
     },
     "characters": {},
     "shortDesc": "The sewer again... its not easier this time.",
-    "longDesc": "As you crawl on your belly into the vile sewer, you find yourself questioning if escape is even worth this horrible stench. It takes all of your might to keep going.",
+    "longDesc": "As you crawl on your belly into the vile sewer, you find yourself questioning if escape is even worth\nthis horrible stench. It takes all of your might to keep going.",
     "visited": false
   },
   "Start_Cell": {
@@ -423,7 +423,7 @@
     },
     "characters": {},
     "shortDesc": "The gateway to freedom.",
-    "longDesc": "This is the same place where you remember being brought into this concrete nightmare all those years ago. Outsideof the main gate is freedom.",
+    "longDesc": "This is the same place where you remember being brought into this concrete nightmare all those years\nago. Outsideof the main gate is freedom.",
     "visited": false
   },
   "Kitchen": {
@@ -467,7 +467,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -486,7 +486,7 @@
       }
     },
     "shortDesc": "This place should not be used to prepare food. Everything is disgusting.",
-    "longDesc": "This room used to make food for the whole prison. Its tiny, very tiny, and extremely gross. You find yourself hoping that the mysterious liquids covering the walls only appeared after the apocalypse... but that seems like wishful thinking.",
+    "longDesc": "This room used to make food for the whole prison. Its tiny, very tiny, and extremely gross. You find\nyourself hoping that the mysterious liquids covering the walls only appeared after the apocalypse...\nbut that seems like wishful thinking.",
     "visited": false
   },
   "Cafeteria": {
@@ -567,7 +567,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -581,19 +581,19 @@
             }
           }
         },
-        "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant do much",
+        "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant\ndo much",
         "classification": "Zombie"
       }
     },
     "shortDesc": "The moldy and messy Cafeteria appears to be unchanged and still dirty.",
-    "longDesc": "You walk into a big open room with rectangular dinning tables strewn about. Old plates of food and broken chairs are thrown around, a smell of mold permeates the air, im glad im not hungry right now",
+    "longDesc": "You walk into a big open room with rectangular dinning tables strewn about. Old plates of food and\nbroken chairs are thrown around, a smell of mold permeates the air, im glad im not hungry right now",
     "visited": false
   },
   "Courtyard": {
     "doors": {
       "Front_Gate": {
         "locked": true,
-        "desc": "Through the metal Iron bars, it looks like theres another gate across this control room that leads to the road, freedom."
+        "desc": "Through the metal Iron bars, it looks like theres another gate across this control room that leads\nto the road, freedom."
       },
       "Guard_Room": {
         "locked": true,
@@ -637,7 +637,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -647,7 +647,7 @@
       }
     },
     "shortDesc": "The dried grass sways in the wind and the concrete walls stand firm",
-    "longDesc": "A cobblestone path leads out to the front gate. Dried grass makes up the field ahead as the concrete walls surrounding you a recovered by moss with barbed wire wrapped around the top, an orange sphere is visible in the field",
+    "longDesc": "A cobblestone path leads out to the front gate. Dried grass makes up the field ahead as the concrete\nwalls surrounding you a recovered by moss with barbed wire wrapped around the top, an orange sphere is\nvisible in the field",
     "visited": false
   },
   "Hospital_Ward": {
@@ -706,7 +706,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -725,7 +725,7 @@
       }
     },
     "shortDesc": "The Hospital Ward",
-    "longDesc": "You open the door and see a bed and a tray in the middle of the room. You look to your right and see the medical cabinet in the corner. There must be something in here I can use you say to yourself. As you search the room you remember the time that Ivan almost beat you to death because you didnt give him your cookies. You spent a week in pain recovering in the Hopsital Ward, but it was nice not having to be in that cell for a little bit",
+    "longDesc": "You open the door and see a bed and a tray in the middle of the room. You look to your right and see\nthe medical cabinet in the corner. There must be something in here I can use you say to yourself.\nAs you search the room you remember the time that Ivan almost beat you to death because you\ndidnt give him your cookies. You spent a week in pain recovering in the Hopsital Ward, but it was nice not having to be in that cell for\na little bit",
     "visited": false
   },
   "North_Hall": {
@@ -762,7 +762,7 @@
     },
     "characters": {},
     "shortDesc": "the long ominous hallway with doors for the Hospital wing, West hallway and north cell block",
-    "longDesc": "A long dusty hallway stretches ahead with another barred door at the other end, along with others leading to what seems like more cells.  One of these doors has a red cross on it. there are scattered belongings accross the floor",
+    "longDesc": "A long dusty hallway stretches ahead with another barred door at the other end, along with others\nleading to what seems like more cells.  One of these doors has a red cross on it.\nthere are scattered belongings across the floor",
     "visited": false
   },
   "South_Hall": {
@@ -809,7 +809,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -840,7 +840,7 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 4
+              "Damage": 3
             }
           }
         },
@@ -859,7 +859,7 @@
       }
     },
     "shortDesc": "The South Hall",
-    "longDesc": "The South Hall looks completely abandoned just like West Hall did. You see several corpses with missing limbs and what looks like bites that have been taken out of them. As you take a closer look you see a corpse with its eyes wide open and quickly realize it was your good friend Jeff. You take a moment to close his eyes and pray that he is in a better place now. A tear runs down your face as you get up and continue to move on trying to escape this hellhole.",
+    "longDesc": "The South Hall looks completely abandoned just like West Hall did. You see several corpses with\nmissing limbs and what looks like bites that have been taken out of them. As you take a closer look you see\na corpse with its eyes wide open and quickly realize it was your good friend Jeff. You take a moment to close\nhis eyes and pray that he is in a better place now. A tear runs down your face as you get up and continue to\nmove on trying to escape this hellhole.",
     "visited": false
   },
   "West_Hall": {
@@ -1069,18 +1069,19 @@
               "Opens": [
                 "North_Cell_Block.North_Hall",
                 "North_Hall.West_Hall",
-                "West_Hall.South_Hall"
+                "West_Hall.South_Hall",
+                "South_Cell_Block.Jones_Cell"
               ]
             }
           }
         },
         "wearing": {},
-        "desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you. He can be a great ally, but an even worse enemy.",
+        "desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you.\nHe can be a great ally, but an even worse enemy.",
         "classification": "NPC"
       }
     },
     "shortDesc": "Ivans Cell",
-    "longDesc": "This cell belongs to Ivan. The beast of the prison. You heard stories about how he killed 10 men with only his fists. You do not want to run into this guy",
+    "longDesc": "This cell belongs to Ivan. The beast of the prison. You heard stories about how he killed 10 men with\nonly his fists. You do not want to run into this guy",
     "visited": false
   },
   "West_Cell_Block": {
@@ -1114,19 +1115,19 @@
             }
           }
         },
-        "desc": "the mutilated corpse of one of the inmates, Pedro, face first in the ground, his back completly devoured.  his right arm is outstretched looks like he was holding something. Bugger always had sticky fingers"
+        "desc": "the mutilated corpse of one of the inmates, Pedro, face first in the ground, his back completly\ndevoured.  his right arm is outstretched looks like he was holding something. Bugger always had sticky fingers"
       }
     },
     "characters": {},
-    "shortDesc": "the now completly destroyed cell block lacks any of its former security, or sanitation due to the blodd.  Poor Pedros burial will have to wait",
-    "longDesc": "The familiar cell block no longer looks the same.  the once clean interior is now spattered with blood, littered with broken furniture, busted cell doors and metal bars, near the exit door you see the body of an inmate, he looks like someone you know.",
+    "shortDesc": "the now completely destroyed cell block lacks any of its former security,\nor sanitation due to the blood.  Poor Pedros burial will have to wait",
+    "longDesc": "The familiar cell block no longer looks the same.  the once clean interior is now spattered with\nblood, littered with broken furniture, busted cell doors and metal bars, near the exit door you see the body of an inmate, he looks like someone you know.",
     "visited": false
   },
   "Guard_Room": {
     "doors": {
       "Courtyard": {
         "locked": true,
-        "desc": "You can see into the courtyard, from what you can tell this is how you entered the prison, but now theres a bunch of zomies roaming around"
+        "desc": "You can see into the courtyard, from what you can tell this is how you entered the prison, but now\ntheres a bunch of zomies roaming around"
       },
       "North_Hall": {
         "locked": true,
@@ -1188,7 +1189,7 @@
       }
     },
     "shortDesc": "The guards room is dimly lit, maybe everyone left but its worth checking out for weapons",
-    "longDesc": "Judging by the state of the prison you would expect this room to be empty, the lights are dim,the room is messy from people scavenging, they must be looking for weaopons, the guards areusually armed, its worth checking out",
+    "longDesc": "Judging by the state of the prison you would expect this room to be empty, the lights are dim,the\nroom is messy from people scavenging, they must be looking for weaopons, the guards areusually armed, its worth checking out",
     "visited": false
   },
   "Easter_Egg_Room": {
@@ -1221,12 +1222,12 @@
             }
           }
         },
-        "desc": "A corpse is lying face down holding a gun with no bullets while the song plays in the background.You cant tell at this point if he shot himself to get away from the zombies or the music"
+        "desc": "A corpse is lying face down holding a gun with no bullets while the song plays in the background.You\ncant tell at this point if he shot himself to get away from the zombies or the music"
       }
     },
     "characters": {},
     "shortDesc": "This room is mysterious or a complete waste of time",
-    "longDesc": "This room was likely used for torture, this prison is rampant with experiments and unethical,guards, the longer you spend in this room the more likely you end up like the corpse on thefloor",
+    "longDesc": "This room was likely used for torture, this prison is rampant with experiments and unethical,guards,\nthe longer you spend in this room the more likely you end up like the corpse on thefloor",
     "visited": false
   },
   "Jones_Cell": {
@@ -1283,7 +1284,7 @@
       }
     },
     "shortDesc": "This cell contains the prisons most infamous felon, Mike Jones, anarchist",
-    "longDesc": "This is the top security wing of the prison, the most dangerous criminals are locked away here.Mike Jones is an old man know and has no strength to fight zombie but his bomb making skils arelegendary, his skill will be useful",
+    "longDesc": "This is the top security wing of the prison, the most dangerous criminals are locked away here.Mike\nJones is an old man know and has no strength to fight zombie but his bomb making skils arelegendary,\nhis skill will be useful",
     "visited": false
   }
 }
