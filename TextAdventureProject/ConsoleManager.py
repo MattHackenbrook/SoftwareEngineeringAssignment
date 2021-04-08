@@ -69,7 +69,7 @@ class ConsoleManager:
                 print("the door is currently locked")
             elif command.action != "" and command.action != None:
                 print("that item or object is not available to you")
-            elif command.action != None:
+            elif command.action == None:
                 print("Invalid input. Please try again")
             return False
         else:
