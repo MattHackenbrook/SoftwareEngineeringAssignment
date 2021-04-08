@@ -61,7 +61,10 @@ class ConsoleManager:
     def printFailure(self, command):
         if parserCommand.checkValidCommand(command) == False:
             if command.action == Action.UNLOCK:
-                print("the target is already unlocked or you do not have the item that unlocks it")
+                if command.object is None:
+                    print("Invalid command. Key not specified")
+                else:
+                    print("That wont work.")
             if command.action == Action.ENTER:
                 print("the door is currently locked")
             elif command.action != "" and command.action != None:
@@ -81,14 +84,14 @@ class ConsoleManager:
 
     def helper(self):
         print('''You have 8 different commands you can use in the game.
-1.Unlock
-2.Throw
-3.Hit
-4.Take
-5.Inspect
-6.Eat
-7.Wear
-8.Enter 
+1.Unlock [door] [key]
+2.Throw [inv item] [character]
+3.Hit [inv item] [character]
+4.Take [contaienr item]
+5.Inspect [any]
+6.Eat [inv item]
+7.Wear [inv item]
+8.Enter [door]
 You can also check your inventory using:
 inv
 
