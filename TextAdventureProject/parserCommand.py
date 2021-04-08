@@ -146,10 +146,26 @@ def checkValidCommand(command):
         command.target = command.room
     if command.target == None and (command.action == Action.EAT or command.action == Action.WEAR):
         command.target = command.owner
-    if command.action == None or command.target == None:
+    if command.action == None:
         return False
-    else:
-        return True
+    if command.action == Action.UNLOCK:
+        if command.target is None or command.object is None:
+            return False
+    if command.action == Action.EAT and command.object is None:
+        return False
+    if command.action == Action.WEAR:
+        if command.object is None:
+            return False
+    if command.action == Action.ENTER:
+        if command.target is None:
+            return False
+    if command.action == Action.THROW or command.action == Action.HIT:
+        if command.target is None or command.object is None:
+            return False
+    if command.action == Action.TAKE:
+        if command.target is None:
+            return False
+    return True
 
 
 def roomDict(room):
