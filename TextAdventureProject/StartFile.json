@@ -987,7 +987,7 @@
       },
       "Sewer": {
         "locked": true,
-        "desc": "You see a crack in the floor that looks like it might lead somewhere. You need a something strong like a sledgehammer to break through."
+        "desc": "You see a crack in the floor that looks like it might lead somewhere. You need a something strong\nlike a shovel to dig in."
       }
     },
     "containers": {

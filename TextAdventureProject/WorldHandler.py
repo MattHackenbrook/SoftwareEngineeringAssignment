@@ -228,8 +228,13 @@ class WorldHandler:
             toDelete = []
             for character in room.characters.keys():
                 if int(room.characters[character].stats["health"]) <= 0:
-                    room.containers[character] = DataModels.Container(room.characters[character].inv,
-                                                                      "The corpse of " + character)
+                    room.characters[character].inv = {
+                        **room.characters[character].inv,
+                        **room.characters[character].wearing
+                    }
+                    room.containers[character] = DataModels.Container(
+                        room.characters[character].inv, "The corpse of " + character
+                    )
                     toDelete.append(character)
             for character in toDelete:
                 del room.characters[character]
