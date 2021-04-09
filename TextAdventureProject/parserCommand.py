@@ -42,7 +42,7 @@ def parseInput(console, owner):
     for word in command_words:
         if word.lower() in actionWords:            
             command["Action"] = getEnum(word.lower())
-        elif word.title() in doorList:
+        if word.title() in doorList:
             if command["Action"] == Action.INSPECT:
                 command["Target"] = word.title()
             elif command["Action"] == Action.UNLOCK:
@@ -57,10 +57,10 @@ def parseInput(console, owner):
                     command["Target"] = word.title()
             else:
                 command["Target"] = word.title()
-        elif word.title() in containerList:
+        if word.title() in containerList:
             if command["Action"] == Action.INSPECT:
                 command["Target"] = word.title()
-        elif word.title() in itemList:
+        if word.title() in itemList:
             if command["Action"] != Action.EAT and command["Action"] != Action.WEAR and command["Action"] != Action.UNLOCK:
                 if command["Action"] == Action.TAKE:
                     command["Target"] = word.title()
@@ -68,7 +68,7 @@ def parseInput(console, owner):
                     command["Target"] = word.title()
                 else:
                     command["Object"] = word
-        elif word.title() in invList[owner]:
+        if word.title() in invList[owner]:
             if command["Action"] == Action.INSPECT:
                 command["Target"] = word.title()
             if command["Action"] == Action.UNLOCK:

@@ -78,7 +78,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -109,7 +109,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -159,7 +159,7 @@
             "desc": "A guards hat",
             "traits": {
               "Damage": 1,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -195,7 +195,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -226,7 +226,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -257,7 +257,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -288,7 +288,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -392,7 +392,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -477,7 +477,7 @@
             "desc": "Meant to keep food off clothes while cooking, but it seems to be covered in zombie goo now.",
             "traits": {
               "Damage": 1,
-              "armour": 2
+              "Armour": 2
             }
           }
         },
@@ -577,7 +577,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -716,7 +716,7 @@
             "desc": "A nurse uniform. A little torn, and bloody, and covered in many fluids. Still wearable",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -819,7 +819,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -850,7 +850,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },
@@ -997,7 +997,7 @@
             "classification": "Melee",
             "desc": "This pipe must have fallen from the ceiling after the pipes burst",
             "traits": {
-              "Damage": 2
+              "Damage": 6
             }
           }
         }
@@ -1055,20 +1055,21 @@
           "thrift": "1",
           "persuasion": "0",
           "armour": "5",
-          "health": "20"
+          "health": "25"
         },
         "inv": {
           "Sledgehammer": {
             "classification": "Key",
             "desc": "A giant sledgehammer, good for smashing.",
             "traits": {
-              "Damage": 7,
+              "Damage": 10,
               "Opens": [
                 "North_Cell_Block.North_Hall",
                 "North_Hall.West_Hall",
                 "West_Hall.South_Hall",
                 "West_Hall.Hospital_Ward",
-                "North_Hall.Hospital_Ward"
+                "North_Hall.Hospital_Ward",
+                "Jones_Cell.South_Cell_Block"
               ]
             }
           }
@@ -1136,11 +1137,11 @@
       "Ground": {
         "items": {
           "Bullet_Proof_Vest": {
-            "classification": "Misc",
+            "classification": "Wearable",
             "desc": "A old vest with stab marks, but its bullet proof",
             "traits": {
               "Damage": 1,
-              "health": 15
+              "Armour": 10
             }
           },
           "Empty_Gun": {
@@ -1174,11 +1175,11 @@
         },
         "wearing": {
           "Tactical_Vest": {
-            "classification": "Misc",
+            "classification": "Wearable",
             "desc": "A old vest with stab marks, but its bullet proof",
             "traits": {
               "Damage": 1,
-              "health": 15
+              "Armour": 5
             }
           }
         },
@@ -1200,7 +1201,7 @@
           "classification": "Misc",
           "desc": "A corpse is clutching a gun with no bullets, he looks to have shot himself from the music",
           "traits": {
-            "health": 0
+            "Damage": 0
           }
         }
         }
@@ -1269,7 +1270,7 @@
             "desc": "Your standard, orange jumpsuit.",
             "traits": {
               "Damage": 0,
-              "armour": 1
+              "Armour": 1
             }
           }
         },

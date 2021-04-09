@@ -121,7 +121,8 @@ class WorldHandler:
         if command.owner.wearing != {}:
             item = list(command.owner.wearing.keys())[0]                
             command.owner.inv[item] = command.owner.wearing[item]
-        command.owner.wearing[cmd.object] = command.object
+            command.owner.wearing.pop(item)
+        command.owner.wearing[cmd.object] = command.object        
         command.owner.inv.pop(cmd.object)
         return "Wear the " + cmd.object
 
@@ -168,8 +169,8 @@ class WorldHandler:
                                 extra += ", a " + container
                 return command.target.longDesc + extra
             elif cmd.target in command.room.doors:
-                return command.room.doors[cmd.target].desc
-        return command.target.desc + extra
+                return "see " + command.room.doors[cmd.target].desc
+        return "see " + command.target.desc + extra
     def take(self, cmd):
         command = self.populateCommand(cmd)
         command.owner.inv[cmd.target] = command.target
@@ -202,14 +203,15 @@ class WorldHandler:
         if command.target is None or command.object is None:
             return "Invalid command"
         try:
-            armour = command.target.wearing.traits["armour"]
+            wearing = list(command.target.wearing.keys())[0]
+            armour = command.target.wearing[wearing].traits["Armour"]
             if armour <= 0:
                 armour = 1
-            command.target.stats["health"] = str( int(command.target.stats["health"]) - command.object.traits["Damage"] / armour)
+            command.target.stats["health"] = (int(command.target.stats["health"]) - command.object.traits["Damage"] / armour)
         except:
             health = int(command.target.stats["health"])
             health -= command.object.traits["Damage"]
-            command.target.stats["health"] = str(health)
+            command.target.stats["health"] = health
         if cmd.target == "Player":
             print(cmd.owner, " hit you with ", cmd.object, "!")
         elif cmd.object == "Bomb" and cmd.owner == "Player":
