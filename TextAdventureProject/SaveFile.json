@@ -376,7 +376,7 @@
                     }
                 },
                 "desc": "Jacob is a zombie!",
-                "state": "    "
+                "state": "idle"
             },
             "Zombie_Jeff": {
                 "classification": "Zombie",
@@ -407,7 +407,7 @@
                     }
                 },
                 "desc": "Jeff, but a zombie.",
-                "state": "idle"
+                "state": "    "
             }
         },
         "shortDesc": "This place should not be used to prepare food. Everything is disgusting.",
