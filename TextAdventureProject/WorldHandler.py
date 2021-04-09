@@ -146,7 +146,7 @@ class WorldHandler:
                         else:
                             extra += ", a " + item
             if cmd.target != "Ground":
-                return "inspect the " + command.target.desc + extra
+                return command.target.desc + extra
             else:
                 return "inspect the floor." + extra
         except:
