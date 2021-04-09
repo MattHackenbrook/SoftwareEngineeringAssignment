@@ -44,6 +44,7 @@ class WorldAi:
 
         if checkHostile(characterObject, characterObjects):
             setState(caracter, characterObject, data, "aggressive")
+            print("you hear a muffled moan, maybe there is a scuffle nearby")
             command["Action"] = random.choice(hostileActionWords)
             if command["Action"] == Action.THROW and len(roomStuff["Inventory"][caracter]) <= 1:
                 command["Action"] = Action.HIT

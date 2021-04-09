@@ -19,7 +19,7 @@ class WorldHandler:
         self.checkDeaths()
         self.data.writeData()
         #send playerResult to compileOutput
-        print(self.playerResult)
+        print("you " + self.playerResult)
 
     # def __init__(self, cmd):
     #     self.playerCommand = CommandModel.Command(cmd.action, cmd.object, cmd.owner, cmd.target, cmd.room)
@@ -108,12 +108,12 @@ class WorldHandler:
                 if rooms[1] == cmd.target:
                     self.rooms[cmd.target].doors[cmd.room].locked = False
                     command.target.locked = False
-                    return "Opened " + cmd.target + " with " + cmd.object
+                    return "Opened the " + cmd.target + " with the " + cmd.object
             if rooms[1] == cmd.room:
                 if rooms[0] == cmd.target:
                     command.target.locked = False
-                    return "Opened " + cmd.target + " with " + cmd.object
-        return "Cannot open " + cmd.target + " with " + cmd.object
+                    return "Opened the " + cmd.target + " with the " + cmd.object
+        return "Cannot open the " + cmd.target + " with the" + cmd.object
 
     def wear(self, cmd):
         command = self.populateCommand(cmd)
@@ -121,13 +121,13 @@ class WorldHandler:
             item = command.owner.wearing.keys()[0]
             command.owner.inv[item] = command.owner.wearing[item]
         command.owner.wearing[cmd.object] = command.object
-        return "Wear " + cmd.object
+        return "Wear the " + cmd.object
 
     def eat(self, cmd):
         command = self.populateCommand(cmd)
         command.owner.stats["health"] += command.object.traits["Healing"]
         del command.owner.inv[cmd.object]
-        return "Eat " + cmd.object
+        return "Eat the " + cmd.object
 
     def inspect(self, cmd):
         command = self.populateCommand(cmd)
@@ -179,7 +179,7 @@ class WorldHandler:
                     toDelete = item
                     ctr = container
         del ctr.items[toDelete]
-        return "Take " + cmd.target
+        return "Take the " + cmd.target
 
     def throw(self, cmd):
         command = self.populateCommand(cmd)
@@ -193,7 +193,7 @@ class WorldHandler:
         elif cmd.object == "Bomb" and cmd.owner == "Player":
             print("You threw a very large bomb... not a good idea.")
             command.owner.stats["health"] = 0
-        return "Throw " + cmd.object + " at " + cmd.target
+        return "Throw the " + cmd.object + " at " + cmd.target
 
     def hit(self, cmd):
         command = self.populateCommand(cmd)
@@ -213,13 +213,13 @@ class WorldHandler:
         elif cmd.object == "Bomb" and cmd.owner == "Player":
             print("You smashed a very large bomb... not a good idea.")
             command.owner.stats["health"] = 0
-        return "Hit " + cmd.target + " with " + cmd.object
+        return "Hit the " + cmd.target + " with the" + cmd.object
 
     def enter(self, cmd):
         command = self.populateCommand(cmd)
         self.rooms[cmd.target].characters[cmd.owner] = command.owner
         del command.room.characters[cmd.owner]
-        return "Enter " + cmd.target
+        return "Enter the " + cmd.target
 
 
     def checkDeaths(self):

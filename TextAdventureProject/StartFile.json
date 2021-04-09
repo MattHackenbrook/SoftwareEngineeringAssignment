@@ -360,7 +360,7 @@
             "desc": "A handful of beans.",
             "traits": {
               "Damage": 0,
-              "Healing": 2
+              "Healing": 4
             }
           }
         },
@@ -435,11 +435,11 @@
     },
     "containers": {
       "Ground": {},
-      "oven": {
+      "Oven": {
         "items": {},
         "desc": "The oven is completely disabled, the gas is turned off. What is happening outside this prison?"
       },
-      "pantry": {
+      "Pantry": {
         "items": {
           "Beans": {
             "classification": "Melee",
@@ -545,7 +545,7 @@
             "desc": "A can of Diet Spripesi Cola Up, its the quenchiest! looks edible",
             "traits": {
               "Damage": 1,
-              "Healing": 1
+              "Healing": 2
             }
           }
         },
@@ -672,7 +672,7 @@
             "classification": "Edible",
             "desc": "You find some pills, they might be able to recover some health, or just get you really high.",
             "traits": {
-              "Healing": 5
+              "Healing": 10
             }
           }
         },
@@ -1067,8 +1067,8 @@
                 "North_Cell_Block.North_Hall",
                 "North_Hall.West_Hall",
                 "West_Hall.South_Hall",
-                "South_Cell_Block.Jones_Cell",
-                "Hospital_Ward.North_Hall"
+                "West_hall.Hospital_Ward",
+                "North_Hall.Hospital_Ward"
               ]
             }
           }

@@ -16,15 +16,15 @@ class CompileOutput:
             print("For help enter 'help'\n")
             print("to end game enter exit\n")
             print("HEALTH: ", console.room[1].characters["Player"].stats["health"], "\n\n")
-            console.readUserInput()
-            if console.userInput.lower() == "help":
-                console.helper()
-            if console.userInput.lower() == "exit":
-                print("thank you for playing")
-                raise SystemExit()
-            else:
-                parsed = parseInput(console, "Player")
-                valid = console.printFailure(parsed)
+            if console.readUserInput():
+                if console.userInput.lower() == "help":
+                    console.helper()
+                if console.userInput.lower() == "exit":
+                    print("thank you for playing")
+                    raise SystemExit()
+                else:
+                    parsed = parseInput(console, "Player")
+                    valid = console.printFailure(parsed)
         wH = WorldHandler.WorldHandler(parsed)
         if console.endGame(wH.data):
             print("thank you for playing")
