@@ -21,7 +21,7 @@ class WorldHandler:
         self.checkDeaths()
         self.data.writeData()
         #send playerResult to compileOutput
-        print("you " + self.playerResult)
+        print("you " + self.playerResult + "\n")
 
     # def __init__(self, cmd):
     #     self.playerCommand = CommandModel.Command(cmd.action, cmd.object, cmd.owner, cmd.target, cmd.room)
