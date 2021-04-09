@@ -111,6 +111,7 @@ class WorldHandler:
                     return "Opened the " + cmd.target + " with the " + cmd.object
             if rooms[1] == cmd.room:
                 if rooms[0] == cmd.target:
+                    self.rooms[cmd.target].doors[cmd.room].locked = False
                     command.target.locked = False
                     return "Opened the " + cmd.target + " with the " + cmd.object
         return "Cannot open the " + cmd.target + " with the" + cmd.object
