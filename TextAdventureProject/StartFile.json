@@ -637,13 +637,13 @@
             "classification": "Melee",
             "desc": "Eww... Teeth.",
             "traits": {
-              "Damage": 3
+              "Damage": 36
             }
           }
         },
         "wearing": {},
         "desc": "A Huge horde of almost 50 zombies wanders around aimlesly together as they look for any way to move around.",
-        "classification": "Horde"
+        "classification": "Zombie"
       }
     },
     "shortDesc": "The dried grass sways in the wind and the concrete walls stand firm",
