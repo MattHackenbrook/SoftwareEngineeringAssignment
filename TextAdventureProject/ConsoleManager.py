@@ -68,11 +68,9 @@ class ConsoleManager:
                     print("That wont work.")
             if command.action == Action.ENTER:
                 if command.target is None:
-                    print("that door is not in this room")
-                else:
-                    print("the door is currently locked")
+                    print("the door is currently locked or not in this room")
             elif command.action != "" and command.action != None:
-                print("that item, object or target is not currently available to you")
+                print("that item, object or target is not available to you")
             elif command.action == None:
                 print("Invalid input. Please try again")
             return False
