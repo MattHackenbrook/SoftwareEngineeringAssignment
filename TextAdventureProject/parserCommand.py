@@ -70,24 +70,25 @@ def parseInput(console, owner):
                     command["Target"] = word.title()
                 if command["Action"] == Action.INSPECT:
                     command["Target"] = word.title()
-                else:
-                    command["Object"] = word
+                
         if word.title() in invList[owner]:
-            if command["Action"] == Action.INSPECT:
-                command["Target"] = word.title()
-            if command["Action"] == Action.UNLOCK:
-                if invObjectsList[owner][word.title()].classification == "Key":
+            if command["Action"] != Action.ENTER:
+                if command["Action"] == Action.INSPECT:
+                    command["Target"] = word.title()
+                if command["Action"] == Action.UNLOCK:
+                    if invObjectsList[owner][word.title()].classification == "Key":
+                        command["Object"] = word.title()
+                elif command["Action"] == Action.EAT:
+                    if invObjectsList[owner][word.title()].classification == "Edible":
+                        command["Object"] = word.title()
+                elif command["Action"] == Action.WEAR:
+                    if invObjectsList[owner][word.title()].classification == "Wearable":
+                        command["Object"] = word.title()
+                else:
                     command["Object"] = word.title()
-            elif command["Action"] == Action.EAT:
-                if invObjectsList[owner][word.title()].classification == "Edible":
-                    command["Object"] = word.title()
-            elif command["Action"] == Action.WEAR:
-                if invObjectsList[owner][word.title()].classification == "Wearable":
-                    command["Object"] = word.title()
-            else:
-                command["Object"] = word.title()
         elif word.title() in characterList:
-            command["Target"] = word.title()
+            if command["Action"] != Action.ENTER:
+                command["Target"] = word.title()
     if command["Object"] == "":
         command["Object"] = None
     commandObject = CommandModel.Command(getEnum(command["Action"]), command["Object"], command["Owner"], command["Target"],
