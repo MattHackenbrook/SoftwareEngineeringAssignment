@@ -21,7 +21,7 @@ class WorldHandler:
         self.checkDeaths()
         self.data.writeData()
         #send playerResult to compileOutput
-        print("you " + self.playerResult + "\n")
+        print("You " + self.playerResult + "\n")
 
     # def __init__(self, cmd):
     #     self.playerCommand = CommandModel.Command(cmd.action, cmd.object, cmd.owner, cmd.target, cmd.room)
@@ -198,12 +198,12 @@ class WorldHandler:
         elif cmd.object == "Bomb" and cmd.owner == "Player":
             print("You threw a very large bomb... not a good idea.")
             command.owner.stats["health"] = 0
-        return "Throw the " + cmd.object + " at " + cmd.target
+        return " threw the " + cmd.object + " at " + cmd.target
 
     def hit(self, cmd):
         command = self.populateCommand(cmd)
         if command.target is None or command.object is None:
-            return "Invalid command"
+            return " Made an invalid command"
         try:
             wearing = list(command.target.wearing.keys())[0]
             armour = command.target.wearing[wearing].traits["Armour"]
@@ -214,18 +214,16 @@ class WorldHandler:
             health = int(command.target.stats["health"])
             health -= command.object.traits["Damage"]
             command.target.stats["health"] = health
-        if cmd.target == "Player":
-            print(cmd.owner, " hit you with ", cmd.object, "!")
-        elif cmd.object == "Bomb" and cmd.owner == "Player":
+        if cmd.object == "Bomb" and cmd.owner == "Player":
             print("You smashed a very large bomb... not a good idea.")
             command.owner.stats["health"] = 0
-        return "Hit the " + cmd.target + " with the " + cmd.object
+        return " hit the " + cmd.target + " with the " + cmd.object
 
     def enter(self, cmd):
         command = self.populateCommand(cmd)
         self.rooms[cmd.target].characters[cmd.owner] = command.owner
         del command.room.characters[cmd.owner]
-        return "Enter the " + cmd.target
+        return " enter the " + cmd.target
 
 
     def checkDeaths(self):
