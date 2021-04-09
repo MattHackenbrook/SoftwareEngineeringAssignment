@@ -57,6 +57,8 @@ def parseInput(console, owner):
                     command["Target"] = word.title()
             elif command["Action"] == Action.HIT:
                  command["Target"] = None
+            elif command["Action"] == Action.THROW:
+                 command["Target"] = None
             else:
                 command["Target"] = word.title()
         if word.title() in containerList:
