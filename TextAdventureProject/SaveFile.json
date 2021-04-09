@@ -141,37 +141,6 @@
             }
         },
         "characters": {
-            "Zombie_Steve": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "Steve, but a zombie.",
-                "state": "    "
-            },
             "Zombie_Fred": {
                 "classification": "Zombie",
                 "stats": {
@@ -201,7 +170,7 @@
                     }
                 },
                 "desc": "Fred, but a zombie.",
-                "state": "    "
+                "state": "idle"
             }
         },
         "shortDesc": "Jones cell block. Its completely torn apart.",
@@ -476,7 +445,7 @@
                     }
                 },
                 "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant\ndo much",
-                "state": "idle"
+                "state": "    "
             },
             "Zombie_Jeff": {
                 "classification": "Zombie",
@@ -647,7 +616,7 @@
                     }
                 },
                 "desc": "A zombie wearing a nurse uniform",
-                "state": "    "
+                "state": "idle"
             }
         },
         "shortDesc": "The Hospital Ward",
@@ -835,6 +804,37 @@
                     }
                 },
                 "desc": "William is a zombie!",
+                "state": "idle"
+            },
+            "Zombie_Steve": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Steve, but a zombie.",
                 "state": "    "
             }
         },

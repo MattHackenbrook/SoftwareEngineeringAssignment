@@ -146,9 +146,9 @@ class WorldHandler:
                         else:
                             extra += ", a " + item
             if cmd.target != "Ground":
-                return command.target.desc + extra
+                return "inspect the " + command.target.desc + extra
             else:
-                return "The floor." + extra
+                return "inspect the floor." + extra
         except:
             if cmd.target == cmd.room:
                 command.target = command.room
@@ -164,10 +164,10 @@ class WorldHandler:
                                 first = False
                             else:
                                 extra += ", a " + container
-                return command.target.longDesc + extra
+                return "inspect " + command.target.longDesc + extra
             elif cmd.target in command.room.doors:
                 return command.room.doors[cmd.target].desc
-        return command.target.desc + extra
+        return "inspect " + command.target.desc + extra
     def take(self, cmd):
         command = self.populateCommand(cmd)
         command.owner.inv[cmd.target] = command.target
