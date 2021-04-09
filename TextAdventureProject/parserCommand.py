@@ -55,12 +55,7 @@ def parseInput(console, owner):
                     command["Target"] = None
                 else:
                     command["Target"] = word.title()
-            elif command["Action"] == Action.HIT:
-                 command["Target"] = None
-            elif command["Action"] == Action.THROW:
-                 command["Target"] = None
-            else:
-                command["Target"] = word.title()
+           
         if word.title() in containerList:
             if command["Action"] == Action.INSPECT:
                 command["Target"] = word.title()
@@ -87,7 +82,7 @@ def parseInput(console, owner):
                 else:
                     command["Object"] = word.title()
         elif word.title() in characterList:
-            if command["Action"] != Action.ENTER:
+            if command["Action"] != Action.ENTER and command["Action"] != Action.TAKE:
                 command["Target"] = word.title()
     if command["Object"] == "":
         command["Object"] = None
