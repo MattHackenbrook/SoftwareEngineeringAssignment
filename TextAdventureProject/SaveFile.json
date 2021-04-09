@@ -13,13 +13,12 @@
         "containers": {
             "Desk": {
                 "items": {
-                    "Rotten_Banana": {
+                    "Empty_Handgun": {
                         "traits": {
-                            "Damage": 0,
-                            "Healing": 1
+                            "Damage": 3
                         },
-                        "classification": "Edible",
-                        "desc": "A completely black banana. Almost certainly not safe to eat."
+                        "classification": "Melee",
+                        "desc": "A guards handgun. There is no magazine."
                     }
                 },
                 "desc": "The guard desk in the center of the block."
@@ -31,20 +30,19 @@
             "Ground": {
                 "items": {},
                 "desc": null
-            },
-            "Zombie_James": {
-                "items": {},
-                "desc": "The corpse of Zombie_James"
-            },
-            "Ivan": {
-                "items": {
-                    "Empty_Handgun": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "A guards handgun. There is no magazine."
-                    },
+            }
+        },
+        "characters": {
+            "Zombie_Jack": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
                     "Teeth": {
                         "traits": {
                             "Damage": 3
@@ -53,10 +51,20 @@
                         "desc": "Eww... Teeth."
                     }
                 },
-                "desc": "The corpse of Ivan"
+                "wearing": {
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "Armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Jack, but a zombie.",
+                "state": "idle"
             }
         },
-        "characters": {},
         "shortDesc": "Ivans cell block. It appears to be nearly untouched.",
         "longDesc": "An oddly tidy cell block. This is Ivans cell block, and if hes here it could mean trouble for you.\nThe man is terrifying!",
         "visited": true
@@ -72,7 +80,7 @@
                 "desc": "You can see that this cell is completely covered in blood. What happened here?"
             },
             "Jones_Cell": {
-                "locked": false,
+                "locked": true,
                 "desc": "This cell is completely sealed up from a roof collapse. It belongs to your old friend, Jones, a\nfriendly backyard chemist."
             }
         },
@@ -93,6 +101,14 @@
                         },
                         "classification": "Readable",
                         "desc": "A note from the warden to the guard stationed in the south block."
+                    },
+                    "Guard_Hat": {
+                        "traits": {
+                            "Damage": 1,
+                            "Armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "A guards hat"
                     }
                 },
                 "desc": "The guard desk in the center of the block."
@@ -100,52 +116,12 @@
             "Ground": {
                 "items": {},
                 "desc": null
-            },
-            "Zombie_Jeff": {
-                "items": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    },
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "Armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "The corpse of Zombie_Jeff"
-            },
-            "Zombie_Steve": {
-                "items": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    },
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "Armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "The corpse of Zombie_Steve"
             }
         },
         "characters": {},
         "shortDesc": "Jones cell block. Its completely torn apart.",
         "longDesc": "The entire room is falling apart. Its almost like a wreaking ball was swung around in here. This is\nthe cell block where your friend Jones used to be. Hes probably dead, or a zombie, but might as well check, right?",
-        "visited": true
+        "visited": false
     },
     "Sewer": {
         "doors": {
@@ -244,10 +220,98 @@
             "Pantry": {
                 "items": {},
                 "desc": "This cabinet used to be filled with food that would last days... it appears to have been emptied."
+            },
+            "Zombie_Jacob": {
+                "items": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    },
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "Armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "The corpse of Zombie_Jacob"
+            }
+        },
+        "characters": {},
+        "shortDesc": "This place should not be used to prepare food. Everything is disgusting.",
+        "longDesc": "This room used to make food for the whole prison. Its tiny, very tiny, and extremely gross. You find\nyourself hoping that the mysterious liquids covering the walls only appeared after the apocalypse...\nbut that seems like wishful thinking.",
+        "visited": true
+    },
+    "Cafeteria": {
+        "doors": {
+            "Kitchen": {
+                "locked": false,
+                "desc": "Inside you see what looks like a kitchen, and is that food?"
+            },
+            "South_Hall": {
+                "locked": false,
+                "desc": "Looks like a hallway but heading in the south direction"
+            },
+            "West_Hall": {
+                "locked": false,
+                "desc": "Looks like a halway but heading in the weat direction"
+            },
+            "Courtyard": {
+                "locked": true,
+                "desc": "looking through you see grass and a big fence"
+            }
+        },
+        "containers": {
+            "Ground": {
+                "items": {},
+                "desc": null
+            },
+            "Trash_Can": {
+                "items": {
+                    "Garbage": {
+                        "traits": {
+                            "Damage": 2,
+                            "throw": 2
+                        },
+                        "classification": "Throwable",
+                        "desc": "A hard solid mass of dried up Garvage, who knows what this used to be, its got some weight to it"
+                    }
+                },
+                "desc": "a dirty old trash can with the smell of old garbage coming out of it."
+            },
+            "Food_Pile": {
+                "items": {
+                    "Spoon": {
+                        "traits": {
+                            "Damage": 1
+                        },
+                        "classification": "Misc",
+                        "desc": "A large Wooden Spoon about a foot and a half long, a little chipped at the ends"
+                    }
+                },
+                "desc": "A smelly pile of waste that might possibly have been food lying on a table"
+            },
+            "Vending_Machine": {
+                "items": {
+                    "Soda_Can": {
+                        "traits": {
+                            "Damage": 1,
+                            "Healing": 2
+                        },
+                        "classification": "Edible",
+                        "desc": "A can of Diet Spripesi Cola Up, its the quenchiest! looks edible"
+                    }
+                },
+                "desc": "A banged up old vending machine, looks like its still powered, with a few drinks left."
             }
         },
         "characters": {
-            "Zombie_Jacob": {
+            "Zombie_Jeff": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
@@ -275,100 +339,10 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "Jacob is a zombie!",
-                "state": "    "
+                "desc": "Jeff, but a zombie.",
+                "state": "idle"
             }
         },
-        "shortDesc": "This place should not be used to prepare food. Everything is disgusting.",
-        "longDesc": "This room used to make food for the whole prison. Its tiny, very tiny, and extremely gross. You find\nyourself hoping that the mysterious liquids covering the walls only appeared after the apocalypse...\nbut that seems like wishful thinking.",
-        "visited": true
-    },
-    "Cafeteria": {
-        "doors": {
-            "Kitchen": {
-                "locked": false,
-                "desc": "Inside you see what looks like a kitchen, and is that food?"
-            },
-            "South_Hall": {
-                "locked": false,
-                "desc": "Looks like a hallway but heading in the south direction"
-            },
-            "West_Hall": {
-                "locked": false,
-                "desc": "Looks like a halway but heading in the weat direction"
-            },
-            "Courtyard": {
-                "locked": false,
-                "desc": "looking through you see grass and a big fence"
-            }
-        },
-        "containers": {
-            "Ground": {
-                "items": {},
-                "desc": null
-            },
-            "Trash_Can": {
-                "items": {},
-                "desc": "a dirty old trash can with the smell of old garbage coming out of it."
-            },
-            "Food_Pile": {
-                "items": {
-                    "Spoon": {
-                        "traits": {
-                            "Damage": 1
-                        },
-                        "classification": "Misc",
-                        "desc": "A large Wooden Spoon about a foot and a half long, a little chipped at the ends"
-                    }
-                },
-                "desc": "A smelly pile of waste that might possibly have been food lying on a table"
-            },
-            "Vending_Machine": {
-                "items": {},
-                "desc": "A banged up old vending machine, looks like its still powered, with a few drinks left."
-            },
-            "Zombie_Fred": {
-                "items": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    },
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "Armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "The corpse of Zombie_Fred"
-            },
-            "Jawless_Zombie": {
-                "items": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    },
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "Armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "The corpse of Jawless_Zombie"
-            }
-        },
-        "characters": {},
         "shortDesc": "The moldy and messy Cafeteria appears to be unchanged and still dirty.",
         "longDesc": "You walk into a big open room with rectangular dinning tables strewn about. Old plates of food and\nbroken chairs are thrown around, a smell of mold permeates the air, im glad im not hungry right now",
         "visited": true
@@ -384,7 +358,7 @@
                 "desc": "there are some computer screens that are still lit and something that looks like a metal cylinder."
             },
             "Cafeteria": {
-                "locked": false,
+                "locked": true,
                 "desc": "Looks like theres a mess of dinning tables and what looks like piles of waste all over."
             },
             "South_Hall": {
@@ -394,26 +368,46 @@
         },
         "containers": {
             "Ground": {
-                "items": {},
-                "desc": null
-            },
-            "Horde": {
                 "items": {
+                    "Basketball": {
+                        "traits": {
+                            "Damage": 1,
+                            "Throw": 1
+                        },
+                        "classification": "Throwable",
+                        "desc": "A roughed up faded orange basketball"
+                    }
+                },
+                "desc": null
+            }
+        },
+        "characters": {
+            "Horde": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": "50",
+                    "thrift": "0",
+                    "persuasion": "0",
+                    "armour": "50",
+                    "health": "50"
+                },
+                "inv": {
                     "Teeth": {
                         "traits": {
-                            "Damage": 3
+                            "Damage": 36
                         },
                         "classification": "Melee",
                         "desc": "Eww... Teeth."
                     }
                 },
-                "desc": "The corpse of Horde"
+                "wearing": {},
+                "desc": "A Huge horde of almost 50 zombies wanders around aimlesly together as they look for any way to move around.",
+                "state": "idle"
             }
         },
-        "characters": {},
         "shortDesc": "The dried grass sways in the wind and the concrete walls stand firm",
         "longDesc": "A cobblestone path leads out to the front gate. Dried grass makes up the field ahead as the concrete\nwalls surrounding you a recovered by moss with barbed wire wrapped around the top, an orange sphere is\nvisible in the field",
-        "visited": true
+        "visited": false
     },
     "Hospital_Ward": {
         "doors": {
@@ -436,15 +430,7 @@
                 "desc": "As you approach the cabinet, you can see some things inside that might be useful"
             },
             "Tray": {
-                "items": {
-                    "Surgical_Knife": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "melee",
-                        "desc": "You find a surgical knife with some blood still left on it. This place was never that clean anyway"
-                    }
-                },
+                "items": {},
                 "desc": "You see a surgical knife laid out on the tray"
             },
             "Nurse_Zombie": {
@@ -472,7 +458,7 @@
                 "desc": "Dirty floor and walls and what looks like 2 moving bodies"
             },
             "Guard_Room": {
-                "locked": false,
+                "locked": true,
                 "desc": "there are some computer screens that are still lit and something that looks like a metal cylinder."
             },
             "Hospital_Ward": {
@@ -486,58 +472,34 @@
         },
         "containers": {
             "Ground": {
-                "items": {
-                    "Toothbrush_Shank": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "melee",
-                        "desc": "A small plastic toothbrush with a sharp filled end"
-                    }
-                },
+                "items": {},
                 "desc": null
             },
-            "Zombie_Chef": {
-                "items": {
+            "Ivan": {
+                "items": {},
+                "desc": "The corpse of Ivan"
+            }
+        },
+        "characters": {
+            "Zombie_Fred": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
                     "Teeth": {
                         "traits": {
                             "Damage": 3
                         },
                         "classification": "Melee",
                         "desc": "Eww... Teeth."
-                    },
-                    "Apron": {
-                        "traits": {
-                            "Damage": 1,
-                            "Armour": 2
-                        },
-                        "classification": "Wearable",
-                        "desc": "Meant to keep food off clothes while cooking, but it seems to be covered in zombie goo now."
                     }
                 },
-                "desc": "The corpse of Zombie_Chef"
-            },
-            "Prison_Guard": {
-                "items": {
-                    "Empty_Gun": {
-                        "traits": {
-                            "Damage": 5
-                        },
-                        "classification": "Misc",
-                        "desc": "The Gun has no ammo, this still might come in handy"
-                    }
-                },
-                "desc": "The corpse of Prison_Guard"
-            },
-            "Zombie_William": {
-                "items": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    },
+                "wearing": {
                     "Prison_Uniform": {
                         "traits": {
                             "Damage": 0,
@@ -547,10 +509,41 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "The corpse of Zombie_William"
+                "desc": "Fred, but a zombie.",
+                "state": "    "
+            },
+            "Zombie_William": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "Armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "William is a zombie!",
+                "state": "idle"
             }
         },
-        "characters": {},
         "shortDesc": "the long ominous hallway with doors for the Hospital wing, West hallway and north cell block",
         "longDesc": "A long dusty hallway stretches ahead with another barred door at the other end, along with others\nleading to what seems like more cells.  One of these doors has a red cross on it.\nthere are scattered belongings across the floor",
         "visited": true
@@ -558,7 +551,7 @@
     "South_Hall": {
         "doors": {
             "West_Hall": {
-                "locked": false,
+                "locked": true,
                 "desc": "This leads to the West Hall"
             },
             "Washroom": {
@@ -604,7 +597,7 @@
                 "desc": "A long dirty corridor, must be the North hallway it looks like it has some other doors"
             },
             "South_Hall": {
-                "locked": false,
+                "locked": true,
                 "desc": "A long dirty corridor, must be the South hallway it looks like it has some other doors"
             },
             "Cafeteria": {
@@ -614,19 +607,43 @@
         },
         "containers": {
             "Ground": {
-                "items": {
-                    "Syringe": {
-                        "traits": {
-                            "Damage": 5
-                        },
-                        "classification": "melee",
-                        "desc": "A used syringe, can be used to poison"
-                    }
-                },
+                "items": {},
                 "desc": null
             }
         },
-        "characters": {},
+        "characters": {
+            "Zombie_Steve": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "Armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Steve, but a zombie.",
+                "state": "    "
+            }
+        },
         "shortDesc": "the long ominous hallway with doors for the Hospital wing, north and south hallway and West cell block",
         "longDesc": "the long ominous hallway with doors you hear the sounds the prison echoing through the doors, down the hall you can see the hospital wing, more hallways, north and south and halls leading,back the way you came. ",
         "visited": true
@@ -640,25 +657,48 @@
         },
         "containers": {
             "Ground": {
-                "items": {},
+                "items": {
+                    "Guard_Key": {
+                        "traits": {
+                            "Damage": 0,
+                            "Opens": [
+                                "North_Hall.Guard_Room"
+                            ]
+                        },
+                        "classification": "Key",
+                        "desc": "The key to the guard room"
+                    }
+                },
                 "desc": null
             },
             "Joes_Drawer": {
+                "items": {},
+                "desc": "Joe Dirts draw is left open, he must of left in a rush"
+            },
+            "Zombie_Chef": {
                 "items": {
-                    "Bandaids": {
+                    "Teeth": {
                         "traits": {
-                            "Healing": 3
+                            "Damage": 3
                         },
-                        "classification": "Misc",
-                        "desc": "Band-aids may come in handy if i run into zombies or worse"
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    },
+                    "Apron": {
+                        "traits": {
+                            "Damage": 1,
+                            "Armour": 2
+                        },
+                        "classification": "Wearable",
+                        "desc": "Meant to keep food off clothes while cooking, but it seems to be covered in zombie goo now."
                     }
                 },
-                "desc": "Joe Dirts draw is left open, he must of left in a rush"
+                "desc": "The corpse of Zombie_Chef"
             }
         },
         "characters": {},
         "shortDesc": "The Janitors Closet is a small room in the south hall.",
-        "longDesc": "The Janitors Closet is a small room in the south hall. Joe Dirts the prison Janitor, he doesnt carry a weapon but hes always high, his stash might be inside the closet. As you approach you dont hear any zombies inside",
+        "longDesc": "The Janitors Closet is a small room in the south hall. Joe Dirts the prison Janitor,\nhe doesnt carry a weapon but hes always high, his stash might be\ninside the closet. As you approach you dont hear any zombies inside",
         "visited": true
     },
     "Waste_Dump": {
@@ -682,7 +722,7 @@
                     "thrift": 0,
                     "persuasion": 0,
                     "armour": 0,
-                    "health": 54.0
+                    "health": 7.0
                 },
                 "inv": {
                     "Hand": {
@@ -711,6 +751,13 @@
                         "classification": "Key",
                         "desc": "A key card to the hallways"
                     },
+                    "Syringe": {
+                        "traits": {
+                            "Damage": 5
+                        },
+                        "classification": "melee",
+                        "desc": "A used syringe, can be used to poison"
+                    },
                     "Sledgehammer": {
                         "traits": {
                             "Damage": 10,
@@ -726,6 +773,20 @@
                         "classification": "Key",
                         "desc": "A giant sledgehammer, good for smashing."
                     },
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    },
+                    "Toothbrush_Shank": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "melee",
+                        "desc": "A small plastic toothbrush with a sharp filled end"
+                    },
                     "Janitors_Key": {
                         "traits": {
                             "Damage": 0,
@@ -738,13 +799,12 @@
                         "classification": "Key",
                         "desc": "A key to many doors in the prison"
                     },
-                    "Garbage": {
+                    "Surgical_Knife": {
                         "traits": {
-                            "Damage": 2,
-                            "throw": 2
+                            "Damage": 3
                         },
-                        "classification": "Throwable",
-                        "desc": "A hard solid mass of dried up Garvage, who knows what this used to be, its got some weight to it"
+                        "classification": "melee",
+                        "desc": "You find a surgical knife with some blood still left on it. This place was never that clean anyway"
                     },
                     "Bean_Can": {
                         "traits": {
@@ -753,15 +813,20 @@
                         "classification": "Melee",
                         "desc": "A can of baked beans. If only you could find a can opener..."
                     },
-                    "Guard_Key": {
+                    "Crack_Pipe": {
                         "traits": {
-                            "Damage": 0,
-                            "Opens": [
-                                "North_Hall.Guard_Room"
-                            ]
+                            "Damage": 2,
+                            "Healing": -2
                         },
-                        "classification": "Key",
-                        "desc": "The key to the guard room"
+                        "classification": "Edible",
+                        "desc": "Joe Dirts half used crack pipe, if i smoke it should help with my withdrawals"
+                    },
+                    "Bandaids": {
+                        "traits": {
+                            "Healing": 3
+                        },
+                        "classification": "Misc",
+                        "desc": "Band-aids may come in handy if i run into zombies or worse"
                     },
                     "Shovel": {
                         "traits": {
@@ -773,52 +838,6 @@
                         "classification": "Key",
                         "desc": "You pick up a shovel, You can use it to break through somewhere"
                     },
-                    "Crack_Pipe": {
-                        "traits": {
-                            "Damage": 2,
-                            "Healing": -2
-                        },
-                        "classification": "Edible",
-                        "desc": "Joe Dirts half used crack pipe, if i smoke it should help with my withdrawals"
-                    },
-                    "Bomb": {
-                        "traits": {
-                            "Damage": 10
-                        },
-                        "classification": "melee",
-                        "desc": "Rick Asthlys Never gonna give you up is playing on a screen"
-                    },
-                    "Gun": {
-                        "traits": {
-                            "Damage": 15
-                        },
-                        "classification": "Misc",
-                        "desc": "The Guards Gun still has ammo, this will come in handy real soon"
-                    },
-                    "Tactical_Vest": {
-                        "traits": {
-                            "Damage": 1,
-                            "Armour": 5
-                        },
-                        "classification": "Wearable",
-                        "desc": "A old vest with stab marks, but its bullet proof"
-                    },
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "Armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    },
-                    "Guard_Hat": {
-                        "traits": {
-                            "Damage": 1,
-                            "Armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "A guards hat"
-                    },
                     "Nurse_Uniform": {
                         "traits": {
                             "Damage": 0,
@@ -826,24 +845,16 @@
                         },
                         "classification": "Wearable",
                         "desc": "A nurse uniform. A little torn, and bloody, and covered in many fluids. Still wearable"
-                    },
-                    "Basketball": {
-                        "traits": {
-                            "Damage": 1,
-                            "Throw": 1
-                        },
-                        "classification": "Throwable",
-                        "desc": "A roughed up faded orange basketball"
                     }
                 },
                 "wearing": {
-                    "Bullet_Proof_Vest": {
+                    "Prison_Uniform": {
                         "traits": {
-                            "Damage": 1,
-                            "Armour": 10
+                            "Damage": 0,
+                            "Armour": 1
                         },
                         "classification": "Wearable",
-                        "desc": "A old vest with stab marks, but its bullet proof"
+                        "desc": "Your standard, orange jumpsuit."
                     }
                 },
                 "desc": "You.",
@@ -870,51 +881,15 @@
                 "items": {
                     "Metal_Pipe": {
                         "traits": {
-                            "Damage": 2
+                            "Damage": 6
                         },
                         "classification": "Melee",
                         "desc": "This pipe must have fallen from the ceiling after the pipes burst"
                     }
                 },
                 "desc": null
-            }
-        },
-        "characters": {},
-        "shortDesc": "The Washroom",
-        "longDesc": "You can hear the slow fall of water dripping from the ceiling, you take a step forward and feel something wet at your feet. You look down to see you are standing in a pool of blood. The washroom has been the place of many unspeakable acts, but thankfully you have never dropped the soap and are safe from the traumatizing experience other inmates faced. As you examine the room you notice a giant crack in the floor and see a small pipe next to it.",
-        "visited": true
-    },
-    "Bloody_Cell": {
-        "doors": {
-            "South_Cell_Block": {
-                "locked": false,
-                "desc": "what looks like the empty cell block, the window is smudged in blood"
-            }
-        },
-        "containers": {
-            "Ground": {
-                "items": {},
-                "desc": null
-            }
-        },
-        "characters": {},
-        "shortDesc": "a bloody mess on the floor from the previous inmates remains",
-        "longDesc": "A grotestesque scene of blood and gore, it looks as though the inmate who belonged in this cell is now the bloody puddle of red slop in the floor. the cell is turned upsidedown, there must have been a terrible struggle before he was pinned down on the floor and eaten alive. note to self, dont get cornered.",
-        "visited": true
-    },
-    "Ivans_Cell": {
-        "doors": {
-            "North_Cell_Block": {
-                "locked": false,
-                "desc": "This leads to the North Cell Block"
-            }
-        },
-        "containers": {
-            "Ground": {
-                "items": {},
-                "desc": null
             },
-            "Zombie_Luke": {
+            "Jawless_Zombie": {
                 "items": {
                     "Teeth": {
                         "traits": {
@@ -932,7 +907,69 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
+                "desc": "The corpse of Jawless_Zombie"
+            }
+        },
+        "characters": {},
+        "shortDesc": "The Washroom",
+        "longDesc": "You can hear the slow fall of water dripping from the ceiling, you take a step forward and feel something wet at your feet. You look down to see you are standing in a pool of blood. The washroom has been the place of many unspeakable acts, but thankfully you have never dropped the soap and are safe from the traumatizing experience other inmates faced. As you examine the room you notice a giant crack in the floor and see a small pipe next to it.",
+        "visited": true
+    },
+    "Bloody_Cell": {
+        "doors": {
+            "South_Cell_Block": {
+                "locked": false,
+                "desc": "what looks like the empty cell block, the window is smudged in blood"
+            }
+        },
+        "containers": {
+            "Ground": {
+                "items": {
+                    "Bloody_Hand": {
+                        "traits": {
+                            "Healing": 100,
+                            "Damage": 1
+                        },
+                        "classification": "Edible",
+                        "desc": "a bloody hand attached to what remains of an arm"
+                    }
+                },
+                "desc": null
+            }
+        },
+        "characters": {},
+        "shortDesc": "a bloody mess on the floor from the previous inmates remains",
+        "longDesc": "A grotestesque scene of blood and gore, it looks as though the inmate who belonged in this cell is now the bloody puddle of red slop in the floor. the cell is turned upsidedown, there must have been a terrible struggle before he was pinned down on the floor and eaten alive. note to self, dont get cornered.",
+        "visited": false
+    },
+    "Ivans_Cell": {
+        "doors": {
+            "North_Cell_Block": {
+                "locked": false,
+                "desc": "This leads to the North Cell Block"
+            }
+        },
+        "containers": {
+            "Ground": {
+                "items": {},
+                "desc": null
+            },
+            "Zombie_Luke": {
+                "items": {
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "Armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
                 "desc": "The corpse of Zombie_Luke"
+            },
+            "Zombie_James": {
+                "items": {},
+                "desc": "The corpse of Zombie_James"
             }
         },
         "characters": {},
@@ -973,7 +1010,7 @@
                 "desc": "You can see into the courtyard, from what you can tell this is how you entered the prison, but now\ntheres a bunch of zomies roaming around"
             },
             "North_Hall": {
-                "locked": false,
+                "locked": true,
                 "desc": "A long dirty corridor, must be the North hallway it looks like it has some other doors"
             }
         },
@@ -984,41 +1021,56 @@
             }
         },
         "characters": {
-            "Zombie_Jack": {
-                "classification": "Zombie",
+            "Prison_Guard": {
+                "classification": "NPC",
                 "stats": {
-                    "strength": 1,
-                    "thrift": 0,
+                    "strength": 10,
+                    "thrift": 2,
                     "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
+                    "armour": 15,
+                    "health": 15
                 },
                 "inv": {
-                    "Teeth": {
+                    "Gun": {
                         "traits": {
-                            "Damage": 3
+                            "Damage": 15
                         },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
+                        "classification": "Misc",
+                        "desc": "The Guards Gun still has ammo, this will come in handy real soon"
+                    },
+                    "Empty_Gun": {
+                        "traits": {
+                            "Damage": 5
+                        },
+                        "classification": "Misc",
+                        "desc": "The Gun has no ammo, this still might come in handy"
+                    },
+                    "Bullet_Proof_Vest": {
+                        "traits": {
+                            "Damage": 1,
+                            "Armour": 10
+                        },
+                        "classification": "Wearable",
+                        "desc": "A old vest with stab marks, but its bullet proof"
                     }
                 },
                 "wearing": {
-                    "Prison_Uniform": {
+                    "Tactical_Vest": {
                         "traits": {
-                            "Damage": 0,
-                            "Armour": 1
+                            "Damage": 1,
+                            "Armour": 5
                         },
                         "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
+                        "desc": "A old vest with stab marks, but its bullet proof"
                     }
                 },
-                "desc": "Jack, but a zombie.",
-                "state": "    "
+                "desc": "A Guard is hiding under his desk, hes been beaten and is scared",
+                "state": "idle"
             }
         },
         "shortDesc": "The guards room is dimly lit, maybe everyone left but its worth checking out for weapons",
         "longDesc": "Judging by the state of the prison you would expect this room to be empty, the lights are dim,the\nroom is messy from people scavenging, they must be looking for weaopons, the guards areusually armed, its worth checking out",
-        "visited": true
+        "visited": false
     },
     "Easter_Egg_Room": {
         "doors": {},
@@ -1059,7 +1111,7 @@
     "Jones_Cell": {
         "doors": {
             "South_Cell_Block": {
-                "locked": false,
+                "locked": true,
                 "desc": "what looks like the empty cell block, the window is smudged in blood"
             }
         },
@@ -1067,9 +1119,19 @@
             "Ground": {
                 "items": {},
                 "desc": null
-            },
+            }
+        },
+        "characters": {
             "Mike_Jones": {
-                "items": {
+                "classification": "NPC",
+                "stats": {
+                    "strength": 0,
+                    "thrift": 15,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 5
+                },
+                "inv": {
                     "Bomb_Making_Equipment": {
                         "traits": {
                             "damage": 1
@@ -1077,6 +1139,15 @@
                         "classification": "Misc",
                         "desc": "With Jones help this equipment can be used to make bombs"
                     },
+                    "Bomb": {
+                        "traits": {
+                            "Damage": 10
+                        },
+                        "classification": "melee",
+                        "desc": "Rick Asthlys Never gonna give you up is playing on a screen"
+                    }
+                },
+                "wearing": {
                     "Prison_Uniform": {
                         "traits": {
                             "Damage": 0,
@@ -1086,12 +1157,12 @@
                         "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "The corpse of Mike_Jones"
+                "desc": "A weak old man who landed in prison for crimes against humanity, his intelligence is all thats left",
+                "state": "idle"
             }
         },
-        "characters": {},
         "shortDesc": "This cell contains the prisons most infamous felon, Mike Jones, anarchist",
         "longDesc": "This is the top security wing of the prison, the most dangerous criminals are locked away here.Mike\nJones is an old man know and has no strength to fight zombie but his bomb making skils arelegendary,\nhis skill will be useful",
-        "visited": true
+        "visited": false
     }
 }

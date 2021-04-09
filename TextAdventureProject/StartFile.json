@@ -936,10 +936,10 @@
             }
           },
           "Bandaids": {
-            "classification": "Misc",
+            "classification": "Wearable",
             "desc": "Band-aids may come in handy if i run into zombies or worse",
             "traits": {
-              "Healing": 3
+              "Armour": 100
             }
           },
           "Shovel": {
