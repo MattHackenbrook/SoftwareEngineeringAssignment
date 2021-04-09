@@ -119,9 +119,10 @@ class WorldHandler:
     def wear(self, cmd):
         command = self.populateCommand(cmd)
         if command.owner.wearing != {}:
-            item = command.owner.wearing.keys()[0]
+            item = list(command.owner.wearing.keys())[0]                
             command.owner.inv[item] = command.owner.wearing[item]
         command.owner.wearing[cmd.object] = command.object
+        command.owner.inv.pop(cmd.object)
         return "Wear the " + cmd.object
 
     def eat(self, cmd):

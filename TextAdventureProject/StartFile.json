@@ -441,7 +441,7 @@
       },
       "Pantry": {
         "items": {
-          "Beans": {
+          "Bean_Can": {
             "classification": "Melee",
             "desc": "A can of baked beans. If only you could find a can opener...",
             "traits": {
@@ -540,7 +540,7 @@
       },
       "Vending_Machine": {
         "items": {
-          "Soda_can": {
+          "Soda_Can": {
             "classification": "Edible",
             "desc": "A can of Diet Spripesi Cola Up, its the quenchiest! looks edible",
             "traits": {
@@ -1018,7 +1018,7 @@
     "containers": {
       "Ground": {
         "items": {
-          "Bloody_hand": {
+          "Bloody_Hand": {
             "classification": "Edible",
             "desc": "a bloody hand attached to what remains of an arm",
             "traits": {
@@ -1067,7 +1067,7 @@
                 "North_Cell_Block.North_Hall",
                 "North_Hall.West_Hall",
                 "West_Hall.South_Hall",
-                "West_hall.Hospital_Ward",
+                "West_Hall.Hospital_Ward",
                 "North_Hall.Hospital_Ward"
               ]
             }
