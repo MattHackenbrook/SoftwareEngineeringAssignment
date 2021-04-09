@@ -241,4 +241,6 @@ class WorldHandler:
                     )
                     toDelete.append(character)
             for character in toDelete:
+                if "Player" in self.rooms[roomKey].characters.keys():
+                    print(character, " died!")
                 del room.characters[character]
