@@ -66,17 +66,21 @@ class ConsoleManager:
                     print("Invalid command. Key not specified")
                 else:
                     print("That wont work.")
+                return False
             if command.action == Action.ENTER:
                 if command.target is None:
                     print("the door is currently locked or not in this room")
+                return False
             if command.action == Action.EAT:
                 if command.object == None:
                     print("you cant eat that")
+                return False
             elif command.action != "" and command.action != None:
                 print("that item, object or target is not available to you")
+                return False
             elif command.action == None:
                 print("Invalid input. Please try again")
-            return False
+                return False
         else:
             return True
 

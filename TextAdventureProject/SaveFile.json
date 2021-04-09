@@ -85,47 +85,7 @@
                 "desc": "The corpse of Zombie_Luke"
             }
         },
-        "characters": {
-            "Ivan": {
-                "classification": "NPC",
-                "stats": {
-                    "strength": "20",
-                    "thrift": "1",
-                    "persuasion": "0",
-                    "armour": "5",
-                    "health": "11"
-                },
-                "inv": {
-                    "Sledgehammer": {
-                        "traits": {
-                            "Damage": 7,
-                            "Opens": [
-                                "North_Cell_Block.North_Hall",
-                                "North_Hall.West_Hall",
-                                "West_Hall.South_Hall",
-                                "West_hall.Hospital_Ward",
-                                "Hospital_Ward.West_hall",
-                                "North_Hall.Hospital_Ward",
-                                "Hospital_Ward.North_Hall"
-                            ]
-                        },
-                        "classification": "Key",
-                        "desc": "A giant sledgehammer, good for smashing."
-                    },
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "wearing": {},
-                "desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you.\nHe can be a great ally, but an even worse enemy.",
-                "state": "    "
-            }
-        },
+        "characters": {},
         "shortDesc": "Ivans cell block. It appears to be nearly untouched.",
         "longDesc": "An oddly tidy cell block. This is Ivans cell block, and if hes here it could mean trouble for you.\nThe man is terrifying!",
         "visited": false
@@ -211,6 +171,37 @@
                 "desc": "Fred, but a zombie.",
                 "state": "idle"
             },
+            "Zombie_Steve": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Steve, but a zombie.",
+                "state": "    "
+            },
             "Zombie_Jack": {
                 "classification": "Zombie",
                 "stats": {
@@ -240,6 +231,37 @@
                     }
                 },
                 "desc": "Jack, but a zombie.",
+                "state": "idle"
+            },
+            "Zombie_Jeff": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "Jeff, but a zombie.",
                 "state": "idle"
             }
         },
@@ -423,14 +445,14 @@
             }
         },
         "characters": {
-            "Zombie_Chef": {
+            "Jawless_Zombie": {
                 "classification": "Zombie",
                 "stats": {
                     "strength": 1,
                     "thrift": 0,
                     "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
+                    "armour": 1,
+                    "health": 1
                 },
                 "inv": {
                     "Teeth": {
@@ -442,17 +464,17 @@
                     }
                 },
                 "wearing": {
-                    "Apron": {
+                    "Prison_Uniform": {
                         "traits": {
-                            "Damage": 1,
-                            "armour": 2
+                            "Damage": 0,
+                            "armour": 1
                         },
                         "classification": "Wearable",
-                        "desc": "Meant to keep food off clothes while cooking, but it seems to be covered in zombie goo now."
+                        "desc": "Your standard, orange jumpsuit."
                     }
                 },
-                "desc": "This zombie looks like Jim. He used to work in the kitchen, I think he was once a car thief.",
-                "state": "    "
+                "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant\ndo much",
+                "state": "idle"
             }
         },
         "shortDesc": "The moldy and messy Cafeteria appears to be unchanged and still dirty.",
@@ -614,7 +636,7 @@
                 "desc": "A series of what looks like unmade beds with dirty white sheets"
             },
             "West_Hall": {
-                "locked": true,
+                "locked": false,
                 "desc": "A long dirty corridor, must be the West hallway it looks like it has some other doors"
             }
         },
@@ -632,145 +654,6 @@
                 "desc": null
             }
         },
-        "characters": {},
-        "shortDesc": "the long ominous hallway with doors for the Hospital wing, West hallway and north cell block",
-        "longDesc": "A long dusty hallway stretches ahead with another barred door at the other end, along with others\nleading to what seems like more cells.  One of these doors has a red cross on it.\nthere are scattered belongings across the floor",
-        "visited": false
-    },
-    "South_Hall": {
-        "doors": {
-            "West_Hall": {
-                "locked": true,
-                "desc": "This leads to the West Hall"
-            },
-            "Washroom": {
-                "locked": false,
-                "desc": "You can hear water running as you continue walking. This must be the door to the washroom"
-            },
-            "South_Cell_Block": {
-                "locked": false,
-                "desc": "You see blood stains on the ground infront of the door. This leads to the South Cell Block"
-            },
-            "Janitors_Closet": {
-                "locked": true,
-                "desc": "This leads to the Janitors Closet. There might be something useful in there"
-            },
-            "Cafeteria": {
-                "locked": false,
-                "desc": "This leads to the Cafeteria."
-            }
-        },
-        "containers": {
-            "Ground": {
-                "items": {},
-                "desc": null
-            }
-        },
-        "characters": {
-            "Zombie_William": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "William is a zombie!",
-                "state": "    "
-            },
-            "Jawless_Zombie": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 1,
-                    "health": 1
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "A Zombie, missing a jaw looks around with only one eye that stares hungrily, but it probably cant\ndo much",
-                "state": "idle"
-            }
-        },
-        "shortDesc": "The South Hall",
-        "longDesc": "The South Hall looks completely abandoned just like West Hall did. You see several corpses with\nmissing limbs and what looks like bites that have been taken out of them. As you take a closer look you see\na corpse with its eyes wide open and quickly realize it was your good friend Jeff. You take a moment to close\nhis eyes and pray that he is in a better place now. A tear runs down your face as you get up and continue to\nmove on trying to escape this hellhole.",
-        "visited": false
-    },
-    "West_Hall": {
-        "doors": {
-            "West_Cell_Block": {
-                "locked": false,
-                "desc": "Dirty floor and walls , zombie free for now"
-            },
-            "Hospital_Ward": {
-                "locked": true,
-                "desc": "A series of what looks like unmade beds with dirty white sheets"
-            },
-            "North_Hall": {
-                "locked": true,
-                "desc": "A long dirty corridor, must be the North hallway it looks like it has some other doors"
-            },
-            "South_Hall": {
-                "locked": true,
-                "desc": "A long dirty corridor, must be the South hallway it looks like it has some other doors"
-            },
-            "Cafeteria": {
-                "locked": true,
-                "desc": "The door to the cafeteria. Covered in grease, like always"
-            }
-        },
-        "containers": {
-            "Ground": {
-                "items": {
-                    "Syringe": {
-                        "traits": {
-                            "Damage": 5
-                        },
-                        "classification": "melee",
-                        "desc": "A used syringe, can be used to poison"
-                    }
-                },
-                "desc": null
-            }
-        },
         "characters": {
             "Player": {
                 "classification": "Player",
@@ -779,7 +662,7 @@
                     "thrift": 0,
                     "persuasion": 0,
                     "armour": 0,
-                    "health": 14
+                    "health": "11"
                 },
                 "inv": {
                     "Hand": {
@@ -823,9 +706,137 @@
                 "state": "player_control"
             }
         },
+        "shortDesc": "the long ominous hallway with doors for the Hospital wing, West hallway and north cell block",
+        "longDesc": "A long dusty hallway stretches ahead with another barred door at the other end, along with others\nleading to what seems like more cells.  One of these doors has a red cross on it.\nthere are scattered belongings across the floor",
+        "visited": true
+    },
+    "South_Hall": {
+        "doors": {
+            "West_Hall": {
+                "locked": false,
+                "desc": "This leads to the West Hall"
+            },
+            "Washroom": {
+                "locked": false,
+                "desc": "You can hear water running as you continue walking. This must be the door to the washroom"
+            },
+            "South_Cell_Block": {
+                "locked": false,
+                "desc": "You see blood stains on the ground infront of the door. This leads to the South Cell Block"
+            },
+            "Janitors_Closet": {
+                "locked": true,
+                "desc": "This leads to the Janitors Closet. There might be something useful in there"
+            },
+            "Cafeteria": {
+                "locked": false,
+                "desc": "This leads to the Cafeteria."
+            }
+        },
+        "containers": {
+            "Ground": {
+                "items": {},
+                "desc": null
+            },
+            "Zombie_William": {
+                "items": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    },
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "desc": "The corpse of Zombie_William"
+            }
+        },
+        "characters": {
+            "Zombie_Chef": {
+                "classification": "Zombie",
+                "stats": {
+                    "strength": 1,
+                    "thrift": 0,
+                    "persuasion": 0,
+                    "armour": 0,
+                    "health": 4
+                },
+                "inv": {
+                    "Teeth": {
+                        "traits": {
+                            "Damage": 3
+                        },
+                        "classification": "Melee",
+                        "desc": "Eww... Teeth."
+                    }
+                },
+                "wearing": {
+                    "Apron": {
+                        "traits": {
+                            "Damage": 1,
+                            "armour": 2
+                        },
+                        "classification": "Wearable",
+                        "desc": "Meant to keep food off clothes while cooking, but it seems to be covered in zombie goo now."
+                    }
+                },
+                "desc": "This zombie looks like Jim. He used to work in the kitchen, I think he was once a car thief.",
+                "state": "    "
+            }
+        },
+        "shortDesc": "The South Hall",
+        "longDesc": "The South Hall looks completely abandoned just like West Hall did. You see several corpses with\nmissing limbs and what looks like bites that have been taken out of them. As you take a closer look you see\na corpse with its eyes wide open and quickly realize it was your good friend Jeff. You take a moment to close\nhis eyes and pray that he is in a better place now. A tear runs down your face as you get up and continue to\nmove on trying to escape this hellhole.",
+        "visited": true
+    },
+    "West_Hall": {
+        "doors": {
+            "West_Cell_Block": {
+                "locked": false,
+                "desc": "Dirty floor and walls , zombie free for now"
+            },
+            "Hospital_Ward": {
+                "locked": true,
+                "desc": "A series of what looks like unmade beds with dirty white sheets"
+            },
+            "North_Hall": {
+                "locked": false,
+                "desc": "A long dirty corridor, must be the North hallway it looks like it has some other doors"
+            },
+            "South_Hall": {
+                "locked": false,
+                "desc": "A long dirty corridor, must be the South hallway it looks like it has some other doors"
+            },
+            "Cafeteria": {
+                "locked": true,
+                "desc": "The door to the cafeteria. Covered in grease, like always"
+            }
+        },
+        "containers": {
+            "Ground": {
+                "items": {
+                    "Syringe": {
+                        "traits": {
+                            "Damage": 5
+                        },
+                        "classification": "melee",
+                        "desc": "A used syringe, can be used to poison"
+                    }
+                },
+                "desc": null
+            }
+        },
+        "characters": {},
         "shortDesc": "the long ominous hallway with doors for the Hospital wing, north and south hallway and West cell block",
         "longDesc": "the long ominous hallway with doors you hear the sounds the prison echoing through the doors, down the hall you can see the hospital wing, more hallways, north and south and halls leading,back the way you came. ",
-        "visited": false
+        "visited": true
     },
     "Janitors_Closet": {
         "doors": {
@@ -959,7 +970,7 @@
                     }
                 },
                 "desc": "Jacob is a zombie!",
-                "state": "    "
+                "state": "idle"
             }
         },
         "shortDesc": "The Washroom",
@@ -988,70 +999,7 @@
                 "desc": null
             }
         },
-        "characters": {
-            "Zombie_Jeff": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "Jeff, but a zombie.",
-                "state": "idle"
-            },
-            "Zombie_Steve": {
-                "classification": "Zombie",
-                "stats": {
-                    "strength": 1,
-                    "thrift": 0,
-                    "persuasion": 0,
-                    "armour": 0,
-                    "health": 4
-                },
-                "inv": {
-                    "Teeth": {
-                        "traits": {
-                            "Damage": 3
-                        },
-                        "classification": "Melee",
-                        "desc": "Eww... Teeth."
-                    }
-                },
-                "wearing": {
-                    "Prison_Uniform": {
-                        "traits": {
-                            "Damage": 0,
-                            "armour": 1
-                        },
-                        "classification": "Wearable",
-                        "desc": "Your standard, orange jumpsuit."
-                    }
-                },
-                "desc": "Steve, but a zombie.",
-                "state": "idle"
-            }
-        },
+        "characters": {},
         "shortDesc": "a bloody mess on the floor from the previous inmates remains",
         "longDesc": "A grotestesque scene of blood and gore, it looks as though the inmate who belonged in this cell is now the bloody puddle of red slop in the floor. the cell is turned upsidedown, there must have been a terrible struggle before he was pinned down on the floor and eaten alive. note to self, dont get cornered.",
         "visited": false
@@ -1069,7 +1017,47 @@
                 "desc": null
             }
         },
-        "characters": {},
+        "characters": {
+            "Ivan": {
+                "classification": "NPC",
+                "stats": {
+                    "strength": "20",
+                    "thrift": "1",
+                    "persuasion": "0",
+                    "armour": "5",
+                    "health": "11"
+                },
+                "inv": {
+                    "Sledgehammer": {
+                        "traits": {
+                            "Damage": 7,
+                            "Opens": [
+                                "North_Cell_Block.North_Hall",
+                                "North_Hall.West_Hall",
+                                "West_Hall.South_Hall",
+                                "West_hall.Hospital_Ward",
+                                "Hospital_Ward.West_hall",
+                                "North_Hall.Hospital_Ward",
+                                "Hospital_Ward.North_Hall"
+                            ]
+                        },
+                        "classification": "Key",
+                        "desc": "A giant sledgehammer, good for smashing."
+                    },
+                    "Prison_Uniform": {
+                        "traits": {
+                            "Damage": 0,
+                            "armour": 1
+                        },
+                        "classification": "Wearable",
+                        "desc": "Your standard, orange jumpsuit."
+                    }
+                },
+                "wearing": {},
+                "desc": "Ivan is a 7ft tall giant. No one in the prison messes with him because he will literally kill you.\nHe can be a great ally, but an even worse enemy.",
+                "state": "idle"
+            }
+        },
         "shortDesc": "Ivans Cell",
         "longDesc": "This cell belongs to Ivan. The beast of the prison. You heard stories about how he killed 10 men with\nonly his fists. You do not want to run into this guy",
         "visited": false
@@ -1256,7 +1244,7 @@
                     }
                 },
                 "desc": "A weak old man who landed in prison for crimes against humanity, his intelligence is all thats left",
-                "state": "idle"
+                "state": "    "
             }
         },
         "shortDesc": "This cell contains the prisons most infamous felon, Mike Jones, anarchist",
