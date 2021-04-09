@@ -29,11 +29,12 @@ class ConsoleManager:
 
     def printRoom(self):
         try:
+            print("You are currently in the ", self.room[0])
             if self.room[1].visited == False:
                 print(self.room[1].longDesc)
             else:
                 print(self.room[1].shortDesc)
-            print("You may find items in/on the: ")
+            print("\nYou may find items in/on the: ")
             for container in self.room[1].containers.keys():
                 print(container)
             print("\nThis room contains the characters: ")
@@ -48,7 +49,7 @@ class ConsoleManager:
                 print(self.room.longDesc)
             else:
                 print(self.room.shortDesc)
-            print("You may find items in/on the: ")
+            print("\nYou may find items in/on the: ")
             for container in self.room.containers.keys():
                 print(container)
             print("\nThis room contains the characters: ")
