@@ -1022,7 +1022,7 @@
             "classification": "Edible",
             "desc": "a bloody hand attached to what remains of an arm",
             "traits": {
-              "Healing": 100,
+              "Healing": 999,
               "Damage": 1
             }
           }
