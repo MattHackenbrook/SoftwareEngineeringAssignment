@@ -69,6 +69,9 @@ class ConsoleManager:
             if command.action == Action.ENTER:
                 if command.target is None:
                     print("the door is currently locked or not in this room")
+            if command.action == Action.EAT:
+                if command.object == None:
+                    print("you cant eat that")
             elif command.action != "" and command.action != None:
                 print("that item, object or target is not available to you")
             elif command.action == None:

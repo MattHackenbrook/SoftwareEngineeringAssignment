@@ -1068,7 +1068,9 @@
                 "North_Hall.West_Hall",
                 "West_Hall.South_Hall",
                 "West_hall.Hospital_Ward",
-                "North_Hall.Hospital_Ward"
+                "Hospital_Ward.West_hall",
+                "North_Hall.Hospital_Ward",
+                "Hospital_Ward.North_Hall"
               ]
             }
           }
