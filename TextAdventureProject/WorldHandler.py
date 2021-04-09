@@ -164,10 +164,10 @@ class WorldHandler:
                                 first = False
                             else:
                                 extra += ", a " + container
-                return "inspect " + command.target.longDesc + extra
+                return command.target.longDesc + extra
             elif cmd.target in command.room.doors:
                 return command.room.doors[cmd.target].desc
-        return "inspect " + command.target.desc + extra
+        return command.target.desc + extra
     def take(self, cmd):
         command = self.populateCommand(cmd)
         command.owner.inv[cmd.target] = command.target
